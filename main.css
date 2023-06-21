@@ -342,11 +342,11 @@ h2 > span
 #experience
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /*jednego diva do lewej
     a drugiego do prawej i miedzy nimi równy odstęp*/
 
-    max-width: 1200px;
+    max-width: 1000px;
     height: 100%;
     
     margin-top: 25px;
@@ -356,14 +356,18 @@ h2 > span
 
 .experience
 {
+    display: flex;
+    flex-direction: column;
+
     height: 400px;
-    width: 550px;
+    width: 400px;
 
     background-color: rgb(4,18,80);
     border-radius: 50px;
     border: solid #032990;
-
 }
+
+
 
 #footerMain
 {
@@ -490,6 +494,6 @@ h2 > span
     text-align: center;
     letter-spacing: 1px;
 
-    background-color: #020229;
+    background-color: #030b3f;
     width: 100%;
 }
