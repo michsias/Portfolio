@@ -401,6 +401,7 @@ h2 > span
 
     list-style: none;
 }
+
 #skillsList li
 {
     width: 150px;
@@ -415,6 +416,11 @@ h2 > span
     background-color: #0048f8;
 }
 
+#divTools
+{
+    width: 100%;
+}
+
 #tools
 {
     width: 1200px;
@@ -422,9 +428,16 @@ h2 > span
 
     margin-top: 20px;
 }
-#divsListTools
+
+#skillsListTools
 {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 0;
+
+    list-style: none;
 }
 
 #footerMain
