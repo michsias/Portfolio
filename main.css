@@ -339,7 +339,7 @@ h2 > span
     border-radius: 100px;
 }
 
-#experienceDiv
+#experienceSectionDiv
 {
     display: flex;
     justify-content: space-around;
@@ -355,12 +355,26 @@ h2 > span
     margin-right: auto;
 }
 
+#settingsExperienceDiv
+{
+    width: 100%;    
+    height: 150px;
+}
+
+#tiitleExperienceDivs
+{
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
 .experience
 {
     display: flex;
     flex-direction: column;
 
-    height: 400px;
+    height: 360px;
     width: 380px;
 
     background-color: rgb(4,18,80);
@@ -370,14 +384,14 @@ h2 > span
 
 .nameTag
 {
-    width: 280px;
-
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
 
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 1px;
+
 }
 
 .divsList
@@ -414,6 +428,14 @@ h2 > span
 
     border-radius: 100px;
     background-color: #0048f8;
+
+    border: 3px solid #032990;
+}
+
+#nameTagTools
+{
+    margin-top: 20px;
+    display: inline-block;
 }
 
 #divTools
@@ -425,8 +447,9 @@ h2 > span
 {
     display: flex;
     justify-content: center;
+
     width: 1200px;
-    max-height: 150px;
+    max-height: 200px;
 
     margin-top: 20px;
 }
@@ -448,9 +471,15 @@ h2 > span
 #ulTools > li
 {
     width: 200px;
-    height: 45px;
+    height: 50px;
 
     margin-right: 20px;
+}
+
+/*Klasa do wysarzenia diva*/
+.blocked
+{
+    opacity: 0.2;
 }
 
 #footerMain
