@@ -329,10 +329,11 @@ h2 > span
 .developer > p
 {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
 
     color: #fff;
     font-weight: bold;
+    font-size: 18px;
     padding: 5px 15px 5px 15px;
 
     border: solid #013fd9;
@@ -361,7 +362,7 @@ h2 > span
     height: 150px;
 }
 
-#tiitleExperienceDivs
+#tiitleExperienceDiv
 {
     text-align: center;
     font-size: 24px;
@@ -394,7 +395,7 @@ h2 > span
 
 }
 
-.divsList
+.divList
 {
     width: 320px;
     height: 100%;
@@ -432,17 +433,6 @@ h2 > span
     border: 3px solid #032990;
 }
 
-#nameTagTools
-{
-    margin-top: 20px;
-    display: inline-block;
-}
-
-#divTools
-{
-    width: 100%;
-}
-
 #tools
 {
     display: flex;
@@ -452,6 +442,17 @@ h2 > span
     max-height: 200px;
 
     margin-top: 20px;
+}
+
+#nameTagTools
+{
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#divTools
+{
+    width: 100%;
 }
 
 #ulTools
