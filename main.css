@@ -187,7 +187,7 @@ section
 #profession
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /*jednego diva do lewej
     a drugiego do prawej */
 
@@ -237,18 +237,18 @@ h2 > span
     letter-spacing: 1px;
     
     text-align: justify;
-    word-wrap: break-word;
 
 }
 
 #rightDiv
 {
-    width: 50%;
+    width: 400px;
     height: 100%;
     position: relative;
     z-index: 1;
    
 }
+
 
 #level
 {
@@ -298,13 +298,16 @@ h2 > span
     }
     50% {
         filter: brightness(125%);
+        box-shadow:0 0 5px #032990;
     }
     75% {
         filter: brightness(150%);
+        box-shadow:0 0 10px #032990;
     }
     100% {
         width: 100%;
         filter: brightness(175%);
+        box-shadow:0 0 15px #032990;
     }
   }
 
@@ -369,7 +372,7 @@ h2 > span
     text-align: center;
     font-size: 16px;
 
-    opacity: 0.7;   
+    opacity: 0.6;   
 }
 
 #infoExperienceDiv > a
@@ -400,6 +403,14 @@ h2 > span
     background-color: rgb(4,18,80);
     border-radius: 50px;
     border: solid 5px #032990;
+    transition: transform 0.5s ease-in-out,
+                box-shadow 0.3s ease-in-out
+}
+
+.experience:hover
+{
+    transform: scale(0.95);
+    box-shadow:0 0 15px #032990;
 }
 
 .nameTag
@@ -424,6 +435,7 @@ h2 > span
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 
 .skillsList
 {
@@ -538,6 +550,8 @@ h2 > span
     a drugiego do prawej */
 
     height: 200px;
+    max-width: 1200px;
+
     
     margin-top: 200px;
     margin-bottom: 200px;
@@ -594,15 +608,16 @@ h2 > span
     background: linear-gradient(to top, #042073, #004aff);
     animation: slideBackground 8s ease-in-out 1 backwards;
 }
-  
+
 @keyframes slideBackground 
 {
-    0% {
+    0% 
+    {
       top: -100%;
       box-shadow: 0 0 15px #004aff;
-    }
-    
+    } 
 }
+
 
 #end > a 
 {
@@ -668,7 +683,7 @@ h2 > span
 #infoAbout > span
 {
     color: #0046f8;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 #button
@@ -691,15 +706,18 @@ h2 > span
     font-weight: 750;
 
     background-color: #0048f8;
-    border: 2px solid rgb(4,18,80);
+    border: 4px solid #032990;
 
     border-radius: 100px;
-    transition: all 0.1s ease-in-out;
+    transition: background-color 0.3s ease-in-out,
+                transform 0.5s ease-in-out;
+
 }
 
 #button > button:hover
 {
     background-color: #002FF7;
+    transform: scale(1.05);
 }
 
 #socialDiv
