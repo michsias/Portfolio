@@ -192,7 +192,7 @@ section
     a drugiego do prawej */
 
     max-width: 1200px;
-    height: 250px;
+    height: 400px;
     
     margin-left: auto;
     margin-right: auto;
@@ -243,10 +243,86 @@ h2 > span
 #rightDiv
 {
     width: 400px;
-    height: 100%;
-    position: relative;
-    z-index: 1;
+    min-height: 250px;
    
+}
+#coddingBackground
+{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    border-radius: 50px;
+    background-color: #0048f8;
+}
+
+#codding
+{
+    width: 98%;
+    height: 98%;
+
+    position: absolute;
+    top: 2px;
+    left: 4px;
+
+    border-radius: 50px;
+    background-color: #030b3f;
+
+    transition: all 0.5s ease-in-out;
+}
+
+#codding:hover
+{
+    transform: scale(0.95);
+}
+
+#codding > h2
+{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+#coddingList
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+
+    list-style: none;
+}
+
+#coddingList > li
+{
+    width: 160px;
+    height: 70px;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 10px;
+
+    color: #030b3f;
+
+    border-radius: 25px;
+    background-color: #0048f8;
+}
+
+#coddingList > li > p
+{
+    margin-top: 5px;
+    color: white;
+    font-weight: 400;
+
+    font-size: 14px;
+    opacity: 0.6;
 }
 
 
@@ -545,7 +621,7 @@ h2 > span
 #footerMain
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     /*jednego diva do lewej
     a drugiego do prawej */
 
@@ -655,6 +731,7 @@ h2 > span
 {
     width: 250px;
     height: 100%;
+    margin-right: 100px;
 }
 
 #aboutMe
