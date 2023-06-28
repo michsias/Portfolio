@@ -17,6 +17,8 @@ body
    
 }
 
+/* CSS for "Home" page */
+
 #headerDiv
 {
     display: flex;
@@ -881,3 +883,13 @@ h2 > span
     background-color: #030b3f;
     width: 100%;
 }
+
+/* CSS for "CV" page */
+
+
+
+
+
+
+
+/* CSS for "Contact" page */
