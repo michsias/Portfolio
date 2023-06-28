@@ -263,7 +263,7 @@ h2 > span
     height: 98%;
 
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 4px;
 
     border-radius: 50px;
@@ -635,13 +635,7 @@ h2 > span
     margin-right: auto;
 }
 
-#end > a 
-{
-    display: block;
 
-    color: white;
-    text-decoration: none;
-}
 
 .footerDivs
 {
@@ -669,34 +663,20 @@ h2 > span
     border-radius: 50px;
     opacity: 0.8;
 
-    position: relative;
-    overflow: hidden;
-}
-
-#end:before 
-{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
     background: linear-gradient(to top, #042073, #004aff);
-    animation: slideBackground 8s ease-in-out 1 backwards;
+
+    /* https://cssgenerator.pl/box-shadow-generator/ */
+    -webkit-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
+    -moz-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
+    box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
 }
 
-@keyframes slideBackground 
-{
-    0% 
-    {
-      top: -100%;
-      box-shadow: 0 0 15px #004aff;
-    } 
-}
-
+/*Animacja dla diva END */
 
 #end > a 
 {
+    color: white;
+    text-decoration: none;
     position: relative;
     z-index: 1;
 }
