@@ -247,23 +247,36 @@ h2 > span
     height: 100%;
 
     border-radius: 50px;
-    background-color: #030b3f;
-
-    transition: all 0.5s ease-in-out;
-}
-
-#rightDiv:hover
-{
-    transform: scale(0.95);
+    background-color: #0048f8;
+    position: relative;
 }
     
 @media (min-width: 576px) 
 {
     #rightDiv 
     {
-      width: 500px;
-      height: 250px;
+      width: 500px
     }
+}
+#codding
+{
+    display: inline-block;
+    width: 95%;
+    height: 95%;
+
+    position: absolute;
+    top: 8px;
+    left: 12px;
+
+    border-radius: 50px;
+    background-color: #030b3f;
+
+    transition: all 0.5s ease-in-out;
+}
+
+#codding:hover
+{
+    transform: scale(0.95);
 }
 
 #coddingTitle
@@ -300,8 +313,10 @@ h2 > span
 
 #coddingList > li
 {
-    width: 160px;
-    height: 70px;
+    display: inline-block;
+
+    width: 180px;
+    height: 80px;
 
     text-align: center;
     font-size: 16px;
@@ -317,7 +332,9 @@ h2 > span
 
 #coddingList > li > p
 {
+    margin: 0;
     margin-top: 5px;
+
     color: white;
     font-weight: 400;
 
@@ -331,9 +348,6 @@ h2 > span
     height: 100%;
 
     position: relative;
-
-    border-radius: 50px;
-    background-color: #0048f8;
 }
 
 #level
@@ -345,6 +359,7 @@ h2 > span
 .levels
 {
 
+    padding: 20px;
     text-align: center;
     background-color: #030b3f;
 }
