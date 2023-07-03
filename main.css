@@ -417,6 +417,11 @@ h2 > span
     border-radius: 100px;
 }
 
+#experienceSection
+{
+    max-width: 1200px;
+}
+
 #experienceSectionDiv
 {
     display: flex;
@@ -478,6 +483,7 @@ h2 > span
 {
     display: flex;
     flex-direction: column;
+
 
     width: 380px;
 
@@ -576,16 +582,50 @@ h2 > span
     }
 }
 
-#tools
+
+
+@media (min-width: 1300px) 
 {
-    display: flex;
-    flex-direction: row;
+    #tools
+    {
+        display: flex;
+        flex-direction: row;
 
-    width: 1200px;
-    max-height: 200px;
+        width: 380px;
+        max-height: 200px;
 
-    margin-top: 20px;
+        margin-top: 20px;
+    }
+    #divTools
+    {
+        display: flex;
+
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    #ulTools
+    {
+        justify-content: center;
+
+        width: 100%;    
+
+        text-align: center;
+        font-size: 18px;
+
+        height: 100%;
+
+        border-radius: 100px;
+    }
+
+    #ulTools > li
+    {
+        width: 200px;
+        height: 50px;
+
+        margin-top: 20px;
+    }
 }
+
 #namTagToolsDiv
 {
     display: inline-block;
@@ -599,35 +639,6 @@ h2 > span
     display: inline-block;
 }
 
-#divTools
-{
-    display: flex;
-
-    width: 100%;
-    margin: 10px 0 10px 0;
-}
-
-#ulTools
-{
-    justify-content: center;
-
-    width: 100%;    
-
-    text-align: center;
-    font-size: 18px;
-
-    height: 100%;
-
-    border-radius: 100px;
-}
-
-#ulTools > li
-{
-    width: 200px;
-    height: 50px;
-
-    margin-top: 20px;
-}
 
 /*Klasa do wysarzenia diva*/
 .blocked
