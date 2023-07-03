@@ -79,6 +79,34 @@ h1
     letter-spacing: 2px;
 }
 
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
 h1 > a
 {
     width: 100%;
@@ -93,20 +121,19 @@ h1 > a
     font-weight: 700;
 
     transition: all 0.5s ease-in-out;
+    animation: MyAnim 5s infinite;
 }
 
 h1 > a:hover 
 {
     font-weight: 700;
 
-    color: #0048f8;
     border-bottom: 2px solid #0048f8 ;
     text-decoration: none;
     
     -ms-transform: scale(0.9);
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
-
 }
 
 #navDiv
@@ -484,7 +511,7 @@ h2 > span
     display: flex;
     flex-direction: column;
 
-
+    margin-bottom: 20px;
     width: 380px;
 
     background-color: rgb(4,18,80);
@@ -584,15 +611,15 @@ h2 > span
 
 
 
-@media (min-width: 1300px) 
+@media (min-width: 1155px) 
 {
     #tools
     {
         display: flex;
         flex-direction: row;
 
-        width: 380px;
-        max-height: 200px;
+        width: 1200px;
+        height: 100%;
 
         margin-top: 20px;
     }
@@ -600,7 +627,7 @@ h2 > span
     {
         display: flex;
 
-        width: 100%;
+        width: 100%x;
         margin: 10px 0 10px 0;
     }
     #ulTools
@@ -625,6 +652,20 @@ h2 > span
         margin-top: 20px;
     }
 }
+
+@media (max-width: 1160px) 
+{
+    #tools
+    {
+        height: 342px !important;
+    }
+    #settingsExperienceDiv
+    {
+        width: 600px;
+    }
+}
+
+
 
 #namTagToolsDiv
 {
@@ -677,12 +718,15 @@ h2 > span
 
     text-align: center;
 }
+
+#footerMainDiv
+{
+    max-width: 1200px;
+}
+
 #end
 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
+    width: 500px;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -757,7 +801,6 @@ h2 > span
 {
     width: 250px;
     height: 100%;
-    margin-right: 100px;
 }
 
 #aboutMe
