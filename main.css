@@ -216,7 +216,6 @@ h1 > a:hover
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: min(10rem,5vh);
 }
 .sectionMargin
 {
@@ -283,6 +282,7 @@ h2 > span
 
     min-height: 330px;
     height: 100%;
+    width: 450px;
 
     border-radius: 50px;
     background-color: #0048f8;
@@ -293,7 +293,7 @@ h2 > span
 {
     #rightDiv 
     {
-      width: 500px
+      width: 450px
     }
 }
 #codding
