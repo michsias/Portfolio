@@ -11,16 +11,28 @@ body
     font-size: 20px;
     color: #ffffff;
 
+    overflow-x: hidden;
+
     /*From: https://cssgradient.io/ */
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(4,32,115,1) 89%, rgba(0,74,255,1) 100%);  
 }
 
 /* CSS for "Home" page */
+.container-fluid
+{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#logo-nav
+{
+    padding: 0 !important;
+}
 
 #headerDiv
 {
-    width: 1200px;
+    max-width: 1200px;
     height: 200px;
 }
 
@@ -213,6 +225,7 @@ h1 > a:hover
 
 #divMain
 {
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -221,6 +234,9 @@ h1 > a:hover
 {
     margin-top: 75px;
     margin-bottom: 75px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
 }
 #welcome
 {
@@ -237,6 +253,7 @@ h1 > a:hover
 
 #leftDiv {
     width: 500px;
+    padding: 0;
   }
   
 @media (min-width: 1200px) 
@@ -699,6 +716,7 @@ h2 > span
 {
     margin-top: 200px;
     margin-bottom: 300px;
+    padding: 0;
 }
 
 #footerMain
@@ -740,6 +758,7 @@ h2 > span
 
 
 
+
 @media (max-width: 1150px) 
 {
     #lastSectionMain
@@ -774,6 +793,8 @@ h2 > span
 
     padding: 10px;
     width: 500px;
+
+    margin: 0;
 
     font-size: 18px;
     font-weight: 600;
@@ -922,6 +943,16 @@ h2 > span
     margin-right: auto;
     margin-bottom: 50px;
 }
+
+#socialsDivs
+{
+    margin: 0 !important;
+
+    display: flex;
+    justify-content: center;
+}
+
+
 .socials
 {
     display: flex;
@@ -943,6 +974,7 @@ h2 > span
 }
 
 .socials:hover
+
 {
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
@@ -951,8 +983,8 @@ h2 > span
 
 .linkedin
 {
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .linkedin:hover
@@ -1005,6 +1037,7 @@ h2 > span
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 0 !important;
 }
 
 #endDiv > p
