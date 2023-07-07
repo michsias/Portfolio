@@ -1,7 +1,9 @@
+/* Global settings */
+
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin: 0;
 }
 body
 {
@@ -19,6 +21,7 @@ body
 }
 
 /* CSS for "Home" page */
+
 .container-fluid
 {
     margin: 0 !important;
@@ -223,6 +226,12 @@ h1 > a:hover
 }
 
 
+#mainDiv
+{
+    display: flex;
+    flex-direction: column;
+}
+
 #divMain
 {
     width: 100%;
@@ -233,22 +242,19 @@ h1 > a:hover
 .sectionMargin
 {
     margin-top: 75px;
-    margin-bottom: 75px;
+    margin-bottom: 100px;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
 }
-#welcome
+
+/*Settigs first section in main */
+
+#mainBox 
 {
-    max-width: 1400px;
-}
-
-#divMainRow 
-{
-    height: 100%;
-
-    justify-content: space-evenly;
-
+    width: 1200px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
 #leftDiv {
@@ -271,6 +277,7 @@ h2 > span
 
 #junior
 {
+ 
     text-align: center;
 
     font-size: 54px;
@@ -298,7 +305,6 @@ h2 > span
     flex-direction: column;
 
     min-height: 330px;
-    height: 100%;
     width: 450px;
 
     border-radius: 50px;
@@ -306,16 +312,8 @@ h2 > span
     position: relative;
 }
     
-@media (min-width: 576px) 
-{
-    #rightDiv 
-    {
-      width: 450px
-    }
-}
 #codding
 {
-    display: inline-block;
     width: 95%;
     height: 95%;
 
@@ -404,6 +402,8 @@ h2 > span
 
     position: relative;
 }
+
+/* Settings second section in main */
 
 #level
 {
@@ -714,7 +714,7 @@ h2 > span
 
 #lastSectionMain
 {
-    margin-top: 200px;
+    margin-top: 00px;
     margin-bottom: 300px;
     padding: 0;
 }
@@ -792,7 +792,7 @@ h2 > span
 
 
     padding: 10px;
-    width: 500px;
+    width: 450px;
 
     margin: 0;
 
