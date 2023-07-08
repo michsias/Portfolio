@@ -35,7 +35,7 @@ body
 
 #headerDiv
 {
-    max-width: 1200px;
+    width: 100%;
     height: 200px;
 }
 
@@ -148,7 +148,9 @@ h1 > a:hover
 
 #navDiv
 {
-    width: 450px;
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .menu
@@ -207,6 +209,7 @@ h1 > a:hover
     width: 50px;
     height: 50px;
     padding: 5px;
+    margin: 0;
 
     background-color: #0048f8;
     border: 2px solid #030b3f;
