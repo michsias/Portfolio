@@ -648,7 +648,7 @@ h2 > span
         display: flex;
         flex-direction: row;
 
-        width: 1170px;
+        width:1150px;
 
     }
     #divTools
@@ -714,7 +714,7 @@ h2 > span
 
 #lastSectionMain
 {
-    margin-top: 00px;
+    margin-top: 200px;
     margin-bottom: 300px;
     padding: 0;
 }
@@ -761,21 +761,12 @@ h2 > span
 
 @media (max-width: 1150px) 
 {
-    #lastSectionMain
-    {
-        margin-top: 50px;
-        margin-bottom: 100px;
-    }
+    
 
     #footerMainDivs 
     {
       flex-direction: column; /* Zmienia układ divów na pionowy */
       align-items: center;
-    }
-  
-    #pageTwo 
-    {
-      margin-top: 100px; /* Dodatkowy margines na górę */
     }
 
   }
@@ -853,6 +844,19 @@ h2 > span
 #pageTwo
 {
     width: 250px;
+}
+@media (max-width: 900px)
+{
+    #pageTwo
+    {
+        width: 450px;
+        display: flex;
+        justify-content: center;
+    }
+    #pageTwoDiv
+    {
+    width: 250px;
+    }
 }
 
 #aboutMe
