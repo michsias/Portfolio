@@ -35,16 +35,20 @@ body
 
 #headerDiv
 {
-    width: 100%;
-    height: 200px;
+    width: 1400px;
+    height: 250px;
+    position: relative;
 }
+
+
+/*CSS logo div */
 
 #logo
 {
-    width: 450px;
+    width: 400px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
     padding: 0 !important;
@@ -68,12 +72,6 @@ body
     border-radius: 50%;
 }
 
-#name
-{   
-    height: 150px;
-    width: 300px;
-
-}
 
 h1
 {
@@ -146,11 +144,14 @@ h1 > a:hover
     transform: scale(0.9);
 }
 
-#navDiv
+/* ### */ 
+
+
+#nav
 {
-    width: 500px;
     display: flex;
     justify-content: flex-end;
+
 }
 
 .menu
@@ -159,7 +160,7 @@ h1 > a:hover
     justify-content: end;
     text-align: center;
 
-    width: 100%;
+    width: 50%;
     height: 50px;
 	line-height: 200%;
 
@@ -201,7 +202,7 @@ h1 > a:hover
 
 .burger
 {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -222,7 +223,48 @@ h1 > a:hover
     width: 30px;
     height: 5px;
     margin-top: 5px;
+
+    transition: .5s ease-in-out;
 }
+
+@media only screen and (max-width: 1000px)
+{
+    #headerDiv
+    {
+        justify-content: space-between;
+    }
+
+    #logo 
+    {
+        width: 250px;
+        flex-direction: column;
+    }
+
+    #name > h1 
+    {
+        margin: 0;
+    }
+
+    .burger
+    {
+        display: flex;
+        transition: 0.5s ease-in-out;
+    }
+
+    .menu
+    {
+        position: absolute;
+        top: 30vh;
+        height: 70vh;
+        width: 100%;
+        background-color: #0046f8;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+}
+
+
+
 .line:first-child
 {
     margin-top: 0 !important;
@@ -265,7 +307,7 @@ h1 > a:hover
     padding: 0;
   }
   
-@media (min-width: 1200px) 
+@media (min-width: 978px) 
 {
     #leftDiv 
     {
