@@ -329,11 +329,11 @@ h1 > a:hover
     0% 
     {
       opacity: 0;
-      transform: translatey(-100%) ;
+      transform: translateY(-100%) ;
     }
     100% 
     {
-        transform: translatey(0%) ;
+        transform: translateY(0%) ;
         opacity: 1;
     }
   }
@@ -392,7 +392,7 @@ h1 > a:hover
     padding: 0;
   }
   
-@media (min-width: 978px) 
+@media (min-width: 900px) 
 {
     #leftDiv 
     {
@@ -623,12 +623,26 @@ h2 > span
     margin-right: auto;
 }
 
-#experienceDi
-
 #settingsExperienceDiv
 {
     width: 100%;    
     height: 120px;
+}
+
+@media (max-width: 1000px)
+{
+    #settingsExperienceDiv
+    {
+        max-width: 700px !important;
+    }
+}
+
+@media (max-width: 500px)
+{
+    #settingsExperienceDiv
+    {
+        max-width: 450px !important;
+    }
 }
 
 #tiitleExperienceDiv
@@ -681,6 +695,25 @@ h2 > span
                 box-shadow 0.3s ease-in-out
 }
 
+@media (max-width: 1205px)
+{
+    .experience
+    {
+        width: 450px !important;
+    }
+    #nameTagTools
+    {
+        margin-top: 30px !important;
+
+    }
+    .skillsList li
+    {
+        width: 190px !important;
+    }
+
+}
+
+
 .experience:hover
 {
     transform: scale(0.95);
@@ -702,6 +735,7 @@ h2 > span
 .divList
 {
 
+    
     width: 100%;
 
     margin-left: auto;
@@ -717,7 +751,7 @@ h2 > span
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 
     margin: 0;
     padding: 0;
@@ -771,14 +805,15 @@ h2 > span
 
 
 
-@media (min-width: 1200px) 
+@media (min-width: 1205px) 
 {
+
     #tools
     {
         display: flex;
         flex-direction: row;
 
-        width:1150px;
+        width:1180px;
 
     }
     #divTools
@@ -811,28 +846,9 @@ h2 > span
     }
 }
 
-@media (max-width: 992px)
-{
-    #tools
-    {
-        height: 340px;
-    }
-}
-
-
-
-
-#namTagToolsDiv
-{
-    display: inline-block;
-    width: 100px;
-}
-
 #nameTagTools
 {
     margin-top: 20px;
-
-    display: inline-block;
 }
 
 
@@ -1093,9 +1109,7 @@ h2 > span
     justify-content: center;
     align-items: center;
     width: 140px;
-    height: 40px;
-
-    padding: 0;
+    height: 50px;
 
     margin: 0;
 
@@ -1113,6 +1127,29 @@ h2 > span
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+@media (max-width: 700px)
+{
+    .socials
+    {
+        width: 450px !important;
+    }
+    .socials:hover
+    {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.05);
+    }
+    .linkedin
+    {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .page
+    {
+        margin-top: 20px !important;
+    }
 }
 
 .linkedin
@@ -1144,10 +1181,11 @@ h2 > span
 
 .page 
 {   
+
     width: 100%;
     height: 100%;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 20px;
 
     font-size: 18px;
     color: white;
