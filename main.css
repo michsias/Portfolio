@@ -20,6 +20,22 @@ body
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(4,32,115,1) 89%, rgba(0,74,255,1) 100%);  
 }
 
+/* Stylowanie paska przewijania */
+::-webkit-scrollbar {
+    width: 10px; /* szerokość paska przewijania */
+  }
+  
+  /* Stylowanie paska przewijania w pionie */
+  ::-webkit-scrollbar-thumb {
+    background-color: #0048f8; /* kolor paska przewijania */
+    border-radius: 20px; /* zaokrąglenie rogów paska przewijania */
+  }
+  
+  /* Stylowanie tła paska przewijania */
+  ::-webkit-scrollbar-track {
+    background-color: #020127; /* kolor tła paska przewijania */
+  }
+
 /* CSS for "Home" page */
 
 .container-fluid
@@ -1226,7 +1242,7 @@ h2 > span
     text-align: center;
     letter-spacing: 1px;
 
-    background-color: #030b3f;
+    background-color: #020127;
     width: 100%;
 }
 
