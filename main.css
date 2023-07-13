@@ -38,6 +38,7 @@ body
 
 /* CSS for "Home" page */
 
+
 #centreDiv
 {
     max-width: 1400px;
@@ -857,7 +858,7 @@ Animacja ładowania
 #lastSectionMain
 {
     margin-top: 200px;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 
 #footerMain
@@ -924,6 +925,7 @@ Animacja ładowania
 
     width: 450px;
     height: 150px;
+    margin-bottom: 50px;
 
     font-size: 18px;
     font-weight: 600;
@@ -979,21 +981,12 @@ Animacja ładowania
 
 #pageTwo
 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 250px;
     position: relative;
-}
-@media (max-width: 900px)
-{
-    #pageTwo
-    {
-        width: 450px;
-        display: flex;
-        justify-content: center;
-    }
-    #pageTwoDiv
-    {
-    width: 250px;
-    }
+
 }
 
 #aboutMe
@@ -1025,7 +1018,9 @@ Animacja ładowania
     font-weight: 700;
 }
 
-#button
+
+
+.button
 {
     width: 100%;
     margin-top: 10px;
@@ -1034,7 +1029,7 @@ Animacja ładowania
     position: relative;
 }
 
-#button > button
+.button
 {
     cursor: pointer;
 
@@ -1056,15 +1051,28 @@ Animacja ładowania
                 transform 0.5s ease-in-out;
 
     position: absolute; 
-    top: 35px;
-    left: 75px; 
-    z-index: 2;
+    top: 60px;
+    left: 80px; 
 }
 
-#button > button:hover
+.button:hover
 {
     background-color: #002FF7;
     transform: scale(1.05);
+}
+
+.button > a
+{
+    color: white;
+
+    text-decoration: none;
+    
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 600;
+
+    display: inline-block;
+    width: 100%;
 }
 
 
@@ -1085,7 +1093,6 @@ Animacja ładowania
 
 #socialsDivs
 {
-    margin: 0 !important;
 
     display: flex;
     justify-content: center;
@@ -1198,7 +1205,9 @@ Animacja ładowania
     justify-content: center;
     align-items: center;
     width: 100%;
+
     padding: 0 !important;
+    margin: 0 !important;
 }
 
 #endDiv > p
@@ -1217,11 +1226,6 @@ Animacja ładowania
 
     background-color: #020127;
     width: 100%;
-}
-
-#footer
-{
-    padding: 0 !important;
 }
 
 /* CSS for "CV" page */
