@@ -396,7 +396,7 @@ h1 > a:hover
 
 #mainBox 
 {
-    width: 1200px;
+    width: 1400px;
 }
 
 #leftDiv 
@@ -916,14 +916,15 @@ Animacja ładowania
 
 
 
-#end
+#divCitation
 {
-
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
 
+    align-items: center;
     width: 450px;
+
     height: 150px;
 
     font-size: 18px;
@@ -941,7 +942,7 @@ Animacja ładowania
     position: relative;
 }
 
-#end > a 
+#divCitation > a 
 {
     width: 100%;
 
@@ -955,13 +956,13 @@ Animacja ładowania
 
 }
 
-#end > a:hover 
+#divCitation > a:hover 
 {
     opacity: 0.5;
     transform: scale(0.99);
 }
 
-#end a > p > span 
+#divCitation a > p > span 
 {
     font-size: 30px;
     font-weight: 800;
@@ -978,14 +979,12 @@ Animacja ładowania
     opacity: 0.5;
 }
 
-#pageTwo
+#divContents
 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     width: 250px;
+    display: flex;
+    flex-direction: column;
     position: relative;
-
 }
 
 #aboutMe
@@ -1015,17 +1014,6 @@ Animacja ładowania
 {
     color: #0046f8;
     font-weight: 700;
-}
-
-
-
-.button
-{
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 50px;
-
-    position: relative;
 }
 
 .button
