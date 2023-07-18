@@ -36,6 +36,11 @@ body
     background-color: #020127; /* kolor tła paska przewijania */
   }
 
+.container-fluid
+{
+    padding: 0 !important;
+}
+
 /* CSS for "Home" page */
 
 
@@ -366,57 +371,39 @@ h1 > a:hover
     margin-top: 0 !important;
 }
 
+/* ################################################## */
+/* Settings margin / boxes on page */
 
-#mainDiv
-{
-    display: flex;
-    flex-direction: column;
-}
-
-#divMain
-{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.firstSection
+.firstMargin
 {
     margin-top: 50px !important;
 }
-
-.sectionMargin
+.margin
 {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 150px;
+    margin-bottom: 200px;
 }
-
-/*Settigs first section in main */
+#lastMargin
+{
+    margin-top: 250px !important;
+    margin-bottom: 250px !important;
+}
 
 #mainBox 
 {
     width: 1400px;
 }
 
-#leftDiv 
+/* ################################################## */
+/* First section settings */
+
+/* First box in */
+#welcomeYou 
 {
-    width: 500px;
+    min-width: 500px;
+    max-width: 650px;
 }
   
-@media (min-width: 900px) 
-{
-    #leftDiv 
-    {
-      width: 650px;
-    }
-} 
-
-h2 > span
-{
-    color: #0048f8;
-}
-
 #junior
 {
  
@@ -428,7 +415,10 @@ h2 > span
     
     margin-bottom: 40px;
 }
-
+h2 > span
+{
+    color: #0048f8;
+}
 #infoJunior
 {
     margin-left: 30px;
@@ -441,17 +431,19 @@ h2 > span
     text-align: justify;
 
 }
-#rightDiv
+
+/* Second box in */
+#coddingTimer
 {
-    min-height: 330px;
+    height: 330px;
     width: 450px;
 
     border-radius: 50px;
     background-color: #0048f8;
     position: relative;
 }
-    
-#codding
+ 
+#divFrame
 {
     display: flex;
     flex-direction: column;
@@ -459,8 +451,9 @@ h2 > span
     width: 95%;
     height: 95%;
 
+
     position: absolute;
-    top: 8px;
+    top:  8px;
     left: 12px;
 
     border-radius: 50px;
@@ -469,7 +462,7 @@ h2 > span
     transition: all 0.5s ease-in-out;
 }
 
-#codding:hover
+#divFrame:hover
 {
     transform: scale(0.95);
 }
@@ -540,8 +533,8 @@ h2 > span
 
     position: relative;
 }
-
-/* Settings second section in main */
+/* ################################################## */
+/* First section settings */
 
 #levels
 {
@@ -775,7 +768,7 @@ Animacja ładowania
 {
     position: relative;
     overflow: hidden;
-}
+}   
 
 
 #learning:before 
@@ -853,12 +846,6 @@ Animacja ładowania
 .blocked
 {
     opacity: 0.2;
-}
-
-#lastSectionMain
-{
-    margin-top: 200px;
-    margin-bottom: 200px;
 }
 
 #footerMain
@@ -979,7 +966,7 @@ Animacja ładowania
     opacity: 0.5;
 }
 
-#divContents
+#divButton
 {
     width: 250px;
     display: flex;
@@ -987,7 +974,7 @@ Animacja ładowania
     position: relative;
 }
 
-#aboutMe
+#title
 {   
     width: 100%;
     
@@ -997,7 +984,7 @@ Animacja ładowania
     font-weight: 700;
 }
 
-#infoAbout
+#infoButton
 {
     width: 100%;
 
@@ -1010,7 +997,7 @@ Animacja ładowania
     opacity: 0.6;
 }
 
-#infoAbout > span
+#infoButton > span
 {
     color: #0046f8;
     font-weight: 700;
@@ -1023,11 +1010,8 @@ Animacja ładowania
     width: 150px;
     height: 50px;
     padding: 5px;
-
-    color: white;
     
     letter-spacing: 2px;
-    font-size: 18px;
     font-weight: 600;
 
     background-color: #0048f8;
