@@ -536,50 +536,55 @@ h2 > span
 /* ################################################## */
 /* First section settings */
 
-#levels
-{
-    margin: 0 !important;
-    padding: 0 !important;
-
-    border-top: 1px solid #020128;
-    border-bottom: 1px solid #020128;
+#ContainerBG
+{   
+    
+    background: linear-gradient(to top, #042073, #004aff);
+     /* https://cssgenerator.pl/box-shadow-generator/ */
+     -webkit-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
+     -moz-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
+     box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
     /* dodac moze shadowBox */
 }
 
 .level
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    padding: 30px;
-    background-color: #030b3f;
-}
-
-.level > p
-{
-    display: inline-block;
-    
-    padding: 20px;
-
+    width: 300px;
+    height: 100px;
     letter-spacing: 2px;
-    font-weight: 650;
+
 
     border: 5px solid #0046f8;
     border-radius: 50px;
 }
 
-/*
+.level > p
+{
+    display: inline-block;
+    margin: 0;
 
-Animacja ładowania
+    font-weight: 650;
+}
+
+#frontend, #backend, #fullstack
+{
+    position: relative;
+}
+
 .loading
 {
     width: 10px;
-    height: 30%;
-    margin-top: 70px;
-    background-color: #032990;
-
+    height: 15px;
+    margin-top: 85px;
+    background-color: #002FF7;
 
     position: absolute;
     left: 0;
-    top: 0;
+    top: 80px;
     animation: fillAnimation 10s infinite;
   }
 
@@ -587,26 +592,31 @@ Animacja ładowania
     0% {
         width: 0;
         filter: brightness(75%);
+        opacity: 0.5;
     }
     25% {
         filter: brightness(100%);
+        opacity: 1;
     }
     50% {
         filter: brightness(125%);
-        box-shadow:0 0 5px #032990;
+        box-shadow:0 0 10px #0048f8;
+        opacity: 1;
     }
     75% {
         filter: brightness(150%);
-        box-shadow:0 0 10px #032990;
+        box-shadow:0 0 15px #0048f8;
+        opacity: 1;
     }
     100% {
         width: 100%;
         filter: brightness(175%);
-        box-shadow:0 0 15px #032990;
+        box-shadow:0 0 20px #0048f8;
+        opacity: 0;
     }
   }
 
-  */
+
 
 #experienceSection
 {
