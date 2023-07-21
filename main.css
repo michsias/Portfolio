@@ -391,7 +391,7 @@ h1 > a:hover
 
 #mainBox 
 {
-    width: 1400px;
+    width: 1200px;
 }
 
 /* ################################################## */
@@ -670,9 +670,6 @@ h2 > span
 
 .experience
 {
-    flex-direction: column;
-    width: 380px;
-
     background-color: rgb(4,18,80);
     border-radius: 50px;
     border: solid 5px #032990;
@@ -680,24 +677,10 @@ h2 > span
                 box-shadow 0.3s ease-in-out
 }
 
-@media (max-width: 1205px)
+#tools
 {
-    .experience
-    {
-        width: 450px !important;
-    }
-    #nameTagTools
-    {
-        margin-top: 30px !important;
-
-    }
-    .skillsList li
-    {
-        width: 190px !important;
-    }
-
+    width: 100%;
 }
-
 
 .experience:hover
 {
@@ -784,51 +767,6 @@ h2 > span
 
 
 
-@media (min-width: 1205px) 
-{
-
-    #tools
-    {
-        display: flex;
-        flex-direction: row;
-
-        width:1180px;
-
-    }
-    #divTools
-    {
-        display: flex;
-
-        width: 100%x;
-        margin: 10px 0 10px 0;
-    }
-    #ulTools
-    {
-        justify-content: center;
-
-        width: 100%;    
-
-        text-align: center;
-        font-size: 18px;
-
-        height: 100%;
-
-        border-radius: 100px;
-    }
-
-    #ulTools > li
-    {
-        width: 200px;
-        height: 50px;
-
-        margin-top: 20px;
-    }
-}
-
-#nameTagTools
-{
-    margin-top: 20px;
-}
 
 
 /*Klasa do wysarzenia diva*/
