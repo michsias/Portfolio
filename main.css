@@ -677,11 +677,6 @@ h2 > span
                 box-shadow 0.3s ease-in-out
 }
 
-#tools
-{
-    width: 100%;
-}
-
 .experience:hover
 {
     transform: scale(0.95);
@@ -710,6 +705,7 @@ h2 > span
 .skillsList
 {
     height: 100%;
+    max-width: 400px;
 
     display: flex;
     flex-wrap: wrap;
@@ -717,7 +713,6 @@ h2 > span
 
     margin: 0;
     padding: 0;
-    gap: 10px;
 
     list-style: none;
 }
@@ -765,7 +760,10 @@ h2 > span
     }
 }
 
-
+#tools
+{
+    width: 100%;
+}
 
 
 
