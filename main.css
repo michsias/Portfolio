@@ -615,29 +615,10 @@ h2 > span
         opacity: 0;
     }
   }
+/* ################################################## */
+/* Settings experience section */
+ 
 
-
-
-#experienceSection
-{
-    max-width: 1400px;
-}
-
-#experienceSectionDiv
-{
-    display: flex;
-    justify-content: space-around;
-    /*jednego diva do lewej
-    a drugiego do prawej i miedzy nimi równy odstęp*/
-    flex-wrap: wrap;
-
-    max-width: 1200px;
-    height: 100%;
-    
-    margin-top: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 #settingsExperienceDiv
 {   
@@ -652,7 +633,7 @@ h2 > span
     }
 }
 
-#tiitleExperienceDiv
+#tiitleExperience
 {
     text-align: center;
     font-size: 24px;
@@ -660,7 +641,7 @@ h2 > span
     font-weight: 700;
 }
 
-#infoExperienceDiv
+#infoExperience
 {
     margin-top: 5px;
 
@@ -670,7 +651,7 @@ h2 > span
     opacity: 0.6;   
 }
 
-#infoExperienceDiv > a
+#infoExperience > a
 {
     font-size: 16px;
     font-weight: 700;
@@ -682,16 +663,14 @@ h2 > span
     text-decoration: none;
     transition: all 0.5s ease-in-out;
 }
-#infoExperienceDiv > a:hover
+#infoExperience > a:hover
 {
    opacity: 0.3;
 }
 
 .experience
 {
-    display: flex;
     flex-direction: column;
-
     width: 380px;
 
     background-color: rgb(4,18,80);
@@ -774,14 +753,14 @@ h2 > span
 
     border: 3px solid #032990;
 }
-#learning
+.learning
 {
     position: relative;
     overflow: hidden;
 }   
 
 
-#learning:before 
+.learning:before 
 {
     content: "";
     position: absolute;
