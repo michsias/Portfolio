@@ -400,7 +400,6 @@ h1 > a:hover
 /* First box in */
 #welcomeYou 
 {
-    min-width: 500px;
     max-width: 650px;
 }
   
@@ -670,6 +669,8 @@ h2 > span
 
 .experience
 {
+    min-width: 380px;
+
     background-color: rgb(4,18,80);
     border-radius: 50px;
     border: solid 5px #032990;
@@ -696,16 +697,14 @@ h2 > span
 
 .divList
 {
-    width: 100%;
+    max-width: 400px;
     margin-bottom: 10px;
-    margin-top: 10px;
 }
 
 
 .skillsList
 {
-    height: 100%;
-    max-width: 400px;
+
 
     display: flex;
     flex-wrap: wrap;
@@ -762,10 +761,25 @@ h2 > span
 
 #tools
 {
-    width: 100%;
+    min-width: 380px;
+    flex-direction: column;
 }
 
-
+@media (min-width: 1200px)
+{
+    #tools
+    {
+        width: 100% !important;
+    }
+    #divTools
+    {
+        width: 100% !important;
+    }
+    #ulTools
+    {
+        width: 100% !important;
+    }
+}
 
 /*Klasa do wysarzenia diva*/
 .blocked
