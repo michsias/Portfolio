@@ -539,7 +539,7 @@ h2 > span
 #ContainerBG
 {   
     
-    background: linear-gradient(to top, #042073, #004aff);
+    background: linear-gradient(to top, #030b3f, #032990);
      /* https://cssgenerator.pl/box-shadow-generator/ */
      -webkit-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
      -moz-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
@@ -557,7 +557,7 @@ h2 > span
     height: 100px;
     letter-spacing: 2px;
 
-
+    background-color: linear-gradient(to top, #030b3f, #ffffff);
     border: 5px solid #0046f8;
     border-radius: 50px;
 }
