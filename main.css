@@ -669,7 +669,7 @@ h2 > span
 
 .experience
 {
-    min-width: 380px;
+    width: 380px;
 
     background-color: rgb(4,18,80);
     border-radius: 50px;
@@ -687,6 +687,7 @@ h2 > span
 .nameTag
 {
     margin-top: 30px;
+    margin-bottom: 20px;
     margin-left: 20px;
 
     font-size: 18px;
@@ -694,13 +695,6 @@ h2 > span
     letter-spacing: 2px;
 
 }
-
-.divList
-{
-    max-width: 400px;
-    margin-bottom: 10px;
-}
-
 
 .skillsList
 {
@@ -723,13 +717,26 @@ h2 > span
 
     text-align: center;
     font-size: 18px;
-    padding: 10px;
+    padding: 15px;
+    
 
     border-radius: 100px;
     background-color: #0048f8;
 
     border: 3px solid #032990;
 }
+
+#ulTools
+{
+    justify-content: center !important;
+}       
+
+#ulTools li
+{
+    width: 200px !important;
+    margin-right: 20px;
+}
+
 .learning
 {
     position: relative;
@@ -760,27 +767,40 @@ h2 > span
 }
 
 #tools
-{
-    min-width: 380px;
+{   
     flex-direction: column;
 }
 
-@media (min-width: 1200px)
+@media (min-width: 1400px)
 {
     #tools
     {
-        width: 100% !important;
+       width: 100% !important;
     }
-    #divTools
+    
+    
+}
+@media (max-width: 1400px)
+{
+    
+    .experience
     {
-        width: 100% !important;
+        width: 480px !important;
     }
     #ulTools
     {
-        width: 100% !important;
+        justify-content: space-evenly !important;
+        margin-bottom: 20px;
+    }
+    #ulTools > li
+    {
+        margin: 0;
+    }
+    .skillsList > li
+    {
+        width: 200px !important;
     }
 }
-
 /*Klasa do wysarzenia diva*/
 .blocked
 {
