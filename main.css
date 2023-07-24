@@ -618,7 +618,7 @@ h2 > span
 /* Settings experience section */
  
 
-
+/*
 #settingsExperienceDiv
 {   
     height: 150px;
@@ -632,7 +632,29 @@ h2 > span
     }
 }
 
-#tiitleExperience
+*/
+
+#skillsDiv
+{
+    width: 600px;
+}
+
+@media (min-width: 1200px)
+{
+    #skillsDiv
+    {
+        width: 100%;
+    }
+}
+@media (max-width: 600px)
+{
+    #skillsDiv
+    {
+        width: 100%;
+    }
+}
+
+#titleProjects
 {
     text-align: center;
     font-size: 24px;
@@ -640,17 +662,16 @@ h2 > span
     font-weight: 700;
 }
 
-#infoExperience
+#linkProjects
 {
     margin-top: 5px;
 
     text-align: center;
-    font-size: 16px;
 
     opacity: 0.6;   
 }
 
-#infoExperience > a
+#linkProjects > a
 {
     font-size: 16px;
     font-weight: 700;
@@ -662,12 +683,12 @@ h2 > span
     text-decoration: none;
     transition: all 0.5s ease-in-out;
 }
-#infoExperience > a:hover
+#linkProjects > a:hover
 {
    opacity: 0.3;
 }
 
-.experience
+.skills
 {
     background-color: rgb(4,18,80);
     border-radius: 50px;
@@ -676,7 +697,7 @@ h2 > span
                 box-shadow 0.3s ease-in-out
 }
 
-.experience:hover
+.skills:hover
 {
     transform: scale(0.95);
     box-shadow:0 0 15px #032990;
@@ -781,7 +802,7 @@ h2 > span
 @media (max-width: 1400px)
 {
     
-    .experience
+    .skills
     {
         width: 480px !important;
     }
