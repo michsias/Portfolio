@@ -664,8 +664,6 @@ h2 > span
 
 #linkProjects
 {
-    margin-top: 5px;
-
     text-align: center;
 
     opacity: 0.6;   
@@ -673,7 +671,6 @@ h2 > span
 
 #linkProjects > a
 {
-    font-size: 16px;
     font-weight: 700;
 
     margin-left: 5px;
@@ -690,6 +687,9 @@ h2 > span
 
 .skills
 {
+    display: flex;
+    flex-direction: column;
+
     background-color: rgb(4,18,80);
     border-radius: 50px;
     border: solid 5px #032990;
@@ -740,7 +740,7 @@ h2 > span
     
 
     border-radius: 100px;
-    background-color: #0048f8;
+   
 
     border: 3px solid #032990;
 }
@@ -771,9 +771,9 @@ h2 > span
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, transparent, #032990);
+    background: linear-gradient(to right, transparent, #0048f8);
     animation: loaderAnimation 4s linear infinite;
-}
+} 
   
 @keyframes loaderAnimation 
 {
