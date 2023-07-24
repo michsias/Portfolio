@@ -669,8 +669,6 @@ h2 > span
 
 .experience
 {
-    width: 380px;
-
     background-color: rgb(4,18,80);
     border-radius: 50px;
     border: solid 5px #032990;
@@ -768,7 +766,7 @@ h2 > span
 
 #tools
 {   
-    flex-direction: column;
+    
 }
 
 @media (min-width: 1400px)
