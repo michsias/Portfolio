@@ -690,9 +690,9 @@ h2 > span
     display: flex;
     flex-direction: column;
 
-    background-color: rgb(4,18,80);
+    background-color: transparent;
     border-radius: 50px;
-    border: solid 5px #032990;
+    border: solid 5px #0048f8;
     transition: transform 0.5s ease-in-out,
                 box-shadow 0.3s ease-in-out
 }
@@ -742,7 +742,8 @@ h2 > span
     border-radius: 100px;
    
 
-    border: 3px solid #032990;
+    border: 3px solid #0048f8;
+    background: linear-gradient(to top, #042073, #004aff);
 }
 
 #ulTools
@@ -887,7 +888,6 @@ h2 > span
     justify-content: center;
     flex-direction: column;
 
-    align-items: center;
     width: 450px;
 
     height: 150px;
@@ -1000,7 +1000,7 @@ h2 > span
                 transform 0.5s ease-in-out;
 
     position: absolute; 
-    top: 60px;
+    top: 70px;
     left: 80px; 
 }
 
