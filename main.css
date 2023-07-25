@@ -676,13 +676,14 @@ h2 > span
     margin-left: 5px;
 
     color: #0048f8;
+    opacity: 1 !important;
 
     text-decoration: none;
     transition: all 0.5s ease-in-out;
 }
 #linkProjects > a:hover
 {
-   opacity: 0.3;
+   opacity: 0.5 !important;
 }
 
 .skills
@@ -977,8 +978,9 @@ h2 > span
 
 #infoButton > span
 {
-    color: #0046f8;
+    color: #0048f8;
     font-weight: 700;
+    opacity: 1 !important;
 }
 
 .button
@@ -1022,6 +1024,11 @@ h2 > span
 
     display: inline-block;
     width: 100%;
+}
+
+#footer
+{
+    flex-direction: column;
 }
 
 
@@ -1074,7 +1081,7 @@ h2 > span
     transform: scale(1.1);
 }
 
-@media (max-width: 700px)
+@media (max-width: 1000px)
 {
     .socials
     {
@@ -1085,11 +1092,6 @@ h2 > span
         -ms-transform: scale(1.1);
         -webkit-transform: scale(1.1);
         transform: scale(1.05);
-    }
-    .linkedin
-    {
-        margin-top: 30px;
-        margin-bottom: 30px;
     }
     .page
     {
