@@ -764,7 +764,6 @@ h2 > span
     overflow: hidden;
 }   
 
-
 .learning:before 
 {
     content: "";
@@ -774,54 +773,36 @@ h2 > span
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, transparent, #0048f8);
-    animation: loaderAnimation 4s linear infinite;
+    animation: progresAnimation 4s linear infinite;
 } 
   
-@keyframes loaderAnimation 
+@keyframes progresAnimation 
 {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 100%;
-    }
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
-#tools
-{   
-    
-}
+
 
 @media (min-width: 1400px)
 {
     #tools
-    {
-       width: 100% !important;
-    }
-    
-    
+    { width: 100% !important; }   
 }
+
 @media (max-width: 1400px)
 {
-    
     .skills
-    {
-        width: 480px !important;
-    }
+    { width: 480px !important; }
     #ulTools
     {
         justify-content: space-evenly !important;
         margin-bottom: 20px;
     }
-    #ulTools > li
-    {
-        margin: 0;
-    }
-    .skillsList > li
-    {
-        width: 200px !important;
-    }
+    #ulTools > li { margin: 0; }
+    .skillsList > li { width: 200px !important; }
 }
+
 /*Klasa do wysarzenia diva*/
 .blocked
 {
@@ -1086,12 +1067,12 @@ h2 > span
 
     margin: 0;
 
-    border: 2px #020229 solid;
+    border: 3px #020229 solid;
     background: linear-gradient(90deg, #0048f8, #042073);
     border-radius: 100px;
 
     transition: transform 0.8s ease-in-out;
-    animation: loaderAnimation 2s infinite;
+    animation: loaderAnimation 3s infinite;
 
 }
 
