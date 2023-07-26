@@ -1087,9 +1087,12 @@ h2 > span
     margin: 0;
 
     border: 2px #020229 solid;
+    background: linear-gradient(90deg, #0048f8, #042073);
     border-radius: 100px;
 
-    transition: all 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out;
+    animation: loaderAnimation 2s infinite;
+
 }
 
 .socials:hover
@@ -1098,6 +1101,15 @@ h2 > span
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}  
+
+@keyframes loaderAnimation 
+{   
+    0% { opacity: 1; }
+    25% { opacity: 0.8;}
+    50% { opacity: 0.6;}
+    75% { opacity: 0.8;}
+    100% { opacity: 1;}
 }
 
 @media (max-width: 1000px)
@@ -1128,6 +1140,7 @@ h2 > span
     margin-left: 20px;
 }
 
+/*
 .linkedin:hover
 {
 	background-color: rgb(10, 119, 181);
@@ -1148,6 +1161,8 @@ h2 > span
 
     cursor: pointer;
 }
+
+*/
 
 .page 
 {   
