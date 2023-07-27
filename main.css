@@ -155,20 +155,20 @@ h1 > a
     display: inline-block;
 
     color: white;
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
 	text-decoration: none;
     cursor: pointer;
     font-weight: 700;
 
     transition: all 0.5s ease-in-out;
-    animation: MyAnim 5s infinite;
+    animation: MyAnim 2s infinite;
 }
 
 h1 > a:hover 
 {
     font-weight: 700;
 
-    border-bottom: 2px solid #0048f8 ;
+    border-bottom: 3px solid #0048f8 ;
     text-decoration: none;
     
     -ms-transform: scale(0.9);
