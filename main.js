@@ -1,20 +1,9 @@
 
-const button = document.querySelector('#switch');
-
-button.addEventListener('ckick', function() 
-{
-  button.classList.toggle('buttonClick');
-})
-
-
-
-
-
-const nav = document.querySelector('#navMenu');
 const burger = document.querySelector('#switch');
+const nav = document.querySelector('#navBox')
 
 burger.addEventListener('click', function() 
 {
-  nav.classList.toggle('activeMenu');
   burger.classList.toggle('activeBurger');
+  nav.classList.toggle('navBox-bg');
 });
