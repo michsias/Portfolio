@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="font/css/fontello.css" >
 
     <!-- Boostrap local {28.07.2023} -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
     
 
     <!-- My CSS-->
@@ -68,7 +68,7 @@
     <header>
 
 
-            <nav class="navbar navbar-expand-xl" id="navBox" >
+            <nav class="navbar navbar-expand-xl" >
 
 
                 <div class="container-fluid justify-content-end" id="navBox">
@@ -172,7 +172,7 @@
                                     
                                     <div id="coddingTimer">
 
-                                        <div  id="divFrame">
+                                        <div id="divFrame" onmouseover="changeContent(true)" onmouseout="changeContent(false)">
 
                                             <div id="coddingTitle"> 
                                                 <h2>
@@ -183,14 +183,17 @@
                                             <div>
 
                                                 <ul id="coddingList">
+
                                                     <li> 
                                                         HTML + CSS
-                                                        <p> 2 month, 27 days</p>
+                                                        <p id="HTML-CSS"></p>
                                                     </li>
+
                                                     <li> 
                                                         JavaScript
-                                                        <p> 2 days </p>
+                                                        <p id="JS"></p>
                                                     </li>
+
                                                 </ul>
 
                                             </div>
@@ -495,7 +498,7 @@
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	
-	<script src="js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
     <script src="main.js"></script>
     
