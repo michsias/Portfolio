@@ -143,7 +143,7 @@ h1 > a:hover
 }
 
 /* ### */
-#navBox
+#navMenu
 {
     max-width: 1400px;
 }
@@ -156,82 +156,50 @@ h1 > a:hover
 
 .nav-item
 {
-    width: 100px;
+    width: 150px;
+    margin-right: 10px;
     text-align: center;
-}
-
-@media (max-width: 1200px)
-{
-    .nav-item
-    {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
-    .nav-item:first-child
-    {
-        margin-top: 20px;
-    }
+    padding: 2px;
 }
 
 .navBox-bg
 {
-    background: linear-gradient(to top, #030b3f, #0048f8);
+    background: #0048f8;
 }
 
 .nav-link
 {
     font-weight: 700;
     color: white;
+
+    border: 4px solid #0048f8;
+    border-radius: 50px;
     
     letter-spacing: 2px;
 
-    transition: all 0.35s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
-.nav-link:hover 
-    {
-        font-weight: 750;
+.nav-link:hover
+{   
 
-        color: #0048f8;
+        background-color: #0048f8;
+        border: 4px solid #020127;
+        color: #020127;
         
-        -ms-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }   
-
-@media (max-width: 1200px)
-{
-    .nav-link:hover 
-    {
-        color: #030b3f;
-    }   
-}
-
-@media (min-width: 1200px)
-{
-    .navbar-nav
-    {
-        margin-right: 150px;
-        margin-top: 20px;
-    }
-}
+        -ms-transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+}   
 
 .navbar-toggler
 {
     width: 50px;
 
     background-color: #0048f8;
-    border: 3px #030b3f solid;
+    border: 5px #030b3f solid;
     border-radius: 15px;
     transition: all .3s ease-in-out;
-}
-
-.activeBurger
-{
-    background: #030b3f;
-    border: 3px #0048f8 solid;
 }
 
 /* ################################################## */
@@ -380,6 +348,7 @@ h2 > span
 {
     margin: 0;
     margin-top: 5px;
+    height: 20px;
 
     color: white;
     font-weight: 400;
