@@ -1,91 +1,150 @@
+/*############################################################*/
 /* Global settings */
 
+:root {
+    --color-text: #ffffff;
+
+    --main-light-blue: #004Aff; /* #0048f8 */
+    --main-medium-blue: #042073;
+    --main-dark-blue: #020024;
+}
+
 * {
+
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body
-{
+
+body {
     width: 100%;
 
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    color: #ffffff;
+    color: var(--color-text);
 
     overflow-x: hidden;
 
     /*From: https://cssgradient.io/ */
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(4,32,115,1) 89%, rgba(0,74,255,1) 100%);  
+    background: 
+    linear-gradient(180deg, var(--main-dark-blue) 0%, 
+                            var(--main-medium-blue) 89%,
+                            var(--main-light-blue) 100%);  
+}
+
+.container-fluid {
+    padding: 0 !important;
 }
 
 /* Stylowanie paska przewijania */
 ::-webkit-scrollbar {
-    width: 10px; /* szerokość paska przewijania */
-  }
+    width: 10px; 
+}
   
   /* Stylowanie paska przewijania w pionie */
-  ::-webkit-scrollbar-thumb {
-    background-color: #0048f8; /* kolor paska przewijania */
-    border-radius: 20px; /* zaokrąglenie rogów paska przewijania */
-  }
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-light-blue); 
+    border-radius: 20px; 
+}
   
-  /* Stylowanie tła paska przewijania */
-  ::-webkit-scrollbar-track {
-    background-color: #020127; /* kolor tła paska przewijania */
-  }
+/* Stylowanie tła paska przewijania */
+::-webkit-scrollbar-track {
+    background-color: var(--main-dark-blue); 
+}
 
-.container-fluid
-{
+/*############################################################*/
+/* Navigation*/
+
+#navMenu {
+    max-width: 1400px;
+}
+
+.navbar {
     padding: 0 !important;
+    transition: all 2s ease-in-out;
 }
 
-/* CSS for "Home" page */
-main
-{
-    margin-top: 50px;
+.nav-item {
+    width: 150px;
+    margin-right: 10px;
+    padding: 2px;
+
+    text-align: center;
+}
+
+.navBox-bg {
+    background: var(--main-light-blue);
+}
+
+.nav-link {
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+
+    border: 4px solid var(--main-light-blue);
+    border-radius: 50px;
+
+    transition: all .5s ease-in-out;
+}
+
+.nav-link:hover {   
+    background-color: var(--main-light-blue);
+    border: 4px solid var(--main-dark-blue);
+    color: var(--main-dark-blue);
+        
+    -ms-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+}   
+
+.navbar-toggler {
+    width: 50px;
+
+    background-color: var(--main-light-blue);
+    border: 5px solid var(--main-dark-blue);
+    border-radius: 15px;
+
+    transition: all .3s ease-in-out;
+}
+/*############################################################*/
+/*############################################################*/
+/*############################################################*/
+/* CSS HOME PAGE */
+
+/* Boxes on page */
+#mainBox {
+    width: 1200px;
+}
+
+/* Settings margin / boxes on page */
+.firstMargin {
+    margin-top: 25px !important;
+}
+.margin {
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+#lastMargin {
+    margin-top: 300px !important;
+    margin-bottom: 200px !important;
 }
 
 
-#logoDiv
-{
-    width: 1000px;
-    height: 200px;
-}
+/* Logo div */
 
-
-/*CSS logo div */
-
-#logo
-{
-    width: 400px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    padding: 0 !important;
-}
-
-#colAvatar
-{
+#colAvatar {
     align-items: flex-end !important;
 }
 
-@media (max-width: 1200px)
-{
-    #colAvatar
-    {
+@media (max-width: 1200px) { 
+    #colAvatar {
         flex-direction: column !important;
         align-items: center !important;
     }
 }
 
-
-
-#avatar
-{
+#avatar {
     width: 200px;
     height: 200px;
 
@@ -93,16 +152,14 @@ main
     
 }
 
-#logoPNG
-{
+#logoPNG {
     height: inherit;
     width: inherit;
+
     border-radius: 50%;
 }
 
-
-h1
-{
+h1 {
     display: inline-block;
 
     margin-bottom: 0;
@@ -111,8 +168,7 @@ h1
     letter-spacing: 2px;
 }
 
-h1 > a
-{
+h1 > a {
     width: 100%;
     height: 100%;
 
@@ -120,21 +176,21 @@ h1 > a
 
     display: inline-block;
 
-    color: white;
-    border-bottom: 3px solid white;
+    font-weight: 700;
+    color: var(--color-text);
+
+    border-bottom: 3px solid var(--color-text);
 	text-decoration: none;
     cursor: pointer;
-    font-weight: 700;
 
     transition: all 0.5s ease-in-out;
     animation: MyAnim 2s infinite;
 }
 
-h1 > a:hover 
-{
+h1 > a:hover {
     font-weight: 700;
 
-    border-bottom: 3px solid #0048f8 ;
+    border-bottom: 3px solid var(--main-light-blue);
     text-decoration: none;
     
     -ms-transform: scale(0.9);
@@ -142,100 +198,15 @@ h1 > a:hover
     transform: scale(0.9);
 }
 
-/* ### */
-#navMenu
-{
-    max-width: 1400px;
-}
+/*############################################################*/
+/* Second Section */
 
-.navbar
-{
-    padding: 0 !important;
-    transition: all 2s ease-in-out;
-}
-
-.nav-item
-{
-    width: 150px;
-    margin-right: 10px;
-    text-align: center;
-    padding: 2px;
-}
-
-.navBox-bg
-{
-    background: #0048f8;
-}
-
-.nav-link
-{
-    font-weight: 700;
-    color: white;
-
-    border: 4px solid #0048f8;
-    border-radius: 50px;
-    
-    letter-spacing: 2px;
-
-    transition: all .5s ease-in-out;
-}
-
-.nav-link:hover
-{   
-
-        background-color: #0048f8;
-        border: 4px solid #020127;
-        color: #020127;
-        
-        -ms-transform: scale(0.95);
-        -webkit-transform: scale(0.95);
-        transform: scale(0.95);
-}   
-
-.navbar-toggler
-{
-    width: 50px;
-
-    background-color: #0048f8;
-    border: 5px #030b3f solid;
-    border-radius: 15px;
-    transition: all .3s ease-in-out;
-}
-
-/* ################################################## */
-/* Settings margin / boxes on page */
-
-.firstMargin
-{
-    margin-top: 25px !important;
-}
-.margin
-{
-    margin-top: 150px;
-    margin-bottom: 200px;
-}
-#lastMargin
-{
-    margin-top: 300px !important;
-    margin-bottom: 200px !important;
-}
-
-#mainBox 
-{
-    width: 1200px;
-}
-
-/* ################################################## */
-/* First section settings */
-
-/* First box in */
-#welcomeYou 
-{
+/* Left box */
+#welcomeYou {
     max-width: 650px;
 }
   
-#profession
-{
+#profession {
  
     text-align: center;
 
@@ -245,12 +216,12 @@ h1 > a:hover
     
     margin-bottom: 40px;
 }
-h2 > span
-{
-    color: #0048f8;
+
+h2 > span {
+    color: var(--main-light-blue);
 }
-#infoPage
-{
+
+#infoPage {
     margin-left: 30px;
     margin-right: 30px;
 
@@ -259,52 +230,51 @@ h2 > span
     letter-spacing: 1px;
     
     text-align: justify;
-
 }
 
-/* Second box in */
-#coddingTimer
-{
+/* Rigth box */
+#coddingTimer {
     height: 330px;
     width: 450px;
 
     border-radius: 50px;
-    background-color: #0048f8;
+    background-color: var(--main-light-blue);
+
     position: relative;
 }
  
-#divFrame
-{
-    display: flex;
-    flex-direction: column;
-
+#divFrame {
     width: 95%;
     height: 95%;
 
+    display: flex;
+    flex-direction: column;
 
     position: absolute;
     top:  8px;
     left: 12px;
 
     border-radius: 50px;
-    background-color: #030b3f;
+
+    background: 
+    linear-gradient(to top, var(--main-dark-blue), var(--main-medium-blue));
+     /* https://cssgenerator.pl/box-shadow-generator/ */
+     -webkit-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+     -moz-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
 
     transition: all 0.5s ease-in-out;
 }
 
-#divFrame:hover
-{
+#divFrame:hover {
     transform: scale(0.95);
 }
 
-#coddingTitle
-{
+#coddingTitle {
     width: 100%;
     margin-top: 20px;
 }
 
-#coddingTitle > h2
-{
+#coddingTitle > h2 {
     margin-left: 30px;
 
     font-size: 20px;
@@ -312,114 +282,111 @@ h2 > span
     letter-spacing: 2px;
 }
 
-
-#coddingList
-{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
+#coddingList {
     height: 100%;
     margin-top: 25px;
     padding: 0;
 
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
     list-style: none;
 }
 
-#coddingList > li
-{
+#coddingList > li {
 
     width: 180px;
     height: 80px;
+    padding: 10px;
 
     text-align: center;
     font-size: 16px;
     font-weight: 800;
     letter-spacing: 1px;
-    padding: 10px;
-
-    color: #030b3f;
+    color: var(--main-dark-blue);
 
     border-radius: 25px;
-    background-color: #0048f8;
+    background-color: var(--main-light-blue);
 }
 
-#coddingList > li > p
-{
+#coddingList > li > p {
     margin: 0;
     margin-top: 5px;
     height: 20px;
 
-    color: white;
+    color: var(--color-text);
     font-weight: 400;
-
     font-size: 14px;
+
     opacity: 0.6;
 }
 
-#coddingBackground
-{
+#coddingBackground {
     width: 100%;
     height: 100%;
 
     position: relative;
 }
-/* ################################################## */
-/* First section settings */
 
-#ContainerBG
-{   
+/* ################################################## */
+/*Second Section*/
+
+#ContainerBG {   
     
-    background: linear-gradient(to top, #030b3f, #032990);
+    background: 
+    linear-gradient(to top, var(--main-dark-blue), var(--main-medium-blue));
      /* https://cssgenerator.pl/box-shadow-generator/ */
-     -webkit-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
-     -moz-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
-     box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
+     -webkit-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+     -moz-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+
+     box-shadow: 0px 0px 100px -10px var(--main-light-blue);
     /* dodac moze shadowBox */
 }
 
-.level
-{
+.level {
+    width: 300px;
+    height: 100px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    width: 300px;
-    height: 100px;
     letter-spacing: 2px;
 
-    background-color: linear-gradient(to top, #030b3f, #ffffff);
-    border: 5px solid #0046f8;
+    background-color: 
+    linear-gradient(to top, var(--main-dark-blue), var(--color-text));
+
+    border: 5px solid var(--main-light-blue);
     border-radius: 50px;
 }
 
-.level > p
-{
+.level > p {
     display: inline-block;
     margin: 0;
 
     font-weight: 650;
 }
 
-#frontend, #backend, #fullstack
-{
+#frontend, #backend, #fullstack {
     position: relative;
 }
 
-.loading
-{
+.loading {
     width: 10px;
     height: 15px;
     margin-top: 85px;
-    background-color: #002FF7;
+
+    background-color: var(--main-light-blue);
 
     position: absolute;
     left: 0;
     top: 80px;
+
     animation: fillAnimation 10s infinite;
   }
 
-  @keyframes fillAnimation {
+@keyframes fillAnimation {
     0% {
         width: 0;
         filter: brightness(75%);
@@ -431,25 +398,24 @@ h2 > span
     }
     50% {
         filter: brightness(125%);
-        box-shadow:0 0 10px #0048f8;
+        box-shadow:0 0 10px var(--main-light-blue);
         opacity: 1;
     }
     75% {
         filter: brightness(150%);
-        box-shadow:0 0 15px #0048f8;
+        box-shadow:0 0 15px var(--main-light-blue);
         opacity: 1;
     }
     100% {
         width: 100%;
         filter: brightness(175%);
-        box-shadow:0 0 20px #0048f8;
+        box-shadow:0 0 20px var(--main-light-blue);
         opacity: 0;
     }
-  }
-/* ################################################## */
-/* Settings experience section */
- 
+}
 
+/* ################################################## */
+/* Third Section*/
 /*
 #settingsExperienceDiv
 {   
@@ -466,78 +432,67 @@ h2 > span
 
 */
 
-#skillsDiv
-{
+#skillsDiv {
     width: 600px;
 }
 
-@media (min-width: 1200px)
-{
-    #skillsDiv
-    {
-        width: 100%;
-    }
-}
-@media (max-width: 600px)
-{
-    #skillsDiv
-    {
-        width: 100%;
-    }
+@media (min-width: 1200px) {
+    #skillsDiv { width: 100%; }
 }
 
-#titleProjects
-{
+@media (max-width: 600px) {
+    #skillsDiv { width: 100%; }
+}
+
+#titleProjects {
     text-align: center;
     font-size: 24px;
     letter-spacing: 2px;
     font-weight: 700;
 }
 
-#linkProjects
-{
+#linkProjects {
     text-align: center;
 
     opacity: 0.6;   
 }
 
-#linkProjects > a
-{
+#linkProjects > a {
     font-weight: 700;
 
     margin-left: 5px;
 
-    color: #0048f8;
+    color: var(--main-light-blue);
+    text-decoration: none;
+    
     opacity: 1 !important;
 
-    text-decoration: none;
     transition: all 0.5s ease-in-out;
 }
-#linkProjects > a:hover
-{
+
+#linkProjects > a:hover {
    opacity: 0.5 !important;
 }
 
-.skills
-{
+.skills {
     display: flex;
     flex-direction: column;
 
     background-color: transparent;
     border-radius: 50px;
-    border: solid 5px #0048f8;
+    border: solid 5px var(--main-light-blue);
+
     transition: transform 0.5s ease-in-out,
                 box-shadow 0.3s ease-in-out
 }
 
-.skills:hover
-{
+.skills:hover {
     transform: scale(0.95);
-    box-shadow:0 0 15px #032990;
+
+    box-shadow:0 0 15px var(--main-medium-blue);
 }
 
-.nameTag
-{
+.nameTag {
     margin-top: 30px;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -545,13 +500,9 @@ h2 > span
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
-
 }
 
-.skillsList
-{
-
-
+.skillsList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -562,8 +513,7 @@ h2 > span
     list-style: none;
 }
 
-.skillsList li
-{
+.skillsList li {
     width: 150px; 
     margin-bottom: 20px;
 
@@ -571,139 +521,81 @@ h2 > span
     font-size: 18px;
     padding: 15px;
     
-
     border-radius: 100px;
-   
+    border: 3px solid var(--main-light-blue);
 
-    border: 3px solid #0048f8;
-    background: linear-gradient(to top, #042073, #004aff);
+    background: 
+    linear-gradient(to top, var(--main-dark-blue), var(--main-light-blue));
 }
 
-#ulTools
-{
+#ulTools {
     justify-content: center !important;
 }       
 
-#ulTools li
-{
+#ulTools li {
     width: 200px !important;
     margin-right: 20px;
 }
 
-.learning
-{
+.learning {
     position: relative;
     overflow: hidden;
 }   
 
-.learning:before 
-{
+.learning:before {
     content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, transparent, #0048f8);
+
+    background: 
+    linear-gradient(to right, transparent, var(--main-light-blue));
+
     animation: progresAnimation 4s linear infinite;
 } 
   
-@keyframes progresAnimation 
-{
+@keyframes progresAnimation {
     0% { left: -100%; }
     100% { left: 100%; }
 }
 
-
-
-@media (min-width: 1400px)
-{
+@media (min-width: 1400px) {
     #tools
     { width: 100% !important; }   
 }
 
-@media (max-width: 1400px)
-{
+@media (max-width: 1400px) {
     .skills
     { width: 480px !important; }
-    #ulTools
-    {
+
+    #ulTools {
         justify-content: space-evenly !important;
         margin-bottom: 20px;
     }
+
     #ulTools > li { margin: 0; }
+
     .skillsList > li { width: 200px !important; }
 }
 
-/*Klasa do wysarzenia diva*/
+/*Notactive divs*/
 .blocked
 {
     opacity: 0.2;
 }
 
-#footerMain
-{
-    display: flex;
-    justify-content: space-between;
-    /*jednego diva do lewej
-    a drugiego do prawej */
+/* ################################################## */
+/* Fourth Section*/
 
-    height: 200px;
-    max-width: 1200px;
-
-    
-    margin-top: 300px;
-    margin-bottom: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-.footerDivs
-{
-    display: flex;
-    flex-wrap: wrap;
-
-    height: 150px;
-    width: 500px;
-
-    padding: 10px;
-
-    text-align: center;
-}
-
-#footerMainDiv
-{
-    max-width: 1200px;
-}
-
-
-
-
-@media (max-width: 1150px) 
-{
-    
-
-    #footerMainDivs 
-    {
-      flex-direction: column; /* Zmienia układ divów na pionowy */
-      align-items: center;
-    }
-
-  }
-
-
-
-
-#divCitation
-{
+/* Left box */
+#divCitation{
     display: flex;
     justify-content: center;
     flex-direction: column;
 
     width: 450px;
-
     height: 200px;
 
     font-size: 18px;
@@ -711,73 +603,67 @@ h2 > span
 
     border-radius: 50px;
 
-    background: linear-gradient(to top, #004aff, #042073);
+    background: 
+    linear-gradient(to top, var(--main-light-blue), var(--main-dark-blue));
 
     /* https://cssgenerator.pl/box-shadow-generator/ */
-    -webkit-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
-    -moz-box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
-    box-shadow: 0px 0px 100px -10px rgba(0, 74, 255, 1);
+    -webkit-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+    -moz-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+    box-shadow: 0px 0px 100px -10px var(--main-light-blue);
 
     position: relative;
 }
 
-#divCitation > a 
-{
+#divCitation > a {
     width: 100%;
 
     text-align: center;
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
-
     letter-spacing: 2px;
 
     transition: all 0.5s ease-in-out ;
-
 }
 
-#divCitation > a:hover 
-{
+#divCitation > a:hover {
     opacity: 0.5;
+
     transform: scale(0.99);
 }
 
-#divCitation a > p > span 
-{
+#divCitation a > p > span {
     font-size: 30px;
     font-weight: 800;
     letter-spacing: 3px;
 }
 
-#author
-{
+#author {
     margin-left: 35px;
 
     letter-spacing: 3px;
-
     font-size: 16px;
+
     opacity: 0.5;
 }
 
-#divButton
-{
+/* Rigth div */
+#divButton {
     width: 250px;
+
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-#title
-{   
+#title {   
     width: 100%;
-    
     margin: 0;
 
     text-align: left;
     font-weight: 700;
 }
 
-#infoButton
-{
+#infoButton {
     width: 100%;
 
     line-height: 200%;
@@ -789,15 +675,14 @@ h2 > span
     opacity: 0.6;
 }
 
-#infoButton > span
-{
-    color: #0048f8;
+#infoButton > span {
+    color: var(--main-light-blue);
     font-weight: 700;
+
     opacity: 1 !important;
 }
 
-.button
-{
+.button {
     cursor: pointer;
 
     width: 150px;
@@ -805,9 +690,13 @@ h2 > span
     
     letter-spacing: 2px;
     font-weight: 600;
-
-    background: linear-gradient(to bottom, #0048f8, #042073);
-    border: 4px solid #032990;
+    background: 
+    linear-gradient(to top, var(--main-light-blue), var(--main-dark-blue));
+     /* https://cssgenerator.pl/box-shadow-generator/ */
+     -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+     -moz-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+    
+    border: 4px solid var(--main-medium-blue);
 
     border-radius: 100px;
     transition: background-color 0.1s ease-in-out,
@@ -821,23 +710,19 @@ h2 > span
     left: 80px; 
 }
 
-.button:hover
-{
-    background: linear-gradient(to bottom #042073, #0048f8);
+.button:hover {
+    background: 
+    linear-gradient(to top var(--main-dark-blue), var(--main-light-blue));
+    
     transform: scale(1.05);
-    /* https://cssgenerator.pl/box-shadow-generator/ */
-    -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 74, 255, 1);
-    -moz-box-shadow: 0px 0px 25px -10px rgba(0, 74, 255, 1);
-    box-shadow: 0px 0px 25px -10px rgba(0, 74, 255, 1);
 
-    border: 4px solid #0048f8;
+    border: 4px solid var(--main-light-blue);
 
-    color: #0048f8 !important;
+    color: var(--main-light-blue) !important;
 }
 
-.button > a
-{
-    color: white;
+.button > a {
+    color: var(--color-text);
 
     text-decoration: none;
     text-align: center;
@@ -854,43 +739,19 @@ h2 > span
     transition: all 0.1s ease-in-out;
 }
 
-.button > a:hover
-{
-    color: #0048f8 !important;
+.button > a:hover {
+    color: var(--main-light-blue) !important;
     font-weight: 700;;
 }
 
-#footer
-{
+/*############################################################*/
+/* Footer */
+
+#footer {
     flex-direction: column;
 }
 
-
-#socialDiv
-{
-    display: flex;
-    justify-content: center;
-    /*jednego diva do lewej
-    a drugiego do prawej */
-
-    height: 40px;
-    width: 100%;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-}
-
-#socialsDivs
-{
-
-    display: flex;
-    justify-content: center;
-}
-
-
-.socials
-{
+.socials {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -899,25 +760,29 @@ h2 > span
 
     margin: 0;
 
-    border: 3px #020229 solid;
-    background: linear-gradient(90deg, #0048f8, #042073);
     border-radius: 100px;
+    border: 3px solid var(--main-dark-blue);
+    
+    background: 
+    linear-gradient(to top, var(--main-light-blue), var(--main-dark-blue));
+     /* https://cssgenerator.pl/box-shadow-generator/ */
+     -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+     -moz-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+
 
     transition: transform 0.8s ease-in-out;
+
     animation: loaderAnimation 3s infinite;
 
 }
 
-.socials:hover
-
-{
+.socials:hover{
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }  
 
-@keyframes loaderAnimation 
-{   
+@keyframes loaderAnimation {   
     0% { opacity: 1; }
     25% { opacity: 0.8;}
     50% { opacity: 0.6;}
@@ -925,30 +790,21 @@ h2 > span
     100% { opacity: 1;}
 }
 
-@media (max-width: 1200px)
-{
-    .socials
-    {
-        width: 450px !important;
-    }
-    .socials:hover
-    {
+@media (max-width: 1200px) {
+    .socials { width: 450px !important; }
+
+    .socials:hover {
         -ms-transform: scale(1.1);
         -webkit-transform: scale(1.1);
         transform: scale(1.05);
     }
-    .page
-    {
-        margin-top: 20px !important;
-    }
-    .socialsHelp
-    {
-        justify-content: center !important;
-    }
+
+    .page { margin-top: 20px !important; }
+
+    .socialsHelp { justify-content: center !important;}
 }
 
-.linkedin
-{
+.linkedin {
     margin-right: 20px;
     margin-left: 20px;
 }
@@ -977,9 +833,7 @@ h2 > span
 
 */
 
-.page 
-{   
-
+.page {   
     width: 100%;
     height: 100%;
     text-align: center;
@@ -987,7 +841,7 @@ h2 > span
     font-weight: 600;
 
     font-size: 18px;
-    color: white;
+    color: var(--color-text);
 
     display: inline-block;
 
@@ -996,14 +850,13 @@ h2 > span
 
     transition: all 0.5s ease-in-out;
 }
-.page:hover
-{
+.page:hover {
     text-decoration: none;
-    color: white;
+    color: var(--color-text);
 }
 
-#endDiv
-{
+/* Author */
+#endDiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1013,13 +866,12 @@ h2 > span
     margin: 0 !important;
 }
 
-#endDiv > p
-{
+#endDiv > p {
     margin-bottom: 0;
 }
 
-#law
-{
+#law {
+    width: 100%;
     padding: 5px;
     margin-top: 10px;
 
@@ -1027,13 +879,13 @@ h2 > span
     text-align: center;
     letter-spacing: 1px;
 
-    background-color: #020127;
-    width: 100%;
+    background-color: var(--main-dark-blue);
 }
 
-/* CSS for "CV" page */
-
-
+/*############################################################*/
+/*############################################################*/
+/*############################################################*/
+/* CSS for "CV" page *
 
 
 
