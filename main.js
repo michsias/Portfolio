@@ -28,3 +28,11 @@ setInterval(() => updateTimer(coddingJS, start_JS), 500);
 
 divFrame.addEventListener('mouseenter', () => changeContent(true));
 divFrame.addEventListener('mouseleave', () => changeContent(false));
+
+///////////////////////////////////////////////////////////////////////////
+
+const switchBG = document.querySelector('.switch');
+
+switchBG.addEventListener('click', (event) => {
+    switchBG.classList.toggle('activeSwitch');
+})

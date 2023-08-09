@@ -55,6 +55,45 @@ body {
 
 /*############################################################*/
 /* Navigation*/
+.switch
+{
+    border: 5px solid var(--main-medium-blue);
+}
+
+@media (max-width: 1200px) {
+    .navbar { 
+        background: 
+        linear-gradient(to bottom, var(--main-light-blue), var(--main-dark-blue));
+    }
+
+    .nav-item {
+        width: 150px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        padding: 2px;
+    
+        text-align: center;
+    }
+    
+    .navBox-bg {
+        background: var(--main-light-blue);
+    }
+    
+    .nav-link {
+        font-weight: 700;
+        color: white;
+        letter-spacing: 2px;
+    
+        border: 4px solid var(--main-light-blue);
+        border-radius: 50px;
+    
+        transition: all .5s ease-in-out;
+    }
+}
+
+.activeSwitch {
+    background: var(--main-dark-blue);
+}
 
 #navMenu {
     max-width: 1400px;
