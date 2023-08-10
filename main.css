@@ -7,6 +7,11 @@
     --main-light-blue: #004Aff; /* #0048f8 */
     --main-medium-blue: #042073;
     --main-dark-blue: #020024;
+
+    --animation-top-light-dark:
+    --animation-top-dark-light: 
+    --animation-top-dark-medium:  
+    --animation-bottom-light-dark:
 }
 
 * {
@@ -67,7 +72,7 @@ body {
     }
 
     .nav-item {
-        width: 150px;
+        width: 100%;
         margin-right: 10px;
         margin-bottom: 20px;
         padding: 2px;
