@@ -533,7 +533,7 @@ h2 > span {
 .skills:hover {
     transform: scale(0.95);
 
-    box-shadow:0 0 15px var(--main-medium-blue);
+    box-shadow:0 0 50px var(--main-medium-blue);
 }
 
 .nameTag {
@@ -577,8 +577,9 @@ h2 > span {
 }       
 
 #ulTools li {
-    width: 200px !important;
+    width: 200px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .learning {
@@ -615,11 +616,9 @@ h2 > span {
     { width: 480px !important; }
 
     #ulTools {
-        justify-content: space-evenly !important;
         margin-bottom: 20px;
+        width: 430px;
     }
-
-    #ulTools > li { margin: 0; }
 
     .skillsList > li { width: 200px !important; }
 }
