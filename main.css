@@ -582,6 +582,13 @@ h2 > span {
     margin-bottom: 20px;
 }
 
+.impostor
+{
+    width: 1px !important;
+    opacity: 0;
+    margin: 0 !important;
+}
+
 .learning {
     position: relative;
     overflow: hidden;
@@ -617,7 +624,6 @@ h2 > span {
 
     #ulTools {
         margin-bottom: 20px;
-        width: 430px;
     }
 
     .skillsList > li { width: 200px !important; }
