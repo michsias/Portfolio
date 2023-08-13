@@ -94,17 +94,11 @@
 
                         <ul class="mx-5 navbar-nav d-flex align-items-center">
 
-                          <li class="nav-item">
-                            <a class="nav-link" href="Home.html">Home</a>
-                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="Home.html">Home</a> </li>
 
-                          <li class="nav-item">
-                            <a class="nav-link" href="CV.html">CV</a>
-                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="CV.html">CV</a> </li>
                           
-                          <li class="nav-item">
-                            <a class="nav-link" href="Contact.html">Contact</a>
-                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact</a> </li>
 
                         </ul>
 
@@ -134,7 +128,7 @@
 
                                 <div id="full_name">
 
-                                    <img  src="img/profil.jpg" alt="profile picture of michał Kawczak">  
+                                    <img  src="img/profil.jpeg" alt="profile picture of michał Kawczak">  
 
                                     <h1> 
                                         Michał Kawczak
@@ -150,6 +144,11 @@
 
                                         <ol>
 
+                                            <li>   
+                                                <i class="icon-linkedin-squared icon"> </i>
+                                                <a  href="https://www.linkedin.com/in/micha%C5%82-kawczak-279372279/" target="_blank" class="contact"> Linkedin </a>    
+                                            </li>
+
                                             <li> 
                                                 <i class="bi bi-envelope-at-fill icon "></i>
                                                 <a href="mailto:mkawczak00@gmail.com" class="contact"> mkawczak00@gmail.com </a>
@@ -160,20 +159,10 @@
                                                 <a href="tel:+48 506-340-845" class="contact"> +48 506-340-845 </a>
                                             </li>
 
-                                            <li> 
-                                                <i class="bi bi-calendar2-week-fill icon "></i> 
-                                                14.05.2000 
-                                            </li>
+                                            <li> <i class="bi bi-calendar2-week-fill icon "></i> 14.05.2000 </li>
 
-                                            <li> 
-                                                <i class="bi bi-geo-alt-fill icon "></i> 
-                                                Warszawa 
-                                            </li>
+                                            <li> <i class="bi bi-geo-alt-fill icon "></i> Warszawa </li>
 
-                                             <li>   
-                                                <i class="icon-linkedin-squared icon"> </i>
-                                                <a  href="https://www.linkedin.com/in/micha%C5%82-kawczak-279372279/" target="_blank" class="contact"> Linkedin </a>    
-                                            </li>
 
                                         </ol>
                                     
@@ -205,7 +194,7 @@
                                         Cześć, nazywam się Michał, mam 23 latat, studiuje mechatronike a zawodowo jestem elektronikiem. 
                                         Od jakiegoś czasu rozwijam swoje umiejętnośći jako web developer oraz chciałbym w przyszłości jako app developer.
                                         Poznałem podstawy C oraz C++, a aktualnie skupiam się na nauce HTML + CSS oraz JavaScript. 
-                                        Pisanie "koda" sprawia mi dużą przyjemność oraz fakt ciągłexgo rozwoju.  
+                                        Pisanie "koda" sprawia mi dużą przyjemność oraz fakt ciągłego rozwoju.  
                                     </p>
                                     
                                 </div>
@@ -237,14 +226,14 @@
 
                                         <ul>
 
-                                            <li> HTML5 </li>
-                                            <li> CSS </li>
-                                            <li> JavaScript </li>
-                                            <li> Git </li>
-                                            <li> C/C++ </li>
-                                            <li> Fusion360 </li>
-                                            <li> Arduino IDE </li>
-                                            <li> MS Office </li>    
+                                            <li class="list_type"> HTML5 </li>
+                                            <li class="list_type"> CSS </li>
+                                            <li class="list_type"> JavaScript </li>
+                                            <li class="list_type"> Git </li>
+                                            <li class="list_type"> C/C++ <span> [Studia/Praca]</span> </li>
+                                            <li class="list_type"> Fusion360 <span> [Praca] </span> </li>
+                                            <li class="list_type"> Arduino IDE <span> [Praca] </span> </li>
+                                            <li class="list_type"> MS Office </li>    
 
                                         </ul>
                                         
@@ -271,7 +260,7 @@
                             </div>
 
                         </div>  
-                    
+                        
 
                 </Section>
 
@@ -281,10 +270,10 @@
 
                     <div class="container-fluid d-flex justify-content-center">
                             
-                        <div class=" row justify-content-center align-items-center main_box custom_border_bottom">
+                        <div class=" row justify-content-center main_box custom_border_bottom">
 
     
-                            <div class="p-3 my-3 col-md-11 col-11">
+                            <div class="p-3 my-3 col-md-6 col-11">
 
                                 <div id="work_eperience">
 
@@ -292,17 +281,21 @@
 
                                     <ol id="jobs">
 
+                                        <!-- Można zrobić z tego komponent? -->
+                                        
+                                        <p class="start_work"> [ 11.2022 - obecnie ]: </p>
                                         <li>
-                                            <p id="date"> [ 11.2022 - obecnie ] </p>
-                                            <p id="company"> <span> Elektronik </span> - Mysteryinc </p> 
+                                            <p id="company"> <span> Elektronik </span> - Mysteryinc - Warszawa  </p> 
                                             
                                             <ul id="duties">
-                                                <li> Programowanie w C/C++ - Arduino IDE </li>
-                                                <li> Projektowanie druków 3D - Fusion360 </li>
-                                                <li> Projektowanie i lutowanie elektroniki</li>
+                                                <li class="list_type"> Programowanie w C/C++ - Arduino IDE </li>
+                                                <li class="list_type"> Projektowanie druków 3D - Fusion360 </li>
+                                                <li class="list_type"> Projektowanie i lutowanie elektroniki</li>
                                             </ul>
 
                                         </li>
+
+                                        <!-- ########## -->
 
                                     </ol>
                                     
@@ -310,10 +303,25 @@
 
                             </div>
 
+                            <div class="p-3 my-3 col-md-5 col-11 d-flex justify-content-center">
+                                    
+                                <div class="rigth_box">
+
+                                    <h2 class="title_boxes"> Uprawnienia</h2>
+
+                                    <ol>
+
+                                        <li class="list_type"> Sep 1 kV</li>
+                                        <li class="list_type"> Prawo jazdy kat. B</li>
+
+                                    </ol>
+                                    
+                                </div>
+                            
+                            </div>
+
 
                         </div>
-
-                    </div>
 
 
                 </Section>
@@ -324,10 +332,10 @@
 
                     <div class="container-fluid d-flex justify-content-center">
                             
-                            <div class=" row justify-content-center align-items-center main_box custom_border_bottom">
+                            <div class=" row justify-content-center main_box custom_border_bottom">
 
         
-                                <div class="p-3 my-4 col-lg-6 col-11 d-flex justify-content-center">
+                                <div class="p-3 my-3 col-lg-6 col-11 d-flex justify-content-center">
 
                                     <div id="education">
 
@@ -335,16 +343,16 @@
 
                                         <ol>
 
-                                            <li> 
-                                                <p> 09.2016 - 06.2019:</p>  
+                                            <p class="start_work"> [ 09.2016 - 06.2019 ]:</p>
+                                            <li class="list_type">   
                                                 <a href= "http://www.lo2.radomsko.pl/cms/index.php"> 
                                                 II Liceum Ogólnokształcące 
                                                 im. K. K. Baczyńskiego </a>
                                                 <p> Kierunek: mat-jęz</p> 
                                             </li>
 
-                                            <li> 
-                                                <p> 10.2020 - obecnie: </p>
+                                            <p class="start_work"> [ 10.2020 - obecnie ]: </p>
+                                            <li class="list_type"> 
                                                 <a href="https://www.wst.com.pl/"> 
                                                 Wyższa Szkoła Techniczna w Katowicach </a>
                                                 <p> Kierunek: mechatronika</p>
@@ -358,17 +366,49 @@
                                 </div>
 
 
-                                <div class="p-3 my-4 col-lg-5 col-11 d-flex justify-content-center">
+                                <div class="p-3 my-3 col-lg-5 col-11 d-flex justify-content-center">
                                     
-                                    <div id="languages">
+                                    <div class="rigth_box">
 
                                         <h2 class="title_boxes"> Jęzki obce</h2>
 
                                         <ol>
+                                            <li class="list_type"> Polski - ojczysty</li>
+                                            <li class="list_type"> Angielski - B1</li>
+                                        </ol>
+                                        
+                                    </div>
+                                
+                                </div>
 
-                                            <li> Polski - ojczysty</li>
-                                            <li> Angielski - B1</li>
 
+                            </div>
+
+                        </div>
+
+
+                </Section>
+
+                <Section> 
+
+
+                    <div class="container-fluid d-flex justify-content-center">
+                            
+                            <div class=" row justify-content-center main_box custom_border_bottom">
+
+
+                                <div class="p-3 my-3 col-11 d-flex justify-content-center">
+                                    
+                                    <div id="interest">
+
+                                        <h2 class="title_boxes"> Zainteresowania</h2>
+
+                                        <ol>
+                                            <li class="list_type"> Technologia </li>
+                                            <li class="list_type"> Sport </li>
+                                            <li class="list_type"> Muzyka </li>
+                                            <li class="list_type"> Motoryzacja </li>
+                                            <li class="list_type"> Podróże </li>
                                         </ol>
                                         
                                     </div>
@@ -424,7 +464,7 @@
     <footer>
 
 
-        <Section class="firstMargin">
+        <Section class="margin_cv">
             
             <div class="row">
 

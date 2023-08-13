@@ -949,6 +949,10 @@ h2 > span {
     linear-gradient(to top, var(--main-light-blue), var(--main-dark-blue));
 }
 
+.margin_cv {
+    margin-top: 100px;
+}
+
 
 /*############################################################*/
 /* Add title in Navigation */
@@ -975,9 +979,7 @@ h2 > span {
 .main_box {
     width: 95%;
 }
-li {
-    list-style: none;
-}
+
 .custom_border {
     border-top: 5px solid var(--main-light-blue);
     border-bottom: 5px solid var(--main-light-blue);
@@ -991,6 +993,17 @@ h2 {
     font-weight: 700;
     margin-bottom: 20px;
 }
+
+li {
+    list-style: none;
+}
+.list_type {
+    padding: 5px;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 1px;
+ }
+
 /*############################################################*/
 /* First Section - Name/Adress */
 
@@ -1008,6 +1021,7 @@ h2 {
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    border: 5px solid  var(--main-light-blue);
 }
 
 #full_name > h1 {
@@ -1061,11 +1075,6 @@ h2 {
 
 #my_skills > ul > li {
     list-style-type: square;
-    padding: 5px;
-
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 150%;
 }
 
 #repository_Button > button {
@@ -1088,13 +1097,19 @@ h2 {
     transform: scale(0.9);
 }
 
-#repository_Button > button > a {
+#repository_Button >     button > a {
     text-decoration: none;
     color: var(--color-text);
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 2px;
 }
+
+#my_skills > ul > li > span {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
  .icon_repo {
     font-size: 32px !important;
  }
@@ -1102,11 +1117,18 @@ h2 {
 /*############################################################*/
 /* Fiveth Section - Experience */
 
-#date {
-    margin-bottom: 5px;
+
+
+.start_work {
+    margin-bottom: 0;
     font-size: 16px;
     opacity: 0.7;
 }
+
+#jobs > li {
+    list-style-type: square;
+}
+
 #company{
     letter-spacing: 1px ;
 }
@@ -1117,25 +1139,77 @@ h2 {
 
 #duties > li {
     font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 1px;
-    list-style-type: square;
+    list-style: disc;
  }
-
 
 /*############################################################*/
 /* Sixth Section - Languages / Education */
 
 
 /* Left box */
+#education ol > li {
+    margin-bottom: 20px;
+    list-style: square;
+}
 
-/* Right box */
+#education ol > li > a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#education ol > li > p:not(:first-child) {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* Rithg box */
+
+.rigth_box > ol > li {
+    list-style-type: square;
+    font-weight: 550;
+}
 
 
 /*############################################################*/
-/* Seventh Section - Clause */
+/* Seventh Section - interest */
 
+#interest {
+    width: 100%;
+}
 
+#interest > ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 100%;
+
+    text-align: center;
+    font-weight: 550;
+}
+
+#interest > ol > li {
+
+    padding: 10px;
+    border: 5px solid var(--main-light-blue);
+    border-radius: 50px;
+
+    min-width: 150px;
+}
+
+/*############################################################*/
+/* Eightth Section - Clause */
+
+#clause > p {
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
 
 
 
