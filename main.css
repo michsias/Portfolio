@@ -938,6 +938,17 @@ h2 > span {
 /*############################################################*/
 /* CSS for "CV" page */
 
+.cv_print
+{
+    max-width: 1200px;
+    margin-top: 100px;
+
+    border: 5px solid var(--main-light-blue);
+    border-radius: 80px;
+    background: 
+    linear-gradient(to top, var(--main-light-blue), var(--main-dark-blue));
+}
+
 
 /*############################################################*/
 /* Add title in Navigation */
@@ -961,24 +972,159 @@ h2 > span {
 
 /*############################################################*/
 /* Main container CV */
+.main_box {
+    width: 95%;
+}
+li {
+    list-style: none;
+}
+.custom_border {
+    border-top: 5px solid var(--main-light-blue);
+    border-bottom: 5px solid var(--main-light-blue);
+}
+.custom_border_bottom {
+    border-bottom: 5px solid var(--main-light-blue);
+}
 
+h2 {
+    width: 100% !important;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
 /*############################################################*/
 /* First Section - Name/Adress */
 
 
 /* Left box */
+#full_name {
 
-/* RIghtbox */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+}
+
+#full_name > img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#full_name > h1 {
+    margin-top: 20px;
+    font-size: 36px;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+}
+
+/* Rightbox */
+
+#adress > ol {
+    padding: 0;
+    margin: 0;
+}
+
+#adress > ol > li {
+    padding: 15px;
+}
+
+.contact {
+
+    color: var(--main-light-blue);
+    text-decoration: none !important;
+    font-weight: 700;
+
+    transition: all .5s ease-in-out;
+}
+/* .contact:hover {
+    transform: scale(1.5);
+} */
+
+.icon {
+    margin-right: 10px;
+}
+
+/*############################################################*/
+    /* Third Section - about */
+
+#frontend_developer > p {
+    
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 180%;
+}
+
+/*############################################################*/
+    /* Fourth Section - Skills */
+
+
+#my_skills > ul > li {
+    list-style-type: square;
+    padding: 5px;
+
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 150%;
+}
+
+#repository_Button > button {
+
+    width: 300px;
+    height: 150px;
+
+    border: 10px solid var(--main-light-blue);
+    border-radius: 50px;
+
+    background-color: transparent;
+    -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+    -moz-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+    box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+
+    transition: all .5s ease-in-out;
+}
+
+#repository_Button > button:hover {
+    transform: scale(0.9);
+}
+
+#repository_Button > button > a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+ .icon_repo {
+    font-size: 32px !important;
+ }
+
+/*############################################################*/
+/* Fiveth Section - Experience */
+
+#date {
+    margin-bottom: 5px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+#company{
+    letter-spacing: 1px ;
+}
+
+#company > span {
+    font-weight: 700;
+}
+
+#duties > li {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    list-style-type: square;
+ }
 
 
 /*############################################################*/
-/* Second Section - Links */
-
-
-/* Box */
-
-/*############################################################*/
-/* Third Section - Skills/Experience  */
+/* Sixth Section - Languages / Education */
 
 
 /* Left box */
@@ -987,12 +1133,8 @@ h2 > span {
 
 
 /*############################################################*/
-/* Fourth Section - Languages / Education */
+/* Seventh Section - Clause */
 
-
-/* Left box */
-
-/* Right box */
 
 
 
