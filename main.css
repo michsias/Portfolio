@@ -303,8 +303,9 @@ h2 > span {
     background: 
     linear-gradient(to top, var(--main-dark-blue), var(--main-medium-blue));
      /* https://cssgenerator.pl/box-shadow-generator/ */
-     -webkit-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
-     -moz-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+    -webkit-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+    -moz-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+    box-shadow: 0px 0px 100px -10px var(--main-light-blue);
 
     transition: all 0.5s ease-in-out;
 }
@@ -947,6 +948,9 @@ h2 > span {
     border-radius: 80px;
     background: 
     linear-gradient(to top, var(--main-light-blue), var(--main-dark-blue));
+    -webkit-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+    -moz-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+    box-shadow: 0px 0px 100px -10px var(--main-light-blue);
 }
 
 .margin_cv {
@@ -975,7 +979,8 @@ h2 > span {
 }
 
 /*############################################################*/
-/* Main container CV */
+/*############################################################*/
+/* Globall settings */
 .main_box {
     width: 95%;
 }
@@ -1004,6 +1009,7 @@ li {
     letter-spacing: 1px;
  }
 
+/*############################################################*/
 /*############################################################*/
 /* First Section - Name/Adress */
 
@@ -1117,7 +1123,9 @@ li {
 /*############################################################*/
 /* Fiveth Section - Experience */
 
-
+#work_experience {
+    width: 100% !important;
+}
 
 .start_work {
     margin-bottom: 0;
@@ -1192,13 +1200,38 @@ li {
     font-weight: 550;
 }
 
+@media (max-width: 1000px) {
+    #interest > ol {
+        flex-direction: column;
+    }
+
+    #interest > ol > li {
+        margin-bottom: 20px;
+        max-width: 200px;
+        justify-content: flex-start !important;
+    }
+
+    #work_experience {
+        border-bottom: 5px solid var(--main-light-blue);
+    }
+}
+
 #interest > ol > li {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     padding: 10px;
     border: 5px solid var(--main-light-blue);
     border-radius: 50px;
 
     min-width: 150px;
+}
+
+#interest > ol > li > i {
+    font-size: 35px;
+    margin-right: 10px;
 }
 
 /*############################################################*/
