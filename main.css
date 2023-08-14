@@ -1021,6 +1021,8 @@ li {
     align-items: center;
     flex-direction: column;
     height: 350px;
+
+    position: relative;
 }
 
 #full_name > img {
@@ -1036,6 +1038,22 @@ li {
     letter-spacing: 2px;
     font-weight: 600;
 
+}
+
+
+#full_name > .buttons {
+    width: 50px;
+    height: 100px;
+    padding: 5px;
+
+    position: absolute;
+    left: 900px;
+}
+#full_name > .buttons > button > i {
+    font-size: 35px;
+}
+#full_name > .buttons > button {
+    margin-bottom: 20px;
 }
 
 /* Rightbox */
