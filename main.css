@@ -1032,9 +1032,9 @@ li {
 
 #full_name > h1 {
     margin-top: 20px;
-    font-size: 36px;
+    font-size: 38px;
     letter-spacing: 2px;
-    font-weight: 600;
+    font-weight: 650;
 
 }
 
@@ -1234,15 +1234,14 @@ li {
     font-weight: 550;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     #interest > ol {
         flex-direction: column;
     }
 
     #interest > ol > li {
         margin-bottom: 20px;
-        max-width: 200px;
-        justify-content: flex-start !important;
+        width: 100%;
     }
 
     #work_experience {
@@ -1262,7 +1261,7 @@ li {
     border: 5px solid var(--main-medium-blue);
     border-radius: 50px;
 
-    min-width: 175px;
+    min-width: 160px;
 }
 
 #interest > ol > li > i {
