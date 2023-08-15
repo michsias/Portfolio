@@ -1021,8 +1021,6 @@ li {
     align-items: center;
     flex-direction: column;
     height: 350px;
-
-    position: relative;
 }
 
 #full_name > img {
@@ -1041,19 +1039,37 @@ li {
 }
 
 
-#full_name > .buttons {
-    width: 50px;
-    height: 100px;
+#adress > ol > li > button {
+    width: 75px;
+    height: 75px;
     padding: 5px;
 
-    position: absolute;
-    left: 900px;
+
+    background-color: transparent;
+    border-radius: 10px;
+    border: 5px solid var(--main-light-blue);
+
+    margin: 20px 10px 20px 0;
+
+    transition: all .6s ease-in-out;
+
 }
-#full_name > .buttons > button > i {
+
+#adress > ol > li > button > i {
+    color: var(--color-text);
+}
+
+#adress > ol > li > button:hover {
+    
+    transform: scale(0.9);
+
+    background-color: var(--main-light-blue);
+    border: 5px solid var(--main-medium-blue);
+
+}
+
+#adress > ol > li > button > i {
     font-size: 35px;
-}
-#full_name > .buttons > button {
-    margin-bottom: 20px;
 }
 
 /* Rightbox */
@@ -1109,7 +1125,7 @@ li {
     border: 10px solid var(--main-light-blue);
     border-radius: 50px;
 
-    background-color: transparent;
+    background-color: var(--main-medium-blue);
     -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
     -moz-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
     box-shadow: 0px 0px 50px -10px var(--main-light-blue);
@@ -1241,10 +1257,12 @@ li {
     align-items: center;
 
     padding: 10px;
-    border: 5px solid var(--main-light-blue);
+
+    background-color: var(--main-light-blue);
+    border: 5px solid var(--main-medium-blue);
     border-radius: 50px;
 
-    min-width: 150px;
+    min-width: 175px;
 }
 
 #interest > ol > li > i {
