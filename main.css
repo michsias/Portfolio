@@ -968,7 +968,7 @@ h2 > span {
 
 #title > h1 > a {
     margin: 0;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
 }
 
@@ -1288,6 +1288,8 @@ li {
 .contact
 {
     max-width: 1400px;
+    height: 100vh;
+    
     margin-top: 200px;
 }
 
@@ -1303,7 +1305,7 @@ li {
     color: var(--color-text);
 }
 
-.choose_cotact > p > span {
+.choose_contact > p > span {
     color: var(--main-light-blue);
 }
 
@@ -1321,29 +1323,22 @@ li {
     
     background: 
     linear-gradient(to bottom, var(--main-light-blue), var(--main-dark-blue));
-     /* https://cssgenerator.pl/box-shadow-generator/ */
+     
+    /* https://cssgenerator.pl/box-shadow-generator/ */
      -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
      -moz-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+    box-shadow: 0px 0px 50px -10px var(--main-light-blue);
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 
 .contact_socials:hover {
-    -ms-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 
     color: var(--color-text);
 }  
-
-.contact_socials > a:hover {
-    color: var(--color-text);
-}
-
-.linkedin {
-    margin-right: 20px;
-    margin-left: 20px;
-}
 
 .contact_socials_a {
     width: 100%;
@@ -1360,6 +1355,11 @@ li {
 
     transition: all 0.5s ease-in-out;
 }
+
+.contact_socials > a:hover {
+    color: var(--color-text);
+}
+
 .page:hover {
     text-decoration: none;
     color: var(--color-text);
