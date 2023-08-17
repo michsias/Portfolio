@@ -1285,15 +1285,84 @@ li {
 /*############################################################*/
 /* CSS for "Contact" page */
 
-.cv_print
+.contact
 {
     max-width: 1400px;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 /* First Section - socials */
 
+.choose_contact {
+    text-align: center;
 
+    font-size: 24px;
+    font-weight: 650;
+    letter-spacing: 2px;
 
+    color: var(--color-text);
+}
+
+.choose_cotact > p > span {
+    color: var(--main-light-blue);
+}
+
+.contact_socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+
+    margin: 0;
+
+    border-radius: 100px;
+    border: 3px solid var(--main-dark-blue);
+    
+    background: 
+    linear-gradient(to bottom, var(--main-light-blue), var(--main-dark-blue));
+     /* https://cssgenerator.pl/box-shadow-generator/ */
+     -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+     -moz-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
+
+    transition: all 0.5s ease-in-out;
+}
+
+.contact_socials:hover {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+
+    color: var(--color-text);
+}  
+
+.contact_socials > a:hover {
+    color: var(--color-text);
+}
+
+.linkedin {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.contact_socials_a {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+
+    font-size: 18px;
+    color: var(--color-text);
+
+    display: inline-block;
+
+	text-decoration: none;
+    cursor: pointer;
+
+    transition: all 0.5s ease-in-out;
+}
+.page:hover {
+    text-decoration: none;
+    color: var(--color-text);
+}
 
 /* Second Section - form */
