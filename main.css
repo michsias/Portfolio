@@ -942,7 +942,6 @@ h2 > span {
 .cv_print
 {
     max-width: 1200px;
-    margin-top: 100px;
 
     border: 5px solid var(--main-light-blue);
     border-radius: 80px;
@@ -951,6 +950,8 @@ h2 > span {
     -webkit-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
     -moz-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
     box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+
+    transform: scale(0.85);
 }
 
 .margin_cv {
@@ -1288,8 +1289,7 @@ li {
 .contact
 {
     max-width: 1400px;
-    height: 100vh;
-    
+
     margin-top: 200px;
 }
 
@@ -1297,12 +1297,15 @@ li {
 
 .choose_contact {
     text-align: center;
-
-    font-size: 24px;
-    font-weight: 650;
-    letter-spacing: 2px;
+    margin-bottom: 80px;
 
     color: var(--color-text);
+}
+
+.choose_contact > p {
+    font-size: 30px;
+    font-weight: 650;
+    letter-spacing: 3px;
 }
 
 .choose_contact > p > span {
@@ -1314,15 +1317,15 @@ li {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 75px;
 
     margin: 0;
 
     border-radius: 100px;
-    border: 3px solid var(--main-dark-blue);
+    border: 5px solid var(--main-light-blue);
     
-    background: 
-    linear-gradient(to bottom, var(--main-light-blue), var(--main-dark-blue));
+    /* background: 
+    linear-gradient(to bottom, var(--main-light-blue), var(--main-dark-blue)); */
      
     /* https://cssgenerator.pl/box-shadow-generator/ */
      -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
@@ -1356,8 +1359,15 @@ li {
     transition: all 0.5s ease-in-out;
 }
 
-.contact_socials > a:hover {
-    color: var(--color-text);
+.size_icon_contact {
+
+    color: var(--color-text) !important;
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.contact_socials_a:hover {
+    color: var(--main-light-blue);
 }
 
 .page:hover {
@@ -1366,3 +1376,8 @@ li {
 }
 
 /* Second Section - form */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
