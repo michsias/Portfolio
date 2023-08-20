@@ -1289,10 +1289,10 @@ li {
 .contact
 {
     max-width: 1400px;
-
     margin-top: 200px;
 }
 
+/*############################################################*/
 /* First Section - socials */
 
 .choose_contact {
@@ -1343,6 +1343,13 @@ li {
     color: var(--color-text);
 }  
 
+.size_icon_contact {
+
+    color: var(--color-text) !important;
+    font-size: 24px;
+    margin-right: 5px;
+}
+
 .contact_socials_a {
     width: 100%;
     text-align: center;
@@ -1359,23 +1366,12 @@ li {
     transition: all 0.5s ease-in-out;
 }
 
-.size_icon_contact {
-
-    color: var(--color-text) !important;
-    font-size: 24px;
-    margin-right: 5px;
-}
-
 .contact_socials_a:hover {
     color: var(--main-light-blue);
 }
 
-.page:hover {
-    text-decoration: none;
-    color: var(--color-text);
-}
-
-/* Second Section - form */
+/*############################################################*/
+/* Second Section - Form */
 
 .margin_form {
     margin-top: 250px;
@@ -1384,8 +1380,8 @@ li {
 .title_form > h2 {
     color: var(--color-text);
     font-size: 30px;
+    margin: 0;
 }
-
 
 #form {
     background: 
@@ -1399,18 +1395,21 @@ li {
     width: 100%;
     /* border: 5px solid var(--main-light-blue); */
     border-radius: 25px;
+
+    transform: scale(0.90);
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items:  center;
+    justify-content: center;
 
-    padding: 40px;
+    padding: 10px;
 }
 
 .input_div {
-    min-width: 400px;
+    width: 400px;
 
     display: flex;
     flex-direction: column;
@@ -1418,13 +1417,23 @@ form {
     padding: 5px 20px 5px 20px;
 }
 
-.input_div > input:focus {
+/* .input_div > input:focus {
     border: 3px solid var(--main-dark-blue);
-}
+} */
 
 .input_div > label {
+
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 800;
+
     margin-left: 5px;
     margin-bottom: 5px;
+}
+
+.input_div > label > span {
+    font-size: 30px;
+    font-weight: 900;
 }
 
 .input_div > input, textarea {
@@ -1436,10 +1445,39 @@ form {
     background-color: var(--main-medium-blue);
     border-radius: 25px;
     border: 3px solid var(--main-light-blue);
+
+    cursor: pointer;
 }
 
-textarea {
-    width: 800px;
+/* .input_div > input, textarea:focus {
+    border: 3px solid var(--main-dark-blue);
+} */
+
+#message {
     min-height: 200px;
-    padding: 20px;
+    resize: none;
+}
+
+#send_email > input {
+
+    height: 70px;
+    font-weight: 750;
+    letter-spacing: 2px;
+    
+    color: var(--color-text);
+    background: 
+    linear-gradient(to bottom, var(--main-light-blue), var(--main-dark-blue));
+
+    transition: all .5s ease-in-out;
+}
+
+#send_email >input:hover {
+    transform: scale(0.95);
+    border: 3px solid var(--main-dark-blue);
+}
+
+@media screen and (min-width: 1000px) {
+    #send_email, #write_message {
+        min-width: 800px !important;
+    }
 }
