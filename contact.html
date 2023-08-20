@@ -177,33 +177,64 @@
         
                 </Section>
 
-                <Section>
+                <Section class="margin_form">
 
                     <div class="mt-5 container-fluid d-flex justify-content-center">
         
                         <div class="row justify-content-center main_box">
         
+
+                            <div class="col-11">
+
+                                <div class="title_form">
+
+                                    <h2> Contact form: </h2>
+
+                                </div>
+
+                            </div>
         
-                            <div class="col-9 d-flex align-items-center">
+                            <div class="col-11 d-flex align-items-center">
 
                                 <div id="form">
 
                                     <form>
 
-                                        <label for="fullname">Full Name:</label>
-                                        <input type="text" id="fullname" name="fullname" value="Full Name">
+                                        <div class="input_div">
 
-                                        <label for="company">Company</label>
-                                        <input type="text" id="company" name="company" value="Company">
+                                            <label for="fullname">Full Name: <span>*</span> </label>
+                                            <input type="text" id="fullname" name="fullname" value="Full Name">
 
-                                        <label for="emial">E-mail</label>
-                                        <input type="e-mail" id="email" name="email" value="E-mail">
+                                        </div>
 
-                                        <textarea>
+                                        <div class="input_div">
+
+                                            <label for="company">Company: </label>
+                                            <input type="text" id="company" name="company" value="Company">
+
+                                        </div>
+
+                                        <div class="input_div">
+
+                                            <label for="emial">E-mail: <span>*</span> </label>
+                                            <input type="e-mail" id="email" name="email" value="E-mail">
+
+                                        </div>
+
+                                        <div class="input_div">
+
+                                            <label for="message"> Message: <span>*</span> </label>
+                                            <textarea id="message" name="message">
                                          
-                                        </textarea>
+                                            </textarea>
 
-                                        <input type="submit" value="Submit">
+                                        </div>
+
+                                        <div class="input_div">
+
+                                            <input type="submit" value="Send">
+
+                                        </div>
 
                                       </form>
                                     
