@@ -1,11 +1,10 @@
-const start_HTML = new Date('2023-05-14');
-const start_JS = new Date('2023-08-02');
+const start_HTML = new Date('2023-06-18');
+const start_JS = new Date('2023-08-20');
 
 const coddingHTML = document.getElementById('HTML-CSS');
 const coddingJS = document.getElementById('JS');
 
 const divFrame = document.getElementById('divFrame');
-const originalDivFrame = divFrame.innerHTML;
 
 function updateTimer(counter, startTime)  {
 
@@ -23,11 +22,8 @@ function changeContent(replace) {
     }
 }
 
-setInterval(() => updateTimer(coddingHTML, start_HTML), 500);
-setInterval(() => updateTimer(coddingJS, start_JS), 500);
-
-divFrame.addEventListener('mouseenter', () => changeContent(true));
-divFrame.addEventListener('mouseleave', () => changeContent(false));
+setInterval(() => updateTimer(coddingHTML, start_HTML), 999999500);
+setInterval(() => updateTimer(coddingJS, start_JS), 999999500);
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -36,3 +32,30 @@ const switchBG = document.querySelector('.switch');
 switchBG.addEventListener('click', (event) => {
     switchBG.classList.toggle('activeSwitch');
 })
+
+//////////////////////////////////////////////////////////////////////
+//Zmiana zawartości znacznika a w podstronie contact
+/////////////////////////////////////////////////////////////////////
+const discord = document.getElementById('discord');
+const originalContent = discord.innerHTML;
+
+// Funkcja do zmiany zawartości elementu
+const showID = (temp) => {
+    // Jeśli temp jest prawdą, zmieniamy zawartość na nową
+    discord.innerHTML = temp
+        ? ' <i class="bi bi-discord size_icon_contact"></i> #michsias'
+        : originalContent; // W przeciwnym przypadku przywracamy oryginalną zawartość
+};
+
+// Nasłuchiwanie na kliknięcie elementu discord
+discord.addEventListener('click', () => showID(true));
+
+// Nasłuchiwanie na kliknięcie gdziekolwiek indziej
+document.addEventListener('click', (event) => {
+    // Jeśli kliknięcie nastąpiło poza elementem discord, przywracamy oryginalną zawartość
+    if (event.target !== discord) {
+        showID(false);
+    }
+});
+
+
