@@ -60,9 +60,33 @@ body {
 
 /*############################################################*/
 /* Navigation*/
-.switch
+/* .switch
 {
     border: 5px solid var(--main-medium-blue);
+} */
+
+.navbar-toggler {
+    flex-direction: column;
+    width: 60px !important;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.line:first-child {
+    margin-top: 5px;
+}
+
+.line {
+    width: 25px;
+    height: 1px;
+    margin-bottom: 5px;
+
+    background-color: var(--main-dark-blue);
+
+    padding: 5px 15px 5px 15px;
 }
 
 @media (max-width: 1200px) {
@@ -94,10 +118,6 @@ body {
     
         transition: all .5s ease-in-out;
     }
-}
-
-.activeSwitch {
-    background: var(--main-dark-blue);
 }
 
 #navMenu {
