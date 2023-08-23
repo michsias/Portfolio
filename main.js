@@ -16,44 +16,50 @@ function updateTimer(counter, startTime)  {
     return counter.innerHTML = days + ` days`;
 }
 
-setInterval(() => updateTimer(coddingHTML, start_HTML), 1111111111111111111111111111111500);
-setInterval(() => updateTimer(coddingJS, start_JS), 11111111111111111111111111111111111500);
+setInterval(() => updateTimer(coddingHTML, start_HTML), 1000*60*60*24);
+setInterval(() => updateTimer(coddingJS, start_JS), 1000*60*60*24);
 
 ////////////////////////////////////////////////////////////////////////////// 
 
 //Zmiana zawartosci diva liczników na informacje o ostateniej aktualizacji 
-const divFrame = document.getElementById('divFrame');
-const original_div_frame = divFrame.innerHTML;
+// const divFrame = document.getElementById('divFrame');
+// const original_div_frame = divFrame;
 
-divFrame.addEventListener('mouseover', function() {
-    divFrame.innerHTML = '<div> Hi</div>';
-})
-divFrame.addEventListener('mouseout', function() {
-    divFrame.innerHTML = original_div_frame;
-})
+// divFrame.addEventListener('mouseover', () => {
+//     divFrame.innerHTML = '<div d-flex aligns-item center> Hi </div>';
+// })
+// divFrame.addEventListener('mouseout', () => {
+//     divFrame.innerHTML = original_div_frame;
+// })
 
 
 //////////////////////////////////////////////////////////////////////////////
 
-//Zmiana zawartości znacznika 'a' w podstronie contact
+//Zmiana na ID w 'a' 
+
 const discord = document.getElementById('discord');
-const originalContent = discord.innerHTML;
+let temp = false;
+const original_discord = discord.innerHTML;
 
-console.log(originalContent);
-
-// Funkcja do zmiany zawartości elementu
-const showID = (temp) => {
-    discord.innerHTML = temp
-        ? ' <i class="bi bi-discord size_icon_contact"></i> #michsias'
-        : originalContent; 
-};
-
-
-discord.addEventListener('click', () => showID(true));
-document.addEventListener('click', (event) => {
-    if (event.target !== discord) {
-        showID(false);
+discord.addEventListener('click', function(event) {
+    event.stopPropagation();
+    temp = !temp;
+    
+    if (temp) {
+        discord.innerHTML = '<i class="bi bi-discord size_icon_contact"></i> #michsias';
+    } else {
+        discord.innerHTML = original_discord;
     }
 });
+
+document.addEventListener('click', function() {
+    if (temp) {
+        discord.innerHTML = original_discord;
+        temp = false;
+    }
+});
+
+
+
 
 
