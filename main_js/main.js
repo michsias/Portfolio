@@ -1,5 +1,4 @@
 //////////////////////////////////////////////////////////////////////////////
-
 //Liczniki rozpoczęcia nauki HTML + CSS + JavaScript
 
 const start_HTML = new Date('2023-06-18');
@@ -40,7 +39,7 @@ console.log('Vale:', original_frame);
 
     
 //////////////////////////////////////////////////////////////////////////////
-//Zmiana na ID w 'a' 
+//Zmiana zawartosci linku 'a' na ID discorda 
 
 const discord = document.getElementById('discord');
 let temp_discord = false;
@@ -63,8 +62,8 @@ document.addEventListener('click', function() {
         temp_discord = false;
     }
 });
-
-
+ 
+//////////////////////////////////////////////////////////////////////////////
 
 
 
