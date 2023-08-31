@@ -9,36 +9,19 @@ const coddingJS = document.getElementById('JS');
 
 let lastUpdate = Date.now();
 
-function updateTimer(counter, startTime, lastUpdate) {
+function updateTimer(counter, startTime) {
     const today = new Date();
     const timeDifference = today.getTime() - startTime.getTime();
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     counter.innerHTML = days + ` days`;
-
-    const currentTime = Date.now();
-    const timeLastUpdate = currentTime - lastUpdate;
-    lastUpdate = currentTime;
-
-    return timeLastUpdate / 1000; // Zwracamy czas w sekundach
 }
 
-const updateHTMLTimer = () => {
-    const secondsLastUpdate = updateTimer(coddingHTML, start_HTML, lastUpdate);
-    lastUpdate = Date.now();
-    return secondsLastUpdate;
-};
+setTimeout(updateTimer(coddingHTML, start_HTML), 2000);
+setTimeout(updateTimer(coddingJS, start_JS), 2000);
 
-const updateJSTimer = () => {
-    const secondsLastUpdate = updateTimer(coddingJS, start_JS, lastUpdate);
-    lastUpdate = Date.now();
-    return secondsLastUpdate;
-};
+setInterval(updateTimer(coddingHTML, start_HTML), 5000);
+setInterval(updateTimer(coddingJS, start_JS), 5000);
 
-updateHTMLTimer();
-updateJSTimer();
-
-setInterval(updateHTMLTimer, 86400000);
-setInterval(updateJSTimer, 86400000);
 
 ////////////////////////////////////////////////////////////////////////////// 
 //Zmiana zawartosci diva liczników na informacje o ostatniej aktualizacji 
