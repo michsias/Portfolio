@@ -52,10 +52,13 @@
 
     <!-- Boostrap local {28.07.2023} -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    
 
     <!-- My CSS-->
 	<link rel="stylesheet" href="main_css/main.css" >
+    
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
 
 </head>
 
@@ -165,8 +168,8 @@
 
                                             <li> <i class="bi bi-geo-alt-fill icon "></i> Warszawa </li>
 
-                                            <li> <button> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
-                                                 <button> <i class="bi bi-printer-fill"> </i> </button> 
+                                            <li> <button id="download_button"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
+                                                 <button id="print_button"> <i class="bi bi-printer-fill"> </i> </button> 
                                             </li>
 
                                         </ol>
@@ -503,11 +506,10 @@
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>   
 
-    <script src="main_js/main.js" ></script>    
+    <script src="main_js/cv.js" > </script>
 
-    <script src="main_js/id.js" > </script>
 
 </body>
 
