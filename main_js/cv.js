@@ -1,10 +1,15 @@
+const { jsPDF } = window.jspdf;
+
 const doc = new jsPDF();
 
 document.getElementById('download_button').addEventListener('click', () => {
     const cv_box = document.querySelector('.cv_print');
-    doc.text(cv_box, 10, 10);
+    const cv_text = cv_box.textContent || cv_box.innerText; // Pobranie tekstu z elementu
+
+    doc.text(cv_text, 10, 10);
     doc.save("Michał_Kawczak-CV.pdf");
 });
+
 
 // const content = {
 //     title: {
