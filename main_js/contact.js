@@ -24,3 +24,13 @@ document.addEventListener('click', function() {
 });
  
 //////////////////////////////////////////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+  
+    setTimeout(function () {
+      const animatedElements = document.querySelectorAll('.contact_socials');
+      animatedElements.forEach(function (element) {
+        element.classList.toggle('animation_contact'); // Dodaj klasę animacji
+      });
+    }, 500); 
+});

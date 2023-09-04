@@ -118,7 +118,7 @@
 
     <main>
 
-            <div class="container-fluid cv_print">
+            <div class="container-fluid cv_print" id="print">
 
 
                 <Section>
@@ -142,7 +142,7 @@
                             
                             </div>
         
-                            <div class="col-lg-5 col-11 d-flex align-items-center">
+                            <div class="col-lg-5 col-11">
 
                                 <div id="adress">
 
@@ -167,13 +167,11 @@
 
                                             <li> <i class="bi bi-geo-alt-fill icon "></i> Warszawa </li>
 
-                                            <li>
-                                                <button id="download_button"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
-                                                <button id="print_button"> <i class="bi bi-printer-fill"> </i> </button> 
-                                            </li>
-
                                         </ol>
                                     
+                                        <div id = buttonSave>
+                                            <button id="download_button"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
+                                        </div>
                                 </div>
                             
                             </div>
@@ -217,13 +215,14 @@
 
                 </Section>
 
+                <Section id="margin"></Section>
 
                 <Section>
                     
 
                         <div class="container-fluid d-flex justify-content-center">
                             
-                            <div class="row justify-content-center align-items-center main_box custom_border_bottom">
+                            <div class="row justify-content-center align-items-center main_box custom_border_top">
 
         
                                 <div class="p-3 my-3 col-lg-5 col-11 d-fleX justify-content-center">
@@ -255,7 +254,7 @@
                                     <div id="repository_Button">
 
                                         <button> 
-                                            <a href="https://github.com/michsias?tab=repositories" target="_blank">
+                                            <a href="https://github.com/michsias?tab=repositories" target="_blank" id="repo_button">
                                                 <i class="bi bi-github icon_repo"></i> GitHub 
                                             </a> 
                                         </button>
@@ -278,7 +277,7 @@
 
                     <div class="container-fluid d-flex justify-content-center">
                             
-                        <div class=" row justify-content-center  main_box custom_border_bottom">
+                        <div class=" row justify-content-center main_box custom_border">
 
     
                             <div class="p-3 mt-3 col-lg-6 col-11">
@@ -334,13 +333,14 @@
 
                 </Section>
 
+                <Section id="margin"></Section>
 
                 <Section> 
 
 
                     <div class="container-fluid d-flex justify-content-center">
                             
-                            <div class=" row justify-content-center main_box custom_border_bottom">
+                            <div class=" row justify-content-center main_box custom_border_top">
 
         
                                 <div class="p-3 mt-3 col-lg-6 col-11 d-flex">
@@ -397,12 +397,13 @@
 
                 </Section>
 
+
                 <Section> 
 
 
                     <div class="container-fluid d-flex justify-content-center">
                             
-                            <div class=" row justify-content-center main_box custom_border_bottom">
+                            <div class=" row justify-content-center main_box custom_border">
 
 
                                 <div class="p-3 my-3 col-11 d-flex justify-content-center">
@@ -418,7 +419,6 @@
                                             <li class="list_type"> <i class="bi bi-lungs-fill"></i> Sport </li>
                                             <li class="list_type"> <i class="bi bi-earbuds"></i>  Muzyka </li>
                                             <li class="list_type"> <i class="bi bi-car-front"></i> Motoryzacja </li>
-                                            <li class="list_type"> <i class="bi bi-airplane-engines"></i> Podróże </li>
                                         </ol>
                                         
                                     </div>
@@ -508,6 +508,10 @@
 	
 	<script src="bootstrap/js/bootstrap.min.js"></script>   
 
+    <!-- html2pdf library  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- my js -->
     <script src="main_js/cv.js" > </script>
 
 

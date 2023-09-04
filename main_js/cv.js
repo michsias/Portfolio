@@ -1,15 +1,69 @@
-const { jsPDF } = window.jspdf;
 
-const doc = new jsPDF();
 
 document.getElementById('download_button').addEventListener('click', () => {
-    const cv_box = document.querySelector('.cv_print');
-    const cv_text = cv_box.textContent || cv_box.innerText; // Pobranie tekstu z elementu
+    const print = document.getElementById('print');
+    const nav = document.querySelector('.navbar');
+    const dowload_button = document.getElementById('download_button');
+    const repo = document.getElementById('repository_Button');
 
-    doc.text(cv_text, 10, 10);
-    doc.save("Michał_Kawczak-CV.pdf");
+    nav.classList.toggle('none');
+    print.classList.toggle('motiv');
+    dowload_button.classList.toggle('none');
+    repo.classList.toggle('none');
+
+
+    var opt = {
+        orientation: 1,
+        putOnlyUsedFonts:true,
+        margin: 0,
+        filename:     'Michał_Kawczak-CV.pdf',
+        pagebreak: {before: '#margin', after: '#margin'}
+    };
+
+
+
+    html2pdf().from(print).set(opt).save('Michał_Kawczak-CV.pdf');
+
+    // nav.classList.remove('none');
+    // print.classList.remove('motiv');
+    setTimeout(() => {
+        nav.classList.toggle('none');
+        print.classList.toggle('motiv');
+        dowload_button.classList.toggle('none');
+        repo.classList.toggle('none');
+    }, 2000)
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.getElementById('print_button').addEventListener('click', () => {
+//     const printWindow = window.open('', '', 'width=600,height=600');
+
+//     printWindow.document.open();
+//     printWindow.document.write('<html><head><title>Drukowanie</title></head><body>');
+//     printWindow.document.write(cv_box.innerHTML);
+//     printWindow.document.write('</body></html>');
+//     printWindow.document.close();
+
+//     printWindow.print();
+//     printWindow.close();
+// });
 
 // const content = {
 //     title: {

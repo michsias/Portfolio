@@ -16,10 +16,10 @@ function updateTimer(counter, startTime) {
 
 setTimeout( () => {
     updateTimer(coddingHTML, start_HTML);
-}, 2000);
+}, 1000);
 setTimeout( () => {
     updateTimer(coddingJS, start_JS);
-}, 2000);
+}, 1000);
 
 setInterval(() => {
     updateTimer(coddingHTML, start_HTML);
@@ -27,6 +27,23 @@ setInterval(() => {
 setInterval(() => {
     updateTimer(coddingJS, start_JS);
 }, 5000);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  
+    setTimeout(function () {
+      const animatedElement = document.getElementById('profession');
+      animatedElement.classList.toggle('animation_title'); 
+    }, 500); 
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    setTimeout(function () {
+      const animatedElement = document.getElementById('avatar');
+      animatedElement.classList.toggle('animation_avatar'); 
+    }, 750); 
+  });
 
 
 ////////////////////////////////////////////////////////////////////////////// 

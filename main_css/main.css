@@ -211,10 +211,19 @@ body {
 #avatar {
     width: 200px;
     height: 200px;
-
     padding: 2px;
-    
+
+     transform: translatey(-200%);
 }
+
+.animation_avatar {
+    animation: slide_up 2s ease-in-out forwards;
+}
+
+@keyframes slide_up {
+    100% { transform: translatey(0); }
+}
+
 
 #logoPNG {
     height: inherit;
@@ -279,6 +288,16 @@ h1 > a:hover {
     letter-spacing: 1px;
     
     margin-bottom: 40px;
+    transform: translateX(-200%);
+      
+}
+
+.animation_title {
+    animation: slide_left 2s ease-in-out forwards;
+}
+
+@keyframes slide_left {
+    100% { transform: translateX(0); }
 }
 
 h2 > span {
@@ -959,6 +978,19 @@ h2 > span {
 /*############################################################*/
 /* CSS for "CV" page */
 
+
+.none {
+    display: none !important;
+}
+
+.motiv {
+    background: var(--color-text) !important;
+    color: black !important;
+    border: none !important;
+}
+
+
+
 .cv_print
 {
     max-width: 1200px;
@@ -1013,11 +1045,14 @@ h2 > span {
 }
 
 .custom_border {
-    border-top: 5px solid var(--main-light-blue);
-    border-bottom: 5px solid var(--main-light-blue);
+    border-top: 3px solid var(--main-light-blue) !important; 
+    border-bottom: 3px solid var(--main-light-blue) !important;
 }
 .custom_border_bottom {
-    border-bottom: 5px solid var(--main-light-blue);
+    border-bottom: 3px solid var(--main-light-blue) !important;
+}
+.custom_border_top {
+    border-top: 3px solid var(--main-light-blue) !important;
 }
 
 h2 {
@@ -1065,9 +1100,13 @@ li {
 
 }
 
+#adress {
+    display: flex;
+    justify-content: space-between;
+}
 
-#adress > ol > li > button {
-    width: 75px;
+#buttonSave > button {
+    width:  75px;
     height: 75px;
     padding: 5px;
 
@@ -1082,11 +1121,11 @@ li {
 
 }
 
-#adress > ol > li > button > i {
+#buttonSave > button > i {
     color: var(--color-text);
 }
 
-#adress > ol > li > button:hover {
+#buttonSave > button:hover {
     
     transform: scale(0.9);
 
@@ -1095,7 +1134,7 @@ li {
 
 }
 
-#adress > ol > li > button > i {
+#buttonSave > button > i {
     font-size: 35px;
 }
 
@@ -1358,8 +1397,18 @@ li {
      -moz-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
     box-shadow: 0px 0px 50px -10px var(--main-light-blue);
 
+    transform: translateY(600%);
     transition: all 0.8s ease-in-out;
 }
+
+.animation_contact {
+    animation: slide_down 2s ease-in-out forwards;
+}
+
+@keyframes slide_down {
+    100% { transform: translateY(0); }
+}
+x
 
 .contact_socials:hover {
     -ms-transform: scale(0.9);
@@ -1368,13 +1417,6 @@ li {
 
     color: var(--color-text);
 }  
-
-.size_icon_contact {
-
-    color: var(--color-text) !important;
-    font-size: 24px;
-    margin-right: 5px;
-}
 
 .contact_socials_a {
     width: 100%;
@@ -1396,6 +1438,12 @@ li {
     color: var(--main-light-blue);
 }
 
+.size_icon_contact {
+
+    color: var(--color-text) !important;
+    font-size: 24px;
+    margin-right: 5px;
+}
 /*############################################################*/
 /* Second Section - Form */
 
