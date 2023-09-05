@@ -1,5 +1,3 @@
-
-
 document.getElementById('download_button').addEventListener('click', () => {
     const print = document.getElementById('print');
     const nav = document.querySelector('.navbar');
@@ -11,7 +9,6 @@ document.getElementById('download_button').addEventListener('click', () => {
     dowload_button.classList.toggle('none');
     repo.classList.toggle('none');
 
-
     var opt = {
         orientation: 1,
         putOnlyUsedFonts:true,
@@ -20,12 +17,7 @@ document.getElementById('download_button').addEventListener('click', () => {
         pagebreak: {before: '#margin', after: '#margin'}
     };
 
-
-
     html2pdf().from(print).set(opt).save('Michał_Kawczak-CV.pdf');
-
-    // nav.classList.remove('none');
-    // print.classList.remove('motiv');
     setTimeout(() => {
         nav.classList.toggle('none');
         print.classList.toggle('motiv');

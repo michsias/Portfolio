@@ -14,34 +14,32 @@ function updateTimer(counter, startTime) {
     counter.innerHTML = days + ` days`;
 }
 
-setTimeout( () => {
-    updateTimer(coddingHTML, start_HTML);
-}, 1000);
-setTimeout( () => {
-    updateTimer(coddingJS, start_JS);
-}, 1000);
-
 setInterval(() => {
     updateTimer(coddingHTML, start_HTML);
-}, 5000);
+}, 86400000);
 setInterval(() => {
     updateTimer(coddingJS, start_JS);
-}, 5000);
-
+}, 86400000);
 
 document.addEventListener("DOMContentLoaded", function () {
-  
+    updateTimer(coddingHTML, start_HTML);
+    coddingHTML.classList.toggle('animation_days'); 
+
+    updateTimer(coddingJS, start_JS);
+    coddingJS.classList.toggle('animation_days'); 
+  });
+
+document.addEventListener("DOMContentLoaded", function () {  
     setTimeout(function () {
-      const animatedElement = document.getElementById('profession');
-      animatedElement.classList.toggle('animation_title'); 
+        const animatedElement = document.getElementById('profession');
+        animatedElement.classList.toggle('animation_title'); 
     }, 500); 
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-
     setTimeout(function () {
-      const animatedElement = document.getElementById('avatar');
-      animatedElement.classList.toggle('animation_avatar'); 
+        const animatedElement = document.getElementById('avatar');
+        animatedElement.classList.toggle('animation_avatar'); 
     }, 750); 
   });
 

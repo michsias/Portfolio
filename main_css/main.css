@@ -406,6 +406,18 @@ h2 > span {
     opacity: 0.6;
 }
 
+.animation_days {
+
+    letter-spacing: 2px;
+    animation: showDays 3s ease-in-out forwards;
+}
+
+@keyframes showDays {
+    
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 #coddingBackground {
     width: 100%;
     height: 100%;
