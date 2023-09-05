@@ -19,13 +19,6 @@ discord.addEventListener('click', function(event) {
     }
 });
 
-document.addEventListener('click', function() {
-    if (temp_discord) {
-        discord.innerHTML = original_discord;
-        temp_discord = false;
-    }
-});
- 
 //////////////////////////////////////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
