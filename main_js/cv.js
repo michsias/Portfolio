@@ -26,6 +26,10 @@ document.getElementById('download_button').addEventListener('click', () => {
     }, 2000)
 });
 
+const div_adress = document.getElementById('adress');
+const list = document.querySelectorAll('ol li');
+
+
 
 
 

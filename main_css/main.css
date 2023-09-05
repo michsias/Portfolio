@@ -479,7 +479,7 @@ h2 > span {
     left: 0;
     top: 80px;
 
-    animation: fillAnimation 10s infinite;
+    animation: fillAnimation 6s infinite;
   }
 
 @keyframes fillAnimation {
@@ -1448,6 +1448,10 @@ x
 
 .contact_socials_a:hover {
     color: var(--main-light-blue);
+}
+
+.show_ID {
+    cursor: pointer;
 }
 
 .size_icon_contact {

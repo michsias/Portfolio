@@ -10,7 +10,10 @@ discord.addEventListener('click', function(event) {
     temp_discord = !temp_discord;
     
     if (temp_discord) {
-        discord.innerHTML = '<i class="bi bi-discord size_icon_contact"></i> #michsias';
+        discord.innerHTML = 
+        '<a class="contact_socials_a"> \
+        <i class="bi bi-discord size_icon_contact"></i> \
+        #michsias </a>';
     } else {
         discord.innerHTML = original_discord;
     }
