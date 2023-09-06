@@ -1025,7 +1025,6 @@ h2 > span {
 }
 
 .margin_cv {
-    margin-top: 100px;
 }
 
 
@@ -1112,6 +1111,52 @@ li {
 
 }
 
+.check_pin {
+    background: transparent;
+    color: var(--color-text);
+    letter-spacing: 3px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+.check_pin:hover {
+    transform: scale(0.9);
+    background: var(--main-light-blue);
+}
+
+.input_box {
+
+    width: 200px;
+    padding: 5px;
+    letter-spacing: 2px;
+
+    text-align: center;
+    color: var(--color-text);
+
+    background: transparent;
+    border: 3px solid var(--main-light-blue);
+    border-radius: 25px;
+
+    outline: none !important;
+
+    cursor: pointer;
+}
+
+.input_box:focus{
+    border: 3px solid var(--main-medium-blue);
+}
+
+.wrong_pin {
+    border: 4px solid red !important;
+    background: rgb(25, 0, 0);
+    opacity: 0.5;
+}
+
+.good_pin {
+    border: 4px solid green !important;
+    background:rgb(0, 25, 0);
+    opacity: 0.5;
+}
+
 #adress {
     display: flex;
     justify-content: space-between;
@@ -1126,8 +1171,6 @@ li {
     background-color: transparent;
     border-radius: 10px;
     border: 5px solid var(--main-light-blue);
-
-    margin: 20px 10px 20px 0;
 
     transition: all .6s ease-in-out;
 
