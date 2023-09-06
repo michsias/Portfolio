@@ -29,3 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }, 500); 
 });
+
+//////////////////////////////////////////////////////////////////////////////
+
+document.getElementById('forHTML').addEventListener('submit', function(event) {
+    const fullname = document.getElementById('fullname').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('write_message').value;
+
+    if(!fullname || !email || !message) {
+        event.preventDefault(); // Zatrzymaj wysłanie formularza
+        alert('Wszystkie pola oznaczone gwiazdką są obowiązkowe.');   
+    }
+    
+})
