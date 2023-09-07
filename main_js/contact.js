@@ -75,6 +75,8 @@ form.addEventListener('submit', function(event) {
     checkForm(event, fullname, fullname_value, check_name);
     checkForm(event, email, email_value, check_email);
     checkForm(event, message, message_value, check_message);
+
+   
     
 });
 
@@ -84,6 +86,10 @@ function checkForm(event, user_id, user_value, checkPlace) {
         event.preventDefault();
         user_id.classList.add("wrong_pin");  // Dodaj klasę
         
+        form.addEventListener('click', function() {
+            user_id.classList.remove("wrong_pin");
+        });
+
         console.log('Wprowadź poprawne dane.');
     } else {
         console.log('Dane poprawne');
