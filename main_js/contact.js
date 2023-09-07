@@ -32,14 +32,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //////////////////////////////////////////////////////////////////////////////
 
-document.getElementById('forHTML').addEventListener('submit', function(event) {
+const form = document.getElementById("formHTML");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const message_div = document.getElementById("message");
+  const counter = document.createElement("div");
+  const max_message = 500;
+
+  counter.classList.add("char-count");
+  counter.textContent = `0/${max_message}`;
+
+  message_div.parentElement.appendChild(counter);
+
+  message_div.addEventListener("input", function () {
+    const counter_value = this.value.length;
+
+    counter.textContent = `${counter_value}/${max_message}`;
+
+    if (counter_value >= 499) {
+      this.value = this.value.slice(0, 492);
+      counter.textContent = `${492}/${max_message}`;
+    } else if (counter_value == 498) {
+      counter.textContent = `${max_message}/${max_message}`;
+    }
+  });
+});
+
+form.addEventListener('submit', function(event) {
+
     const fullname = document.getElementById('fullname').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('write_message').value;
+    const message = document.getElementById('message').value;
 
-    if(!fullname || !email || !message) {
-        event.preventDefault(); // Zatrzymaj wysłanie formularza
-        alert('Wszystkie pola oznaczone gwiazdką są obowiązkowe.');   
-    }
+    const check_name = /^[\p{L}\s]+$/u;
+    const check_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const check_message = /^.{1,250}$/;
+
+    checkForm(event, fullname, check_name);
+    checkForm(event, email, check_email);
+    checkForm(event, message, check_message);
     
-})
+});
+
+function checkForm(event, user, checkPlace) {
+    if (!checkPlace.test(user)) {
+        event.preventDefault(); // Zapobiega domyślnej akcji, czyli wysłaniu formularza
+        console.log('Niepoprawne');
+    } else {
+        console.log('poprawne');
+    }
+}
+
