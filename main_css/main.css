@@ -1528,8 +1528,9 @@ x
     width: 100%;
     /* border: 5px solid var(--main-light-blue); */
     border-radius: 25px;
+    transform: scale(0.9);
 
-    transform: scale(0.90);
+  
 }
 
 form {
@@ -1547,6 +1548,19 @@ form {
     display: flex;
     flex-direction: column;
     padding: 5px 20px 5px 20px;
+
+    transition: all .3s ease-in-out;
+    
+}
+.input_div > input, textarea {
+    outline: none !important;
+}
+
+.input_div > textarea:focus-within {
+    border: 3px solid var(--main-medium-blue);
+}
+.input_div > input:focus-within {
+    border: 3px solid var(--main-medium-blue);
 }
 
 /* .input_div > input:focus {
@@ -1587,8 +1601,15 @@ form {
 } */
 
 #message {
-    min-height: 200px;
+    min-height: 150px;
     resize: none;
+
+    display: flex;
+}
+
+.words_limit {
+    text-align: right;
+    color: var(--main-medium-blue);
 }
 
 #send_email > input {

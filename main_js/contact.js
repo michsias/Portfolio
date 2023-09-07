@@ -37,9 +37,9 @@ const form = document.getElementById("formHTML");
 document.addEventListener("DOMContentLoaded", function () {
   const message_div = document.getElementById("message");
   const counter = document.createElement("div");
-  const max_message = 500;
+  const max_message = 250;
 
-  counter.classList.add("char-count");
+  counter.classList.add("words_limit");
   counter.textContent = `0/${max_message}`;
 
   message_div.parentElement.appendChild(counter);
@@ -49,37 +49,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     counter.textContent = `${counter_value}/${max_message}`;
 
-    if (counter_value >= 499) {
-      this.value = this.value.slice(0, 492);
-      counter.textContent = `${492}/${max_message}`;
-    } else if (counter_value == 498) {
-      counter.textContent = `${max_message}/${max_message}`;
+    if (counter_value >= 249) {
+      this.value = this.value.slice(0, 248);
+      counter.textContent = `${250}/${max_message}`;
+    } else if (counter_value == 248) {
+      counter.textContent = `${counter_value}/${max_message}`;
     }
   });
 });
 
+const fullname = document.getElementById('fullname');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+
 form.addEventListener('submit', function(event) {
 
-    const fullname = document.getElementById('fullname').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const fullname_value = fullname.value;
+    const email_value = email.value;
+    const message_value = message.value;
 
     const check_name = /^[\p{L}\s]+$/u;
     const check_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const check_message = /^.{1,250}$/;
 
-    checkForm(event, fullname, check_name);
-    checkForm(event, email, check_email);
-    checkForm(event, message, check_message);
+    checkForm(event, fullname, fullname_value, check_name);
+    checkForm(event, email, email_value, check_email);
+    checkForm(event, message, message_value, check_message);
     
 });
 
-function checkForm(event, user, checkPlace) {
-    if (!checkPlace.test(user)) {
-        event.preventDefault(); // Zapobiega domyślnej akcji, czyli wysłaniu formularza
-        console.log('Niepoprawne');
+function checkForm(event, user_id, user_value, checkPlace) {
+
+    if (!checkPlace.test(user_value)) {
+        event.preventDefault();
+        user_id.classList.add("wrong_pin");  // Dodaj klasę
+        
+        console.log('Wprowadź poprawne dane.');
     } else {
-        console.log('poprawne');
+        console.log('Dane poprawne');
+        user_id.classList.remove("wrong_pin");
     }
 }
+
 
