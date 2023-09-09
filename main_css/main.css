@@ -1554,13 +1554,15 @@ form {
 }
 .input_div > input, textarea {
     outline: none !important;
+    border: none;
+    resize: none;
 }
 
 .input_div > textarea:focus-within {
-    border: 3px solid var(--main-medium-blue);
+    border: 3px solid var(--main-light-blue);
 }
 .input_div > input:focus-within {
-    border: 3px solid var(--main-medium-blue);
+    border: 3px solid var(--main-light-blue);
 }
 
 /* .input_div > input:focus {
@@ -1591,7 +1593,6 @@ form {
 
     background-color: var(--main-medium-blue);
     border-radius: 25px;
-    border: 3px solid var(--main-light-blue);
 
     cursor: pointer;
 }

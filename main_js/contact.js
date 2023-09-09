@@ -68,7 +68,7 @@ form.addEventListener('submit', function(event) {
     const email_value = email.value;
     const message_value = message.value;
 
-    const check_name = /^[\p{L}\s + \p{L}]+$/u;
+    const check_name = /^[\p{L}]+\s+[\p{L}]+$/u;
     const check_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const check_message = /^.{1,250}$/;
 
