@@ -68,7 +68,7 @@ form.addEventListener('submit', function(event) {
     const email_value = email.value;
     const message_value = message.value;
 
-    const check_name = /^[\p{L}\s]+$/u;
+    const check_name = /^[\p{L}\s + \p{L}]+$/u;
     const check_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const check_message = /^.{1,250}$/;
 
@@ -84,7 +84,7 @@ function checkForm(event, user_id, user_value, checkPlace) {
 
     if (!checkPlace.test(user_value)) {
         event.preventDefault();
-        user_id.classList.add("wrong_pin");  // Dodaj klasę
+        user_id.classList.add("wrong_pin"); 
         
         form.addEventListener('click', function() {
             user_id.classList.remove("wrong_pin");

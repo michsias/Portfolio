@@ -409,7 +409,7 @@ h2 > span {
 .animation_days {
 
     letter-spacing: 2px;
-    animation: showDays 3s ease-in-out forwards;
+    animation: showDays 5s ease-in-out forwards;
 }
 
 @keyframes showDays {
