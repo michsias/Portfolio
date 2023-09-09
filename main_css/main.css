@@ -4,9 +4,10 @@
 :root {
     --color-text: #ffffff;
 
-    --main-light-blue: #004Aff; /* #0048f8 */
-    --main-medium-blue: #042073;
-    --main-dark-blue: #020024;
+    --main-light-blue: #004Aff;
+    --main-medium-blue: hsl(224, 65%, 16%); /* Odcień bazowy + Zmniejszona Jasność */
+    --main-dark-blue: hsl(224, 90%, 7%);   /* Odcień bazowy + Zmniejszona Jasność i Nasycenie */
+
 
     --animation-top-light-dark:
     --animation-top-dark-light: 
@@ -59,20 +60,76 @@ body {
 }
 
 /*############################################################*/
-/* Navigation*/
-/* .switch
-{
-    border: 5px solid var(--main-medium-blue);
+/* Add buttons in Navigation */
+
+#title_nav {
+    display: flex;
+}
+
+#button_color {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+}
+
+.color_switch {
+
+    margin-left: 10px;
+    margin-bottom: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid var(--main-dark-blue);
+}
+
+.color_switch:active {
+    transform: scale(0.9);
+}
+
+/*############################################################*/
+/* Add title in Navigation */
+#title_nav > h1 {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+#titleNav > h1 > a {
+    margin: 0;
+    font-weight: 700;
+    border: none;
+}
+
+@media (max-width: 1200px) {
+    #title_nav > h1 { display: none;}
+    #navBox { justify-content: space-between !important;}
+}
+
+/* .animation_nav {
+    animation: displayNav 2s ease-in-out forwards;
+}
+
+@keyframes displayNav {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
 } */
 
+/*############################################################*/
+/* Toggler nav */
+.switch_on {
+    background: var(--main-dark-blue);
+}
+.switch_on > .line {
+    background: var(--main-light-blue);
+}
 .navbar-toggler {
     flex-direction: column;
-    width: 60px !important;
-}
-.navbar-toggler:active,
-.navbar-toggler:focus {
-    border: none !important;
+    background-color: var(--main-light-blue);
+    border: 5px solid var(--main-dark-blue);
+    border-radius: 15px;
+
     outline: none !important;
+    box-shadow: none !important;
 }
 
 .line:first-child {
@@ -162,15 +219,6 @@ body {
     transform: scale(0.95);
 }   
 
-.navbar-toggler {
-    width: 50px;
-
-    background-color: var(--main-light-blue);
-    border: 5px solid var(--main-dark-blue);
-    border-radius: 15px;
-
-    transition: all .3s ease-in-out;
-}
 /*############################################################*/
 /*############################################################*/
 /*############################################################*/
@@ -252,7 +300,7 @@ h1 > a {
     font-weight: 700;
     color: var(--color-text);
 
-    border-bottom: 3px solid var(--color-text);
+    border: none !important;
 	text-decoration: none;
     cursor: pointer;
 
@@ -1024,28 +1072,8 @@ h2 > span {
     color: black !important;
 }
 
-.margin_cv {
-}
-
-
-/*############################################################*/
-/* Add title in Navigation */
-#title > h1 {
-    font-size: 30px;
-    margin-left: 40px;
-    letter-spacing: 3px;
-}
-
-#title > h1 > a {
-    margin: 0;
-    font-weight: 700;
-    border: none;
-}
-
-@media (max-width: 1200px) {
-    #title {
-        display: none;
-    }
+.main_box:first-child {
+    margin-top: 50px;
 }
 
 /*############################################################*/
@@ -1329,6 +1357,10 @@ li {
     margin-bottom: 0;
 }
 
+.color_link {
+    color: black !important;
+}
+
 /* Rithg box */
 
 .rigth_box > ol > li {
@@ -1339,18 +1371,27 @@ li {
 
 /*############################################################*/
 /* Seventh Section - interest */
-
 #interest {
     width: 100%;
+}
+
+
+
+.interest_ol {
+    display: block !important;
+    text-align: left !important;
+}
+
+.interest_li {
+    border: none !important;
+    display: block !important;
 }
 
 #interest > ol {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
     width: 100%;
-
     text-align: center;
     font-weight: 550;
 }
@@ -1371,19 +1412,14 @@ li {
 }
 
 #interest > ol > li {
-
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-
-    padding: 10px;
-
+    padding: 10px; 
     background-color: transparent;
     border: 5px solid var(--main-medium-blue);
-    border-radius: 50px;
-
-    min-width: 160px;
-}
+    border-radius: 50px; 
+    min-width: 160px; }
 
 #interest > ol > li > i {
     font-size: 35px;

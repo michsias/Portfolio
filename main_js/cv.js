@@ -4,10 +4,25 @@ document.getElementById("download_button").addEventListener("click", () => {
   const dowload_button = document.getElementById("download_button");
   const repo = document.getElementById("repository_Button");
 
+  const interest_list = document.getElementById("interest_list");
+  const interest_boxes = document.getElementsByClassName('hobby');
+  const education_link = document.getElementsByClassName('education_link');
+
+
   nav.classList.toggle("none");
   print.classList.toggle("motiv");
   dowload_button.classList.toggle("none");
   repo.classList.toggle("none");
+  interest_list.classList.toggle("interest_ol");
+  
+  for(let i = 0; i < interest_boxes.length; i++) {
+    interest_boxes[i].classList.toggle("interest_li");
+    console.log(interest_boxes);
+  }
+  for(let i = 0; i < education_link.length; i++) {
+    education_link[i].classList.toggle("color_link");
+    console.log(education_link);
+  }
 
   var opt = {
     orientation: 0,
@@ -17,17 +32,22 @@ document.getElementById("download_button").addEventListener("click", () => {
     pagebreak: { before: "#margin", after: "#margin" },
   };
 
+  setTimeout(html2pdf().from(print).set(opt).save("Michał_Kawczak-CV.pdf"), 3000);
 
-
-
-  html2pdf().from(print).set(opt).save("Michał_Kawczak-CV.pdf");
   setTimeout(() => {
     nav.classList.toggle("none");
     print.classList.toggle("motiv");
     dowload_button.classList.toggle("none");
     repo.classList.toggle("none");
-  }, 2000);
+    main_interest_box.classList.toggle("interest_div");
 
+    interest_list.classList.toggle("interest_ol");
+
+    for(let i = 0; i < interest_boxes.length; i++) {
+      interest_boxes[i].classList.toggle("interest_li");
+      break;
+    }
+  }, 500);
   
 });
 
@@ -149,33 +169,33 @@ const content = {
     }
 };
 
-const languageButton = document.getElementById('languageButton');
-const titleElement = document.getElementById('title');
-const descriptionElement = document.getElementById('description');
+// const languageButton = document.getElementById('languageButton');
+// const titleElement = document.getElementById('title');
+// const descriptionElement = document.getElementById('description');
 
-let currentLanguage = 'pl'; // Domyślny język
+// let currentLanguage = 'pl'; // Domyślny język
 
-languageButton.addEventListener('click', () => {
-    currentLanguage = currentLanguage === 'pl' ? 'en' : 'pl';
-    updateContent();
-});
+// languageButton.addEventListener('click', () => {
+//     currentLanguage = currentLanguage === 'pl' ? 'en' : 'pl';
+//     updateContent();
+// });
 
-function updateContent() {
-    titleElement.textContent = content.title[currentLanguage];
-    descriptionElement.textContent = content.description[currentLanguage];
-}
+// function updateContent() {
+//     titleElement.textContent = content.title[currentLanguage];
+//     descriptionElement.textContent = content.description[currentLanguage];
+// }
 
-// Inicjalizacja zawartości
-updateContent();
+// // Inicjalizacja zawartości
+// updateContent();
 
-const cv_box = document.querySelector('.cv_print');
-const download_button = document.getElementById('download_button');
+// const cv_box = document.querySelector('.cv_print');
+// const download_button = document.getElementById('download_button');
 
-download_button.addEventListener('click', () => {
+// download_button.addEventListener('click', () => {
 
-    cv_box.classList.toggle('cv_print_background_download');
+//     cv_box.classList.toggle('cv_print_background_download');
 
-    const cv_pdf = new jsPDF();
-    cv_pdf.fromHTML(cv_box, 10, 10);
-    cv_pdf.save('Michał_Kawczak-CV.pdf');
-})
+//     const cv_pdf = new jsPDF();
+//     cv_pdf.fromHTML(cv_box, 10, 10);
+//     cv_pdf.save('Michał_Kawczak-CV.pdf');
+// })

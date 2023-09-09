@@ -70,48 +70,54 @@
     <header>
 
 
-            <nav class="navbar navbar-expand-xl" >
+        <nav class="navbar navbar-expand-xl" >
 
 
-                <div class="container-fluid justify-content-end" id="navBox">
+            <div class="container-fluid justify-content-evenly" id="navBox">
 
-                    <div id="title">
+                <div id="title_nav">
 
-                        <h1>
-                            <a class="animatedText"
-                                href="home.html">
-                                @michsias
-                            </a>
-                        </h1>
-
-                    </div>
-                    
-                    <button class=" my-4 mx-4 navbar-toggler align-items-center" 
-                    type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" 
-                    aria-expanded="false" aria-label="Toggle navigation">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </button>
-
-                    <div class="pt-3 pb-3 collapse navbar-collapse justify-content-end" id="navMenu">
-
-                        <ul class="mx-5 navbar-nav d-flex align-items-center">
-
-                          <li class="nav-item"> <a class="nav-link" href="Home.html">Home</a> </li>
-
-                          <li class="nav-item"> <a class="nav-link" href="cv.html">CV</a> </li>
-                          
-                          <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact</a> </li>
-
-                        </ul>
-
-                      </div>
+                    <h1>
+                        <a class="animatedText"
+                            href="home.html">   
+                            @michsias
+                        </a>
+                    </h1>
 
                 </div>
 
+                <button class="my-4 mx-4 navbar-toggler align-items-center" 
+                type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" 
+                aria-expanded="false" aria-label="Toggle navigation" id="nav_button">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
 
-            </nav>
+                <div class="pt-3 pb-3 collapse navbar-collapse justify-content-end" id="navMenu">
+
+                    <ul class="mx-5 navbar-nav d-flex align-items-center">
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="cv.html">CV</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
+
+                    </ul>
+
+                  </div>
+
+            </div>
+
+
+        </nav>
 
 
     </header>
@@ -344,7 +350,7 @@
 
                                             <p class="start_work"> [ 09.2016 - 06.2019 ]:</p>
                                             <li class="list_type">   
-                                                <a href= "http://www.lo2.radomsko.pl/cms/index.php"> 
+                                                <a href= "http://www.lo2.radomsko.pl/cms/index.php" class="education_link"> 
                                                 II Liceum Ogólnokształcące 
                                                 im. K. K. Baczyńskiego </a>
                                                 <p> Kierunek: mat-jęz</p> 
@@ -352,7 +358,7 @@
 
                                             <p class="start_work"> [ 10.2020 - obecnie ]: </p>
                                             <li class="list_type"> 
-                                                <a href="https://www.wst.com.pl/"> 
+                                                <a href="https://www.wst.com.pl/" class="education_link"> 
                                                 Akademia Śląska </a>
                                                 <p> Kierunek: mechatronika</p>
                                                 <p> Tryb: niestacjonarnie</p>
@@ -397,7 +403,7 @@
                             <div class=" row justify-content-center main_box custom_border">
 
 
-                                <div class="p-3 my-3 col-11 d-flex justify-content-center">
+                                <div class="p-3 my-3 col-11 d-flex justify-content-center" id="interest_box">
                                     
                                     <div id="interest">
 
@@ -405,11 +411,11 @@
 
                                         <!-- Dodac za pomocą js gdy najedze myszka to zmieni zawartosc na inna -->
                                         
-                                        <ol>
-                                            <li class="list_type"> <i class="bi bi-android2"></i> Technologia </li>
-                                            <li class="list_type"> <i class="bi bi-lungs-fill"></i> Sport </li>
-                                            <li class="list_type"> <i class="bi bi-earbuds"></i>  Muzyka </li>
-                                            <li class="list_type"> <i class="bi bi-car-front"></i> Motoryzacja </li>
+                                        <ol id="interest_list">
+                                            <li class="list_type hobby"> <i class="bi bi-android2"></i> Technologia </li>
+                                            <li class="list_type hobby"> <i class="bi bi-lungs-fill"></i> Sport </li>
+                                            <li class="list_type hobby"> <i class="bi bi-earbuds"></i>  Muzyka </li>
+                                            <li class="list_type hobby"> <i class="bi bi-car-front"></i> Motoryzacja </li>
                                         </ol>
                                         
                                     </div>
@@ -505,6 +511,7 @@
     <!-- my js -->
     <script src="main_js/cv.js" > </script>
 
+    <script src="main_js/navbar.js" ></script>   
 
 </body>
 

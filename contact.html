@@ -72,48 +72,54 @@
     <header>
 
 
-            <nav class="navbar navbar-expand-xl" >
+        <nav class="navbar navbar-expand-xl" >
 
 
-                <div class="container-fluid justify-content-end" id="navBox">
+            <div class="container-fluid justify-content-evenly" id="navBox">
 
-                    <div id="title">
+                <div id="title_nav">
 
-                        <h1>
-                            <a class="animatedText"
-                                href="home.html">
-                                @michsias
-                            </a>
-                        </h1>
-
-                    </div>
-
-                    <button class=" my-4 mx-4 navbar-toggler align-items-center" 
-                    type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" 
-                    aria-expanded="false" aria-label="Toggle navigation">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </button>
-
-                    <div class="pt-3 pb-3 collapse navbar-collapse justify-content-end" id="navMenu">
-
-                        <ul class="mx-5 navbar-nav d-flex align-items-center">
-
-                          <li class="nav-item"> <a class="nav-link" href="Home.html">Home</a> </li>
-
-                          <li class="nav-item"> <a class="nav-link" href="cv.html">CV</a> </li>
-                          
-                          <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact</a> </li>
-
-                        </ul>
-
-                      </div>
+                    <h1>
+                        <a class="animatedText"
+                            href="home.html">   
+                            @michsias
+                        </a>
+                    </h1>
 
                 </div>
 
+                <button class="my-4 mx-4 navbar-toggler align-items-center" 
+                type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" 
+                aria-expanded="false" aria-label="Toggle navigation" id="nav_button">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
 
-            </nav>
+                <div class="pt-3 pb-3 collapse navbar-collapse justify-content-end" id="navMenu">
+
+                    <ul class="mx-5 navbar-nav d-flex align-items-center">
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="cv.html">CV</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
+
+                    </ul>
+
+                  </div>
+
+            </div>
+
+
+        </nav>
 
 
     </header>
@@ -298,6 +304,7 @@
 
     <script src="main_js/contact.js" > </script>
 
+    <script src="main_js/navbar.js" ></script>   
 
 </body>
 
