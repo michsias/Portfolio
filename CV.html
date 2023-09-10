@@ -69,16 +69,15 @@
 
     <header>
 
-
         <nav class="navbar navbar-expand-xl" >
 
 
-            <div class="container-fluid justify-content-evenly" id="navBox">
+            <div class="container-fluid justify-content-between" id="navBox">
 
                 <div id="title_nav">
 
                     <h1>
-                        <a class="animatedText"
+                        <a class="animatedText easter_hover"
                             href="home.html">   
                             @michsias
                         </a>
@@ -96,9 +95,9 @@
 
                 <div class="pt-3 pb-3 collapse navbar-collapse justify-content-end" id="navMenu">
 
-                    <ul class="mx-5 navbar-nav d-flex align-items-center">
+                    <ul class="navbar-nav d-flex align-items-center">
 
-                      <li class="nav-item">
+                      <li class="nav-item" >
                         <a class="nav-link" href="home.html">Home</a>
                       </li>
 
@@ -112,7 +111,11 @@
 
                     </ul>
 
+                    <div id="counter_eggs">
+                    </div>
+
                   </div>
+
 
             </div>
 
@@ -167,7 +170,7 @@
                                         </ol>
                                     
                                         <div id = buttonSave>
-                                            <button id="download_button"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
+                                            <button id="download_button" class="easter_click"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
                                         </div>
                                 </div>
                             
@@ -251,7 +254,7 @@
                                     <div id="repository_Button">
 
                                         <button> 
-                                            <a href="https://github.com/michsias?tab=repositories" target="_blank" id="repo_button">
+                                            <a href="https://github.com/michsias?tab=repositories" target="_blank" id="repo_button" class="easter_click">
                                                 <i class="bi bi-github icon_repo"></i> GitHub 
                                             </a> 
                                         </button>
@@ -349,16 +352,16 @@
                                         <ol>
 
                                             <p class="start_work"> [ 09.2016 - 06.2019 ]:</p>
-                                            <li class="list_type">   
-                                                <a href= "http://www.lo2.radomsko.pl/cms/index.php" class="education_link"> 
+                                            <li class="list_type easter_click">   
+                                                <a href= "http://www.lo2.radomsko.pl/cms/index.php" target="_blank" class="education_link"> 
                                                 II Liceum Ogólnokształcące 
                                                 im. K. K. Baczyńskiego </a>
                                                 <p> Kierunek: mat-jęz</p> 
                                             </li>
 
                                             <p class="start_work"> [ 10.2020 - obecnie ]: </p>
-                                            <li class="list_type"> 
-                                                <a href="https://www.wst.com.pl/" class="education_link"> 
+                                            <li class="list_type easter_click"> 
+                                                <a href="https://www.wst.com.pl/" target="_blank" class="education_link"> 
                                                 Akademia Śląska </a>
                                                 <p> Kierunek: mechatronika</p>
                                                 <p> Tryb: niestacjonarnie</p>
@@ -512,6 +515,8 @@
     <script src="main_js/cv.js" > </script>
 
     <script src="main_js/navbar.js" ></script>   
+
+    <script src="main_js/easter_eggs.js" ></script> 
 
 </body>
 

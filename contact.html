@@ -75,12 +75,12 @@
         <nav class="navbar navbar-expand-xl" >
 
 
-            <div class="container-fluid justify-content-evenly" id="navBox">
+            <div class="container-fluid justify-content-between" id="navBox">
 
                 <div id="title_nav">
 
                     <h1>
-                        <a class="animatedText"
+                        <a class="animatedText easter_hover"
                             href="home.html">   
                             @michsias
                         </a>
@@ -98,9 +98,9 @@
 
                 <div class="pt-3 pb-3 collapse navbar-collapse justify-content-end" id="navMenu">
 
-                    <ul class="mx-5 navbar-nav d-flex align-items-center">
+                    <ul class="navbar-nav d-flex align-items-center">
 
-                      <li class="nav-item">
+                      <li class="nav-item" >
                         <a class="nav-link" href="home.html">Home</a>
                       </li>
 
@@ -114,7 +114,11 @@
 
                     </ul>
 
+                    <div id="counter_eggs">
+                    </div>
+
                   </div>
+
 
             </div>
 
@@ -150,7 +154,7 @@
 
                             <div class="p-2 mt-1 col-xl-3 col-11 justify-content-center d-flex">
                                 
-                                <div class="contact_socials">
+                                <div class="contact_socials easter_click">
                                     <a class="contact_socials_a" href="https://www.linkedin.com/in/michał-kawczak/" target="_blank">
                                         <i class="bi bi-linkedin size_icon_contact"></i>
                                         Linkedin
@@ -161,7 +165,7 @@
 
                             <div class="p-2 mt-1 col-xl-3 col-11 justify-content-center d-flex  ">
                                 
-                                <div class="contact_socials">
+                                <div class="contact_socials easter_click">
                                     <a class="contact_socials_a" href="mailto:mkawczak00@gmail.com">
                                         <i class="bi bi-envelope-at-fill size_icon_contact"></i>
                                         mkawczak00@gmail.com
@@ -172,7 +176,7 @@
 
                             <div class="p-2 mt-1 col-xl-3 col-11 justify-content-center d-flex">
                                 
-                                <div class="contact_socials" id="discord_ID">
+                                <div class="contact_socials easter_click" id="discord_ID">
                                     <a class="contact_socials_a">
                                         <i class="bi bi-discord size_icon_contact"></i>
                                         Discord
@@ -240,7 +244,7 @@
 
                                         </div>
 
-                                        <div class="input_div" id="send_email">
+                                        <div class="input_div easter_click" id="send_email">
 
                                             <input id="send_message" type="submit" name="Send" value="Send">
 
@@ -305,6 +309,8 @@
     <script src="main_js/contact.js" > </script>
 
     <script src="main_js/navbar.js" ></script>   
+    
+    <script src="main_js/easter_eggs.js" ></script> 
 
 </body>
 

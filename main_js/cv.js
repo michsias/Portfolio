@@ -74,19 +74,19 @@ const adress = {
 const censoredAdress = {
   linkedin:
     '<i class="bi bi-linkedin icon"> </i> \
-    <button class="check_pin"> ########## </button> ',
+    <button class="check_pin easter_click"> ########## </button> ',
   email:
     '<i class="bi bi-envelope-at-fill icon "></i> \
-    <button class="check_pin"> ########## </button>',
+    <button class="check_pin easter_click"> ########## </button>',
   phone:
     ' <i class="bi bi-envelope-at-fill icon "></i> \
-    <button class="check_pin"> ########## </button>',
+    <button class="check_pin easter_click"> ########## </button>',
   birth:
     '<i class="bi bi-telephone-forward-fill icon "></i> \
-    <button class="check_pin"> ########## </button>',
+    <button class="check_pin easter_click"> ########## </button>',
   location:
     '<i class="bi bi-geo-alt-fill icon "></i> \
-    <button class="check_pin"> ########## </button>',
+    <button class="check_pin easter_click"> ########## </button>',
 };
 
 const div_adress = document.getElementById("adress");

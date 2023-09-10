@@ -61,15 +61,21 @@ body {
 
 /*############################################################*/
 /* Add buttons in Navigation */
+#navBox {
+    max-width: 1400px;
+}
+
 
 #title_nav {
     display: flex;
+    max-width: 450px;
 }
 
 #button_color {
     display: flex;
     flex-direction: column;
     width: 50px;
+    
 }
 
 .color_switch {
@@ -100,19 +106,21 @@ body {
     border: none;
 }
 
+.animatedText:hover {
+    color: var(--main-light-blue);
+}
+
+
+#titleNav > h1 > a {
+    margin: 0;
+    font-weight: 700;
+    border: none;
+}
+
 @media (max-width: 1200px) {
     #title_nav > h1 { display: none;}
     #navBox { justify-content: space-between !important;}
 }
-
-/* .animation_nav {
-    animation: displayNav 2s ease-in-out forwards;
-}
-
-@keyframes displayNav {
-    0% { opacity: 1;}
-    100% { opacity: 0;}
-} */
 
 /*############################################################*/
 /* Toggler nav */
@@ -178,7 +186,7 @@ body {
 }
 
 #navMenu {
-    max-width: 1400px;
+    max-width: 900px;
 }
 
 .navbar {
@@ -219,6 +227,34 @@ body {
     transform: scale(0.95);
 }   
 
+#counter_eggs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    text-align: center;
+
+    background: var(--main-light-blue);
+    color: var(--main-dark-blue);
+    border-radius: 100%;
+}
+
+#counter_eggs > p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.found_easter {
+    color: var(--main-light-blue);
+    font-weight: 700;
+    font-size: 20px;
+}
 /*############################################################*/
 /*############################################################*/
 /*############################################################*/
@@ -261,7 +297,7 @@ body {
     height: 200px;
     padding: 2px;
 
-     transform: translatey(-200%);
+    transform: translatey(-200%);
 }
 
 .animation_avatar {
@@ -917,11 +953,7 @@ h2 > span {
      -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
      -moz-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
 
-
     transition: all 0.8s ease-in-out;
-
-    animation: loaderAnimation 3s infinite;
-
 }
 
 .socials:hover{
@@ -932,14 +964,6 @@ h2 > span {
     background: 
     linear-gradient(to top, var(--main-light-blue), var(--main-dark-blue));
 }  
-
-@keyframes loaderAnimation {   
-    0% { opacity: 1; }
-    25% { opacity: 0.8;}
-    50% { opacity: 0.6;}
-    75% { opacity: 0.8;}
-    100% { opacity: 1;}
-}
 
 @media (max-width: 1200px) {
     .socials { width: 450px !important; }
@@ -959,30 +983,6 @@ h2 > span {
     margin-right: 20px;
     margin-left: 20px;
 }
-
-/*
-.linkedin:hover
-{
-	background-color: rgb(10, 119, 181);
-
-    cursor: pointer;
-}
-
-.git:hover
-{
-	background-color: rgb(36, 41, 46);
-
-    cursor: pointer;
-}
-
-.fb:hover
-{
-	background-color: rgb(59, 89, 152);;
-
-    cursor: pointer;
-}
-
-*/
 
 .page {   
     width: 100%;
@@ -1588,13 +1588,14 @@ form {
     transition: all .3s ease-in-out;
     
 }
-.input_div > input, textarea {
+
+#send_message, .input_div > input, textarea {
     outline: none !important;
     border: none;
     resize: none;
 }
 
-.input_div > textarea:focus-within {
+#send_message, .input_div > textarea:focus-within {
     border: 3px solid var(--main-light-blue);
 }
 .input_div > input:focus-within {
