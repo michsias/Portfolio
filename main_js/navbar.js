@@ -20,7 +20,7 @@ const box_button = document.createElement('div');
 
 box_button.id = 'button_color';
 box_button.innerHTML = `
-    <button class="color_switch easter_click"></button>
+    <button class="color_switch"></button>
     <button class="color_switch easter_click"></button>
     <button class="color_switch easter_click"></button>
 `;

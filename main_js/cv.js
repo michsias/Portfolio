@@ -1,5 +1,5 @@
 document.getElementById("download_button").addEventListener("click", () => {
-  const print = document.getElementById("print");
+  const print = document.getElementsByClassName("print")[0];
   const nav = document.querySelector(".navbar");
   const dowload_button = document.getElementById("download_button");
   const repo = document.getElementById("repository_Button");
@@ -39,7 +39,7 @@ document.getElementById("download_button").addEventListener("click", () => {
     print.classList.toggle("motiv");
     dowload_button.classList.toggle("none");
     repo.classList.toggle("none");
-    main_interest_box.classList.toggle("interest_div");
+    interest_list.classList.toggle("interest_div");
 
     interest_list.classList.toggle("interest_ol");
 
@@ -47,6 +47,11 @@ document.getElementById("download_button").addEventListener("click", () => {
       interest_boxes[i].classList.toggle("interest_li");
       break;
     }
+    for(let i = 0; i < education_link.length; i++) {
+      education_link[i].classList.toggle("color_link");
+      console.log(education_link);
+    }
+
   }, 500);
   
 });
@@ -144,6 +149,40 @@ function checkBox() {
 
 viewsPersonal(censoredAdress);
 checkBox();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // document.getElementById('print_button').addEventListener('click', () => {
 //     const printWindow = window.open('', '', 'width=600,height=600');
