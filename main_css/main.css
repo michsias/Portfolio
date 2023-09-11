@@ -1202,6 +1202,7 @@ li {
     padding: 5px;
 
 
+    color: var(--color-text);
     background-color: transparent;
     border-radius: 10px;
     border: 5px solid var(--main-light-blue);
@@ -1214,7 +1215,7 @@ li {
     color: var(--color-text);
 }
 
-.buttons_save > button:hover {
+#save:hover {
     
     transform: scale(0.9);
 
@@ -1226,10 +1227,15 @@ li {
 .buttons_save > button > i {
     font-size: 35px;
 }
-
-#en {
-    display: none;
+#pl_en > span {
+    font-weight: 800;
+    
 }
+
+.active_click {
+    color: var(--main-light-blue);
+}
+
 
 /* Rightbox */
 

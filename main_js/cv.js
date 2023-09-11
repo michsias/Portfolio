@@ -190,20 +190,20 @@ const content_cv = {
     en: 'Hobby'
   },
   paraf_21: {
-    pl: 'Technologia', 
-    en: 'Technology'
+    pl: '<i class="bi bi-android2"></i> Technologia', 
+    en: '<i class="bi bi-android2"></i> Technology'
   },
   paraf_22: {
-    pl: 'Sport', 
-    en: 'Sport'
+    pl: '<i class="bi bi-lungs-fill"></i> Sport', 
+    en: '<i class="bi bi-lungs-fill"></i> Sport'
   },
   paraf_23: {
-    pl: ' Muzyka', 
-    en: 'Music'
+    pl: '<i class="bi bi-earbuds"></i>  Muzyka', 
+    en: '<i class="bi bi-earbuds"></i>  Music'
   },
   paraf_24: {
-    pl: ' Motoryzacja', 
-    en: 'Automotiv'
+    pl: '<i class="bi bi-car-front"></i> Motoryzacja', 
+    en: '<i class="bi bi-car-front"></i> Automotiv'
   },
   paraf_25: {
     pl: 
@@ -224,25 +224,38 @@ const content_cv = {
 };
 
 const btn_language = document.getElementById('pl_en');
+const pl_click = document.getElementById('pl_click');
+const en_click = document.getElementById('en_click');
 const elements_cv = document.getElementsByClassName('pl_content');
 
 let default_language = 'pl'; 
 
 btn_language.addEventListener('click', () => {
-  default_language = default_language === 'pl' ? 'en' : 'pl';
-  updateContent();
+  
+  if (default_language === 'pl') {
+    default_language = 'en';
+    pl_click.classList.toggle("active_click");
+    en_click.classList.toggle("active_click");
+    updateContent();
+ 
+  } else {
+    default_language = 'pl';
+    pl_click.classList.toggle("active_click");
+    en_click.classList.toggle("active_click");
+    updateContent();
+  }
+
+
 });
 
 function updateContent() {
   for (let i = 0; i < elements_cv.length-1; i++) {
     const element = elements_cv[i];
     const contentKey = `paraf_${i + 1}`;
-    element.textContent = content_cv[contentKey][default_language];
+    element.innerHTML = content_cv[contentKey][default_language];
   }
 }
 
-
-/////////////////////////////////////////////////////////////////////////////////////
 
 updateContent();
 
