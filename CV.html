@@ -171,12 +171,12 @@
                                     
                                         <div id="buttons_cv">
                                             
-                                            <div class = buttonSave>
-                                                <button id="download_button" class="easter_click"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
+                                            <div class="buttons_save">
+                                                <button class="easter_click" id="save"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
                                             </div>
     
-                                            <div class = buttonSave>
-                                                <button id="download_button" class="easter_click"> 
+                                            <div class="buttons_save">
+                                                <button class="easter_click" id="pl_en"> 
                                                     <span id="pl_click"> PL</span> / <span id="en_click"> EN </span> 
                                                 </button>
                                             </div>
@@ -205,9 +205,9 @@
 
                                 <div id="frontend_developer">
 
-                                    <h2 class="title_boxes"> O mnie </h2>
+                                    <h2 class="title_boxes pl_content"> O mnie </h2>
 
-                                    <p>
+                                    <p class="pl_content">
                                         Cześć, nazywam się Michał, mam 23 latat, studiuje mechatronike a zawodowo jestem elektronikiem. 
                                         Od jakiegoś czasu rozwijam swoje umiejętnośći jako web developer oraz chciałbym w przyszłości jako app developer.
                                         Na studiach i w pracy poznałem podstawy C oraz C++, a aktualnie skupiam się na nauce HTML + CSS oraz JavaScript. 
@@ -240,7 +240,7 @@
 
                                     <div id="my_skills">
 
-                                        <h2 class="title_boxes"> Umiejętności </h2>
+                                        <h2 class="title_boxes pl_content"> Umiejętności </h2>
 
                                         <ul>
 
@@ -295,20 +295,20 @@
 
                                 <div id="work_eperience">
 
-                                    <h2 class="title_boxes"> Doświadczenie zawodowe </h2>
+                                    <h2 class="title_boxes pl_content"> Doświadczenie zawodowe </h2>
 
                                     <ol id="jobs">
 
                                         <!-- Można zrobić z tego komponent? -->
                                         
-                                        <p class="start_work"> [ 11.2022 - obecnie ]: </p>
+                                        <p class="start_work pl_content"> [ 11.2022 - obecnie ]: </p>
                                         <li>
-                                            <p id="company"> <span> Elektronik </span> - Mysteryinc - Warszawa  </p> 
+                                            <p id="company"> <span class="pl_content"> Elektronik </span> - Mysteryinc - Warszawa  </p> 
                                             
                                             <ul id="duties">
-                                                <li class="list_type"> Programowanie w C/C++ - Arduino IDE </li>
-                                                <li class="list_type"> Projektowanie druków 3D - Fusion360 </li>
-                                                <li class="list_type"> Projektowanie i lutowanie elektroniki</li>
+                                                <li class="list_type pl_content"> Programowanie w C/C++ - Arduino IDE </li>
+                                                <li class="list_type pl_content"> Projektowanie druków 3D - Fusion360 </li>
+                                                <li class="list_type pl_content"> Projektowanie i lutowanie elektroniki</li>
                                             </ul>
 
                                         </li>
@@ -325,12 +325,12 @@
                                     
                                 <div class="rigth_box">
 
-                                    <h2 class="title_boxes"> Uprawnienia</h2>
+                                    <h2 class="title_boxes pl_content"> Uprawnienia</h2>
 
                                     <ol>
 
                                         <li class="list_type"> Sep 1 kV</li>
-                                        <li class="list_type"> Prawo jazdy kat. B</li>
+                                        <li class="list_type pl_content"> Prawo jazdy kat. B</li>
 
                                     </ol>
                                     
@@ -358,7 +358,7 @@
 
                                     <div id="education">
 
-                                        <h2 class="title_boxes"> Wykształcenie</h2>
+                                        <h2 class="title_boxe pl_content"> Wykształcenie </h2>
 
                                         <ol>
 
@@ -367,15 +367,15 @@
                                                 <a href= "http://www.lo2.radomsko.pl/cms/index.php" target="_blank" class="education_link"> 
                                                 II Liceum Ogólnokształcące 
                                                 im. K. K. Baczyńskiego </a>
-                                                <p> Kierunek: mat-jęz</p> 
+                                                <p class="pl_content"> Kierunek: mat-jęz</p> 
                                             </li>
 
-                                            <p class="start_work"> [ 10.2020 - obecnie ]: </p>
+                                            <p class="start_work pl_content"> [ 10.2020 - obecnie ]: </p>
                                             <li class="list_type easter_click"> 
                                                 <a href="https://www.wst.com.pl/" target="_blank" class="education_link"> 
                                                 Akademia Śląska </a>
-                                                <p> Kierunek: mechatronika</p>
-                                                <p> Tryb: niestacjonarnie</p>
+                                                <p class="pl_content"> Kierunek: mechatronika</p>
+                                                <p class="pl_content"> Tryb: niestacjonarnie</p>
                                             </li>
 
                                         </ol>
@@ -389,11 +389,11 @@
                                     
                                     <div class="rigth_box">
 
-                                        <h2 class="title_boxes"> Jęzki obce</h2>
+                                        <h2 class="title_boxes pl_content"> Jęzki obce</h2>
 
                                         <ol>
-                                            <li class="list_type"> Polski - ojczysty</li>
-                                            <li class="list_type"> Angielski - B1</li>
+                                            <li class="list_type pl_content"> Polski - ojczysty</li>
+                                            <li class="list_type pl_content"> Angielski - B1</li>
                                         </ol>
                                         
                                     </div>
@@ -421,15 +421,15 @@
                                     
                                     <div id="interest">
 
-                                        <h2 class="title_boxes"> Zainteresowania</h2>
+                                        <h2 class="title_boxes pl_content"> Zainteresowania</h2>
 
                                         <!-- Dodac za pomocą js gdy najedze myszka to zmieni zawartosc na inna -->
                                         
                                         <ol id="interest_list">
-                                            <li class="list_type hobby"> <i class="bi bi-android2"></i> Technologia </li>
-                                            <li class="list_type hobby"> <i class="bi bi-lungs-fill"></i> Sport </li>
-                                            <li class="list_type hobby"> <i class="bi bi-earbuds"></i>  Muzyka </li>
-                                            <li class="list_type hobby"> <i class="bi bi-car-front"></i> Motoryzacja </li>
+                                            <li class="list_type hobby pl_content"> <i class="bi bi-android2"></i> Technologia </li>
+                                            <li class="list_type hobby pl_content"> <i class="bi bi-lungs-fill"></i> Sport </li>
+                                            <li class="list_type hobby pl_content"> <i class="bi bi-earbuds"></i>  Muzyka </li>
+                                            <li class="list_type hobby pl_content"> <i class="bi bi-car-front"></i> Motoryzacja </li>
                                         </ol>
                                         
                                     </div>
@@ -456,7 +456,7 @@
 
                                 <div id="clause">
 
-                                    <p>
+                                    <p class="pl_content">
                                         Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji 
                                         zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz 
                                         zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. 
@@ -480,9 +480,15 @@
             </div>
 
 
+<!-- 
 
+                                    Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji 
+                                    zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz 
+                                    zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. 
+                                    w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych 
+                                    i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
 
-
+ -->
 
 
             <div class="container-fluid cv_print print" id="en">
@@ -527,12 +533,24 @@
 
                                         </ol>
                                     
-                                        <div id = buttonSave>
-                                            <button id="download_button" class="easter_click"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
+                                        <div id="buttons_cv">
+                                            
+                                            <div class="buttons_save">
+                                                <button class="easter_click" id="save"> <i class="bi bi-cloud-arrow-down-fill"> </i> </button>
+                                            </div>
+    
+                                            <div class="buttons_save">
+                                                <button class="easter_click" id="pl_en"> 
+                                                    <span id="pl_click"> PL</span> / <span id="en_click"> EN </span> 
+                                                </button>
+                                            </div>
+
                                         </div>
+
                                 </div>
                             
                             </div>
+x   
 
                         </div>
                     

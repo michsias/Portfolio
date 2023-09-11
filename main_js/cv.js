@@ -1,62 +1,7 @@
-document.getElementById("download_button").addEventListener("click", () => {
-  const print = document.getElementsByClassName("print")[0];
-  const nav = document.querySelector(".navbar");
-  const dowload_button = document.getElementById("download_button");
-  const repo = document.getElementById("repository_Button");
 
-  const interest_list = document.getElementById("interest_list");
-  const interest_boxes = document.getElementsByClassName('hobby');
-  const education_link = document.getElementsByClassName('education_link');
-
-
-  nav.classList.toggle("none");
-  print.classList.toggle("motiv");
-  dowload_button.classList.toggle("none");
-  repo.classList.toggle("none");
-  interest_list.classList.toggle("interest_ol");
-  
-  for(let i = 0; i < interest_boxes.length; i++) {
-    interest_boxes[i].classList.toggle("interest_li");
-    console.log(interest_boxes);
-  }
-  for(let i = 0; i < education_link.length; i++) {
-    education_link[i].classList.toggle("color_link");
-    console.log(education_link);
-  }
-
-  var opt = {
-    orientation: 0,
-    putOnlyUsedFonts: true,
-    margin: 0,
-    filename: "Michał_Kawczak-CV.pdf",
-    pagebreak: { before: "#margin", after: "#margin" },
-  };
-
-  setTimeout(html2pdf().from(print).set(opt).save("Michał_Kawczak-CV.pdf"), 3000);
-
-  setTimeout(() => {
-    nav.classList.toggle("none");
-    print.classList.toggle("motiv");
-    dowload_button.classList.toggle("none");
-    repo.classList.toggle("none");
-    interest_list.classList.toggle("interest_div");
-
-    interest_list.classList.toggle("interest_ol");
-
-    for(let i = 0; i < interest_boxes.length; i++) {
-      interest_boxes[i].classList.toggle("interest_li");
-      break;
-    }
-    for(let i = 0; i < education_link.length; i++) {
-      education_link[i].classList.toggle("color_link");
-      console.log(education_link);
-    }
-
-  }, 500);
-  
-});
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Set pin for personal data CV
 
 const adress = {
   linkedin:
@@ -114,7 +59,7 @@ function checkBox() {
 
       const input = document.createElement("input");
       input.type = "password";
-      input.placeholder = "PIN";
+      input.placeholder = "PASSWORD";
       input.classList.add("input_box");
 
       list_item.replaceChild(input, button_element);
@@ -148,84 +93,254 @@ function checkBox() {
 }
 
 viewsPersonal(censoredAdress);
-checkBox();
+checkBox()
+
+/////////////////////////////////////////////////////////////////////////////////
+//Button change language pl -> en
+
+const content_cv = {
+  paraf_1: {
+    pl: 'O mnie', 
+    en: 'About me'
+  },
+  paraf_2: {
+    pl: 
+      'Cześć, nazywam się Michał, mam 23 lata, studiuję mechatronikę, a zawodowo jestem elektronikiem. \
+      Od jakiegoś czasu rozwijam swoje umiejętności jako web developer i chciałbym w przyszłości zostać app developerem. \
+      Na studiach i w pracy poznałem podstawy C oraz C++, a obecnie skupiam się na nauce HTML + CSS oraz JavaScript. \
+      Motywuje mnie samorozwój oraz przyjemność z pisania "kodu".  ',
+      
+    en: 
+      'Hello, my name is Michał, I am 23 years old, I am studying mechatronics and professionally I am an electronics engineer. \
+      For some time now I have been developing my skills as a web developer and I would like to become an app developer in the future. \
+      During my studies and at work, I learned the basics of C and C++, and currently I am focusing on learning HTML + CSS and JavaScript. \
+      I am motivated by self-development and the pleasure of writing code.'
+  },
+  paraf_3: {
+    pl: 'Umiejętności', 
+    en: 'Skills'
+  },
+  paraf_4: {
+    pl: 'Doświadczenie zawodoweg', 
+    en: 'Experience'
+  },
+  paraf_5: {
+    pl: '[ 11.2022 - obecnie ]:', 
+    en: '[ 11.2022 - now ]:'
+  },
+  paraf_6: {
+    pl: 'Elektronik', 
+    en: 'Elektronics'
+  },
+  paraf_7: {
+    pl: 'Programowanie w C/C++ - Arduino IDE', 
+    en: 'Programing C/C++ - Arduino IDE'
+  },
+  paraf_8: {
+    pl: 'Projektowanie druków 3D - Fusion360', 
+    en: 'Design 3D print - Fusion360'
+  },
+  paraf_9: {
+    pl: 'Projektowanie i lutowanie elektroniki', 
+    en: 'Electronics design and soldering'
+  },
+  paraf_10: {
+    pl: 'Uprawnienia', 
+    en: 'Permissions'
+  },
+  paraf_11: {
+    pl: 'Prawo jazdy kat. B', 
+    en: 'Driving license cat. B'
+  },
+  paraf_12: {
+    pl: 'Wykształcenie', 
+    en: 'Education'
+  },
+  paraf_13: {
+    pl: 'Kierunek: mat-jęz', 
+    en: 'Direction: math-ling'
+  },
+
+  paraf_14: {
+    pl: '[ 10.2020 - obecnie ]:', 
+    en: '[ 10.2020 - now ]:'
+  },
+  paraf_15: {
+    pl: 'Kierunek: mechatronika', 
+    en: 'Directon: mechatronics'
+  },
+  paraf_16: {
+    pl: 'Tryb: niestacjonarnie', 
+    en: 'Mode: part-time'
+  },
+  paraf_17: {
+    pl: 'Jęzki obce', 
+    en: 'Languages'
+  },
+  paraf_18: {
+    pl: 'Polski - ojczysty', 
+    en: 'Polski - native'
+  },
+  paraf_19: {
+    pl: 'Angielski - B1', 
+    en: 'English - B1'
+  },
+  paraf_20: {
+    pl: 'Zainteresowania', 
+    en: 'Hobby'
+  },
+  paraf_21: {
+    pl: 'Technologia', 
+    en: 'Technology'
+  },
+  paraf_22: {
+    pl: 'Sport', 
+    en: 'Sport'
+  },
+  paraf_23: {
+    pl: ' Muzyka', 
+    en: 'Music'
+  },
+  paraf_24: {
+    pl: ' Motoryzacja', 
+    en: 'Automotiv'
+  },
+  paraf_25: {
+    pl: 
+    ' Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji \
+    zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz \
+    zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. \
+    w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych \
+    i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).', 
+    en: 
+    'I consent to the processing of my personal data for the purposes of carrying out the recruitment process \
+    In accordance with the Act of May 10, 2018 on the protection of personal data (Journal of Laws of 2018, item 1000) and \
+    In accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016. \
+    on the protection of legal persons in connection with the need to use personal data \
+    in free access to such data and use of the account 95/46/EC (GDPR).' 
+  },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById('print_button').addEventListener('click', () => {
-//     const printWindow = window.open('', '', 'width=600,height=600');
-
-//     printWindow.document.open();
-//     printWindow.document.write('<html><head><title>Drukowanie</title></head><body>');
-//     printWindow.document.write(cv_box.innerHTML);
-//     printWindow.document.write('</body></html>');
-//     printWindow.document.close();
-
-//     printWindow.print();
-//     printWindow.close();
-// });
-
-const content = {
-    title: {
-        en: 'Hello!',
-        pl: 'Witaj!'
-    },
-    description: {
-        en: 'This is sample content.',
-        pl: 'To jest przykładowa zawartość.'
-    }
 };
 
-// const languageButton = document.getElementById('languageButton');
-// const titleElement = document.getElementById('title');
-// const descriptionElement = document.getElementById('description');
+const btn_language = document.getElementById('pl_en');
+const elements_cv = document.getElementsByClassName('pl_content');
 
-// let currentLanguage = 'pl'; // Domyślny język
+let default_language = 'pl'; 
 
-// languageButton.addEventListener('click', () => {
-//     currentLanguage = currentLanguage === 'pl' ? 'en' : 'pl';
-//     updateContent();
-// });
+btn_language.addEventListener('click', () => {
+  default_language = default_language === 'pl' ? 'en' : 'pl';
+  updateContent();
+});
 
-// function updateContent() {
-//     titleElement.textContent = content.title[currentLanguage];
-//     descriptionElement.textContent = content.description[currentLanguage];
+function updateContent() {
+  for (let i = 0; i < elements_cv.length-1; i++) {
+    const element = elements_cv[i];
+    const contentKey = `paraf_${i + 1}`;
+    element.textContent = content_cv[contentKey][default_language];
+  }
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+updateContent();
+
+/////////////////////////////////////////////////////////////////////////////////////
+//Convert to pdf and download CV
+const print_pl = document.getElementById('pl');
+
+document.getElementById("save").addEventListener("click", () => {
+
+  const nav = document.querySelector(".navbar");
+  const buttons_cv = document.getElementsByClassName("buttons_save");
+  const repo = document.getElementById("repository_Button");
+
+  const interest_list = document.getElementById("interest_list");
+  const interest_boxes = document.getElementsByClassName('hobby');
+  const education_link = document.getElementsByClassName('education_link');
+
+
+  print_pl.classList.toggle("motiv");
+  nav.classList.toggle("none");
+  repo.classList.toggle("none");
+  interest_list.classList.toggle("interest_ol");
+
+  for(let i = 0; i < buttons_cv.length; i++) {
+    buttons_cv[i].classList.toggle("none");
+    console.log(buttons_cv);
+  }
+  for(let i = 0; i < interest_boxes.length; i++) {
+    interest_boxes[i].classList.toggle("interest_li");
+    console.log(interest_boxes);
+  }
+  for(let i = 0; i < education_link.length; i++) {
+    education_link[i].classList.toggle("color_link");
+    console.log(education_link);
+  }
+
+  settingsPDF();
+
+  setTimeout(() => {
+
+    print_pl.classList.toggle("motiv");
+    nav.classList.toggle("none");
+    repo.classList.toggle("none");
+    interest_list.classList.toggle("interest_div");
+
+    interest_list.classList.toggle("interest_ol");
+
+    for(let i = 0; i < buttons_cv.length; i++) {
+      buttons_cv[i].classList.toggle("none");
+      console.log(buttons_cv);
+    }
+    for(let i = 0; i < interest_boxes.length; i++) {
+      interest_boxes[i].classList.toggle("interest_li");
+      break;
+    }
+    for(let i = 0; i < education_link.length; i++) {
+      education_link[i].classList.toggle("color_link");
+      console.log(education_link);
+    }
+
+  }, 500);
+  
+});
+
+function settingsPDF() {
+
+  var opt = {
+    orientation: 0,
+    putOnlyUsedFonts: true,
+    margin: 0,
+    filename: "Michał_Kawczak-CV.pdf",
+    pagebreak: { before: "#margin", after: "#margin" },
+  };
+
+  html2pdf().from(print_pl).set(opt).save("Michał_Kawczak-CV.pdf");
+}
+
+// function change_language() {
+
+//   const btn_lang = document.getElementById('pl_en');
+//   const print_pl = document.getElementById('pl');
+//   const print_en = document.getElementById('en');
+
+//   btn_lang.addEventListener('click', () => {
+
+//     console.log("Klikam");
+
+//     if (print_pl.style.display === 'block') {
+//       print_en.style.display = 'block';
+//       print_pl.style.display = 'none';
+//     } else {
+//       print_pl.style.display = 'none';
+//       print_en.style.display = 'block';
+//     }
+//   });
 // }
+//change_language();
 
-// // Inicjalizacja zawartości
-// updateContent();
 
 // const cv_box = document.querySelector('.cv_print');
 // const download_button = document.getElementById('download_button');

@@ -1195,7 +1195,7 @@ li {
     flex-direction: column;
 }
 
-.buttonSave > button {
+.buttons_save > button {
     margin-top: 20px;
     width:  75px;
     height: 75px;
@@ -1210,12 +1210,11 @@ li {
 
 }
 
-
-.buttonSave > button > i {
+.buttons_save > button > i {
     color: var(--color-text);
 }
 
-.buttonSave > button:hover {
+.buttons_save > button:hover {
     
     transform: scale(0.9);
 
@@ -1224,8 +1223,12 @@ li {
 
 }
 
-.buttonSave > button > i {
+.buttons_save > button > i {
     font-size: 35px;
+}
+
+#en {
+    display: none;
 }
 
 /* Rightbox */
