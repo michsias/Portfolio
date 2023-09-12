@@ -29,7 +29,7 @@ const first_posistion = title_nav.firstChild;
 title_nav.insertBefore(box_button, first_posistion);
 
 const buttons = document.getElementsByClassName('color_switch');
-const colors = ['#004Aff', '#8000ff', '#ffea00'];
+const colors = ['#004Aff', '#8000ff', '#00DEFF'];
 
 function addColors() {
     for(let i = 0; i < buttons.length; i++) {

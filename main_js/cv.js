@@ -67,7 +67,7 @@ function checkBox() {
       input.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
           const input_value = input.value;
-          const PIN = "181214052703"; 
+          const PIN = "12344321"; 
 
           if (input_value === PIN) {
             input.classList.add("good_pin");
@@ -105,15 +105,15 @@ const content_cv = {
   },
   paraf_2: {
     pl: 
-      'Cześć, nazywam się Michał, mam 23 lata, studiuję mechatronikę, a zawodowo jestem elektronikiem. \
-      Od jakiegoś czasu rozwijam swoje umiejętności jako web developer i chciałbym w przyszłości zostać app developerem. \
-      Na studiach i w pracy poznałem podstawy C oraz C++, a obecnie skupiam się na nauce HTML + CSS oraz JavaScript. \
-      Motywuje mnie samorozwój oraz przyjemność z pisania "kodu".  ',
+      ' Cześć, nazywam się Michał, mam 23 latat, studiuje mechatronike a zawodowo jestem elektronikiem. \
+      Od jakiegoś czasu rozwijam swoje umiejętności jako web developer, a w przyszłości chciałbym również jako app developer. \
+      Na studiach i w pracy poznałem podstawy C/C++, Java, Python, a aktualnie skupiam się na nauce HTML + CSS oraz JavaScript. \
+      Motywuje mnie samorozwój oraz przyjemność z pisania "koda".  ',
       
     en: 
       'Hello, my name is Michał, I am 23 years old, I am studying mechatronics and professionally I am an electronics engineer. \
-      For some time now I have been developing my skills as a web developer and I would like to become an app developer in the future. \
-      During my studies and at work, I learned the basics of C and C++, and currently I am focusing on learning HTML + CSS and JavaScript. \
+      I have been developing my skills as a web developer for some time, and in the future I would also like to become an app developer. \
+      During my studies and at work, I learned the basics of C/C++, Java, Python, and currently I am focusing on learning HTML + CSS and JavaScript. \
       I am motivated by self-development and the pleasure of writing code.'
   },
   paraf_3: {
@@ -121,7 +121,7 @@ const content_cv = {
     en: 'Skills'
   },
   paraf_4: {
-    pl: 'Doświadczenie zawodoweg', 
+    pl: 'Doświadczenie zawodowe', 
     en: 'Experience'
   },
   paraf_5: {
@@ -219,8 +219,6 @@ const content_cv = {
     on the protection of legal persons in connection with the need to use personal data \
     in free access to such data and use of the account 95/46/EC (GDPR).' 
   },
-
-
 };
 
 const btn_language = document.getElementById('pl_en');
@@ -249,7 +247,7 @@ btn_language.addEventListener('click', () => {
 });
 
 function updateContent() {
-  for (let i = 0; i < elements_cv.length-1; i++) {
+  for (let i = 0; i < elements_cv.length; i++) {
     const element = elements_cv[i];
     const contentKey = `paraf_${i + 1}`;
     element.innerHTML = content_cv[contentKey][default_language];
@@ -333,36 +331,3 @@ function settingsPDF() {
   html2pdf().from(print_pl).set(opt).save("Michał_Kawczak-CV.pdf");
 }
 
-// function change_language() {
-
-//   const btn_lang = document.getElementById('pl_en');
-//   const print_pl = document.getElementById('pl');
-//   const print_en = document.getElementById('en');
-
-//   btn_lang.addEventListener('click', () => {
-
-//     console.log("Klikam");
-
-//     if (print_pl.style.display === 'block') {
-//       print_en.style.display = 'block';
-//       print_pl.style.display = 'none';
-//     } else {
-//       print_pl.style.display = 'none';
-//       print_en.style.display = 'block';
-//     }
-//   });
-// }
-//change_language();
-
-
-// const cv_box = document.querySelector('.cv_print');
-// const download_button = document.getElementById('download_button');
-
-// download_button.addEventListener('click', () => {
-
-//     cv_box.classList.toggle('cv_print_background_download');
-
-//     const cv_pdf = new jsPDF();
-//     cv_pdf.fromHTML(cv_box, 10, 10);
-//     cv_pdf.save('Michał_Kawczak-CV.pdf');
-// })

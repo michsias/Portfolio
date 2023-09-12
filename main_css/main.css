@@ -65,16 +65,16 @@ body {
     max-width: 1400px;
 }
 
-
 #title_nav {
-    display: flex;
+    margin-left: 20px;
     max-width: 450px;
 }
 
 #button_color {
     display: flex;
-    flex-direction: column;
-    width: 50px;
+    width: 100px;
+    flex-direction: row;
+    align-items: flex-end
     
 }
 
@@ -117,9 +117,9 @@ body {
     border: none;
 }
 
-@media (max-width: 1200px) {
-    #title_nav > h1 { display: none;}
+@media (max-width: 1200px) {    
     #navBox { justify-content: space-between !important;}
+    #counter_eggs { display: none !important;}
 }
 
 /*############################################################*/
@@ -185,9 +185,7 @@ body {
     }
 }
 
-#navMenu {
-    max-width: 900px;
-}
+
 
 .navbar {
     padding: 0 !important;
@@ -328,8 +326,6 @@ h1 {
 h1 > a {
     width: 100%;
     height: 100%;
-
-    margin-top: 15px;
 
     display: inline-block;
 
@@ -596,21 +592,6 @@ h2 > span {
 
 /* ################################################## */
 /* Third Section*/
-/*
-#settingsExperienceDiv
-{   
-    height: 150px;
-}
-
-@media (max-width: 1100px)
-{
-    #settingsExperienceDiv
-    {
-        max-width: 650px !important;
-    }
-}
-
-*/
 
 #skillsDiv {
     width: 600px;
@@ -1073,7 +1054,7 @@ h2 > span {
 }
 
 .main_box:first-child {
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 /*############################################################*/
@@ -1187,7 +1168,7 @@ li {
 
 #adress {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #buttons_cv {
@@ -1354,6 +1335,9 @@ li {
 
 
 /* Left box */
+#education {
+    max-width: 400px;
+}
 #education ol > li {
     margin-bottom: 20px;
     list-style: square;
@@ -1365,6 +1349,12 @@ li {
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 1px;
+
+    transition: all .5s ease-in-out;
+}
+
+#education ol > li > a:hover {
+    color: var(--main-dark-blue);
 }
 
 #education ol > li > p:not(:first-child) {
@@ -1461,7 +1451,7 @@ li {
 .contact
 {
     max-width: 1400px;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 /*############################################################*/
@@ -1495,9 +1485,6 @@ li {
 
     border-radius: 100px;
     border: 5px solid var(--main-light-blue);
-    
-    /* background: 
-    linear-gradient(to bottom, var(--main-light-blue), var(--main-dark-blue)); */
      
     /* https://cssgenerator.pl/box-shadow-generator/ */
      -webkit-box-shadow: 0px 0px 50px -10px var(--main-light-blue);
@@ -1578,7 +1565,6 @@ x
 
 
     width: 100%;
-    /* border: 5px solid var(--main-light-blue); */
     border-radius: 25px;
     transform: scale(0.9);
 
@@ -1618,10 +1604,6 @@ form {
     border: 3px solid var(--main-light-blue);
 }
 
-/* .input_div > input:focus {
-    border: 3px solid var(--main-dark-blue);
-} */
-
 .input_div > label {
 
     font-size: 20px;
@@ -1649,10 +1631,6 @@ form {
 
     cursor: pointer;
 }
-
-/* .input_div > input, textarea:focus {
-    border: 3px solid var(--main-dark-blue);
-} */
 
 #message {
     min-height: 150px;
@@ -1689,5 +1667,3 @@ form {
         min-width: 800px !important;
     }
 }
-
-
