@@ -125,7 +125,7 @@ body {
 /*############################################################*/
 /* Toggler nav */
 .switch_on {
-    background: var(--main-dark-blue);
+    background: var(--main-dark-blue) !important; 
 }
 .switch_on > .line {
     background: var(--main-light-blue);
@@ -152,6 +152,7 @@ body {
     background-color: var(--main-dark-blue);
 
     padding: 5px 15px 5px 15px;
+    border-radius: 50px;
 }
 
 @media (max-width: 1200px) {
@@ -1546,7 +1547,7 @@ x
 /* Second Section - Form */
 
 .margin_form {
-    margin-top: 250px;
+    margin-top: 300px;
 }
 
 .title_form > h2 {

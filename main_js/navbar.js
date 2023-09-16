@@ -5,13 +5,6 @@ nav_switch.addEventListener('click', () => {
     nav_switch.classList.toggle('switch_on');
 });
 
-document.body.addEventListener('click', function(event) {
-    event.stopPropagation(); 
-    if (!event.target.closest('.nav_button')) {
-        nav_switch.classList.remove('switch_on');   
-    }
-});
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 //Add buttons change color 
 
