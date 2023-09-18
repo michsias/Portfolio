@@ -224,7 +224,17 @@ body {
     -ms-transform: scale(0.95);
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
-}   
+}
+
+.nav_link_active {
+    background-color: var(--main-light-blue);
+    border: 4px solid var(--main-dark-blue);
+    color: var(--main-dark-blue);
+        
+    -ms-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+}
 
 #counter_eggs {
     display: flex;
@@ -261,7 +271,8 @@ body {
 
 /* Boxes on page */
 #mainBox {
-    width: 1200px;
+    width: 95%;
+    max-width: 1200px;
 }
 
 /* Settings margin / boxes on page */
@@ -515,10 +526,14 @@ h2 > span {
     linear-gradient(to top, var(--main-dark-blue), var(--main-medium-blue));
      /* https://cssgenerator.pl/box-shadow-generator/ */
      -webkit-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
-     -moz-box-shadow: 0px 0px 100px -10px var(--main-light-blue);
+     -moz-box-shadow: 0px 0px 100px -10px var(--mainf-light-blue);
 
      box-shadow: 0px 0px 100px -10px var(--main-light-blue);
     /* dodac moze shadowBox */
+}
+
+#levels {
+    width: 100% !important;
 }
 
 .level {
@@ -689,14 +704,10 @@ h2 > span {
     background: 
     linear-gradient(to top, var(--main-dark-blue), var(--main-light-blue));
 }
-
-#ulTools {
-    justify-content: center !important;
-}       
+     
 
 #ulTools li {
     width: 200px;
-    margin-right: 20px;
     margin-bottom: 20px;
 }
 
@@ -738,7 +749,7 @@ h2 > span {
 
 @media (max-width: 1400px) {
     .skills
-    { width: 480px !important; }
+    { width: 450px !important; }
 
     #ulTools {
         margin-bottom: 20px;
@@ -961,10 +972,10 @@ h2 > span {
     .socialsHelp { justify-content: center !important;}
 }
 
-.linkedin {
+/* .linkedin {
     margin-right: 20px;
     margin-left: 20px;
-}
+} */
 
 .page {   
     width: 100%;
@@ -1582,7 +1593,7 @@ form {
 }
 
 .input_div {
-    width: 400px;
+    min-width: 300px;
 
     display: flex;
     flex-direction: column;
@@ -1663,8 +1674,15 @@ form {
     border: 3px solid var(--main-dark-blue);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 950px) {
     #send_email, #write_message {
         min-width: 800px !important;
     }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.founded {
+    background: var(--main-dark-blue) !important;
+    color: var(--main-light-blue) !important;
 }

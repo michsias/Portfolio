@@ -1,0 +1,10 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh\|js)$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule home index.html
+RewriteRule cv-michal-kawczak cv.html
+RewriteRule contact contact.html

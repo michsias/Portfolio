@@ -9,7 +9,8 @@ counter_eggs.innerHTML = '<p>' + size_eggs + '</p>';
 function decreaseSize() {
     size_eggs--;
     if (size_eggs === 0) {
-        counter_eggs.style.display = 'none';
+        counter_eggs.innerHTML = '<p>' + WIN + '</p>';
+
     } else {
         counter_eggs.innerHTML = '<p>' + size_eggs + '</p>';
     }
