@@ -11,10 +11,10 @@ const adress = {
     '<i class="bi bi-envelope-at-fill icon "></i> \
     <a href="mailto:mkawczak00@gmail.com" class="contact"> mkawczak00@gmail.com </a>',
   phone:
-    ' <i class="bi bi-envelope-at-fill icon "></i> \
+    ' <i class="bi bi-telephone-forward-fill icon "></i> \
     <a href="tel:+48 506-340-845" class="contact"> +48 506-340-845 </a>',
   birth:
-    '<i class="bi bi-telephone-forward-fill icon "></i> \
+    '<i class="bi bi-calendar-check icon"></i> \
     14.05.2000',
   location:
     '<i class="bi bi-geo-alt-fill icon "></i> \
@@ -29,13 +29,13 @@ const censoredAdress = {
     '<i class="bi bi-envelope-at-fill icon "></i> \
     <button class="check_pin easter_click"> ########## </button>',
   phone:
-    ' <i class="bi bi-envelope-at-fill icon "></i> \
+    ' <i class="bi bi-telephone-forward-fill icon "></i> \
     <button class="check_pin easter_click"> ########## </button>',
   birth:
-    '<i class="bi bi-telephone-forward-fill icon "></i> \
+    '<i class="bi bi-calendar-check icon"></i>\
     <button class="check_pin easter_click"> ########## </button>',
   location:
-    '<i class="bi bi-geo-alt-fill icon "></i> \
+    '<i class="bi bi-geo-alt-fill icon"></i> \
     <button class="check_pin easter_click"> ########## </button>',
 };
 
