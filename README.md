@@ -14,7 +14,7 @@ they have a bonus counter of "easter eggs",
 which are "hidden" on site, It is meaning, 
 that if you hover your mouse or click somewhere, something will happen
 
-<img src="png/spoiler.png" alt="baner" width="100%">
+<img src="img/spoiler.png" alt="spoiler" width="100%">
 
 
 
