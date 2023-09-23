@@ -1,6 +1,6 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=004AFF&width=435&lines=%2301+Project+-+Website+portfolio)](https://git.io/typing-svg)
 
-# Description 
+## Description 
 
 Hi, this is my first project of web development.
 It is responsive page and you can look on computer and also mobile phnone. 
@@ -14,7 +14,7 @@ Now, I can start the new project, which you will see in my repozytorium in futur
 
 ## Check website
 
-You can check my website, nly click the link [Portfolio](https://michsias.pl/)
+You can check my website, only click the link [Portfolio](https://michsias.pl/)
 
 <br>
 
