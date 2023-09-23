@@ -251,6 +251,11 @@ body {
     background: var(--main-light-blue);
     color: var(--main-dark-blue);
     border-radius: 100%;
+
+    position: fixed;
+    top: 100px;
+    right:-5px;
+    z-index: 100;
 }
 
 #counter_eggs > p {
@@ -263,6 +268,12 @@ body {
     color: var(--main-light-blue);
     font-weight: 700;
     font-size: 20px;
+}
+
+.change_counter {
+    background: var(--color-text) !important;
+    color: var(--main-light-blue) !important;
+    border: 3px solid var(--main-light-blue) !important;
 }
 /*############################################################*/
 /*############################################################*/

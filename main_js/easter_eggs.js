@@ -13,6 +13,11 @@ function decreaseSize() {
 
     } else {
         counter_eggs.innerHTML = '<p>' + size_eggs + '</p>';
+        
+        counter_eggs.classList.add('change_counter');
+        setTimeout(function() {
+            counter_eggs.classList.remove('change_counter');
+        }, 1000);
     }
 }
 
