@@ -25,6 +25,4 @@ that if you hover your mouse or click somewhere, something will happen
 ## Check website
 
 You can check my website, only click the link [Portfolio](https://michsias.pl/)
-
-##
-Thank you for taking the time to check it out! 🤓
+and Thank you for taking the time to check it out! 🤓
