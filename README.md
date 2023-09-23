@@ -16,6 +16,5 @@ Now, I can start the new project, which you will see in my repozytorium in futur
 
 You can check my website, only click the link [Portfolio](https://michsias.pl/)
 
-<br>
-
+##
 Thank you for taking the time to check it out! 🤓
